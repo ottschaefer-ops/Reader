@@ -336,7 +336,10 @@ button { cursor: pointer; }
     const old = items[feedId] || [];
     const byId = new Map(old.map(i => [i.id, i]));
     for (const it of fresh) byId.set(it.id, it);
-    items[feedId] = [...byId.values()].sort((a, b) => b.ts - a.ts).slice(0, KEEP_PER_FEED);
+    // Also drop repeats of the same story saved under an older id.
+    const seen = new Set(), key = i => { try { const u = new URL(i.link); return u.origin + u.pathname; } catch { return i.title; } };
+    items[feedId] = [...byId.values()].sort((a, b) => b.ts - a.ts)
+      .filter(i => !seen.has(key(i)) && seen.add(key(i))).slice(0, KEEP_PER_FEED);
   }
 
   async function refresh(manual) {
