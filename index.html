@@ -17,8 +17,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
 <style>
-/* Layout: one column on the narrow outer screen; at 720px and up (the unfolded
-   inner screen) a feed sidebar sits beside the article list. */
+/* Layout: one column on the outer screen, in portrait or landscape; on the
+   unfolded inner screen (720px wide and 540px tall or more) a feed sidebar
+   sits beside the article list. */
 :root {
   --bg: #f5f7fa;
   --surface: #ffffff;
@@ -178,14 +179,14 @@ button { cursor: pointer; }
 .art-hint { margin-top: 14px; text-align: center; font-size: 12px; color: var(--muted); }
 .art-edge { position: absolute; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--muted); pointer-events: none; opacity: 0; transition: opacity 0.15s; }
 
-@media (min-width: 720px) {
+@media (min-width: 720px) and (min-height: 540px) {
   .side { display: flex; }
   #feedsBtn { display: none; }
   .sheet-wrap { display: none !important; }
   .item { padding-left: 16px; }
   .item h2 { font-size: 18px; }
 }
-@media (min-width: 1000px) { .side { width: 330px; } }
+@media (min-width: 1000px) and (min-height: 540px) { .side { width: 330px; } }
 @media (prefers-reduced-motion: reduce) { .spin svg { animation: none; } .pull, .art-card { transition: none !important; } }
 </style>
 </head>
