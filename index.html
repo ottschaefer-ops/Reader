@@ -63,6 +63,17 @@ button { cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 [hidden] { display: none !important; }
 
+/* iPhone Duo outer screen: iOS keeps a column on the right for its clock and
+   lays web apps out beside it. The script takes that column back (--col is its
+   width); text runs into it, buttons stay out of it. */
+:root { --col: 0px; }
+:root.cover .bar, :root.cover .tools { padding-right: calc(16px + var(--col)); }
+:root.cover .art-bar { padding-right: calc(8px + var(--col)); }
+:root.cover .sheet { padding-right: calc(16px + var(--col)); }
+:root.cover .item { grid-template-columns: 14px 1fr; position: relative; }
+:root.cover .item .meta { padding-right: calc(var(--col) + 52px); }
+:root.cover .toggle { position: absolute; top: 6px; right: calc(var(--col) + 6px); padding: 3px 8px; }
+
 .app { display: flex; height: 100%; }
 
 /* Sidebar (feeds) */
@@ -235,6 +246,36 @@ button { cursor: pointer; }
 <div class="toast" id="toast" hidden></div>
 
 <script>
+  // iPhone Duo outer screen: take back the column iOS keeps for its clock, so
+  // the app fills the whole screen. Re-checked when the screen changes (fold).
+  (function coverColumn() {
+    const meta = document.querySelector('meta[name="viewport"]'), root = document.documentElement;
+    const BASE = "width=device-width, initial-scale=1, viewport-fit=cover";
+    const standalone = navigator.standalone === true || matchMedia("(display-mode: standalone)").matches;
+    if (!meta || !standalone) return;
+    const probe = document.createElement("div");
+    probe.style.cssText = "position:fixed;left:0;top:0;height:0;visibility:hidden;pointer-events:none;width:env(safe-area-inset-right,0px)";
+    document.documentElement.appendChild(probe);
+    let key = "", timer = 0;
+    const geo = () => screen.width + "x" + screen.height + ":" + (innerHeight > innerWidth);
+    function measure() {
+      const sw = screen.width, w = root.clientWidth, h = root.clientHeight, col = sw - w;
+      if (sw <= 600 && h > w && col > 0 && col <= 120 && probe.getBoundingClientRect().width === 0) {
+        meta.content = "width=" + sw + ", height=" + h + ", initial-scale=1, viewport-fit=cover";
+        root.style.setProperty("--col", col + "px"); root.classList.add("cover");
+      }
+    }
+    function sync() {
+      key = geo();
+      meta.content = BASE; root.style.removeProperty("--col"); root.classList.remove("cover");
+      requestAnimationFrame(() => requestAnimationFrame(measure));
+    }
+    const onResize = () => { clearTimeout(timer); timer = setTimeout(() => { if (geo() !== key) sync(); }, 150); };
+    addEventListener("resize", onResize);
+    if (window.visualViewport) visualViewport.addEventListener("resize", onResize);
+    addEventListener("pageshow", e => { if (e.persisted) sync(); });
+    sync();
+  })();
 (() => {
   "use strict";
   const SEED = [
