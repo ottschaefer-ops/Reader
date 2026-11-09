@@ -1,0 +1,38 @@
+name: Fetch feeds
+
+on:
+  schedule:
+    - cron: "4,24,44 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [feeds.txt, .github/scripts/fetch_feeds.py, .github/workflows/feeds.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: feeds
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get the last copies
+        run: |
+          mkdir -p prev
+          if git fetch -q --depth=1 origin data; then git archive FETCH_HEAD | tar -x -C prev; fi
+      - name: Fetch feeds
+        run: python3 .github/scripts/fetch_feeds.py feeds.txt prev out
+      - name: Publish to the data branch
+        run: |
+          cd out
+          git init -q -b data
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Feeds $(date -u +%FT%TZ)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" data

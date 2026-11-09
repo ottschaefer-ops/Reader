@@ -346,11 +346,53 @@ button { cursor: pointer; }
     return { title: j.feed?.title || "", items: normalize(raw, url), via: "rss2json" };
   }
 
-  // Most sites block a web page from reading their feed directly, so each
-  // refresh asks the site and three public relays at once and keeps the first
-  // good answer. rss2json (cached, up to 10 items) is the last resort.
+  // The repo's own workflow fetches the feeds in feeds.txt every 20 minutes
+  // into the data branch, which the app reads first. Feeds not on that list,
+  // or a server copy gone stale, fall back to asking the site and three public
+  // relays at once, then rss2json (up to 10 items).
+  const DATA = "https://raw.githubusercontent.com/ottschaefer-ops/Reader/data/";
+  const feedKey = u => String(u || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/+$/, "");
+  let indexPromise = null;
+  function serverIndex() {
+    if (!indexPromise) indexPromise = getText(DATA + "index.json?t=" + Math.floor(Date.now() / 60000), 8000).then(t => JSON.parse(t)).catch(() => null);
+    return indexPromise;
+  }
+  async function viaServer(url) {
+    const idx = await serverIndex();
+    const all = (idx && idx.feeds) || {};
+    let e = all[feedKey(url)];
+    if (!e) { // same site with one listed feed: take it
+      const host = feedKey(url).split("/")[0];
+      const hits = [...new Set(Object.entries(all).filter(([k]) => k.split("/")[0] === host).map(([, v]) => v))];
+      if (hits.length === 1) e = hits[0];
+    }
+    if (!e || !e.file) throw new Error("not on the server list");
+    const txt = await getText(DATA + e.file + "?t=" + (e.fetchedAt || 0), 10000);
+    return { ...parseXml(txt, url), fetchedAt: e.fetchedAt || 0 };
+  }
+  // Feeds on the server list are added once; one removed in the app stays off.
+  function adoptServerFeeds(idx) {
+    const list = (idx && idx.list) || [];
+    const known = new Set(store.get("serverKnown", []));
+    let added = 0;
+    for (const s of list) {
+      const k = feedKey(s.url);
+      if (!s.url || known.has(k)) continue;
+      known.add(k);
+      if (feeds.some(f => feedKey(f.url) === k)) continue;
+      feeds.push({ id: hash(s.url), url: s.url, title: s.title || new URL(s.url).hostname });
+      added++;
+    }
+    store.set("serverKnown", [...known]);
+    if (added) store.set("feeds", feeds);
+  }
+  const FRESH_MS = 3 * 3600e3;
+
   async function loadFeed(url, depth = 0) {
     const errors = [];
+    let server = null;
+    if (depth === 0) { try { server = await viaServer(url); } catch {} }
+    if (server && Date.now() - server.fetchedAt < FRESH_MS) return server;
     const attempt = async (getUrl, relayed) => {
       try {
         const txt = await getText(getUrl, 10000);
@@ -364,6 +406,7 @@ button { cursor: pointer; }
     };
     try { return await Promise.any([attempt(url, false), ...RELAYS.map(r => attempt(r(url), true))]); } catch {}
     try { return await viaRss2json(url); } catch (e) { errors.push(e); }
+    if (server) return server; // an older copy beats nothing
     const msg = errors.map(e => e.message).find(m => /no feed|not a feed/.test(m));
     throw new Error(msg ? "No RSS or Atom feed found at that address" : "Couldn't reach this feed");
   }
@@ -379,8 +422,10 @@ button { cursor: pointer; }
   }
 
   async function refresh(manual) {
-    if (busy || !feeds.length) { if (!feeds.length) render(); return; }
-    busy = true; $("refreshBtn").classList.add("spin"); setStatus("Updating…");
+    if (busy) return;
+    busy = true; indexPromise = null; $("refreshBtn").classList.add("spin"); setStatus("Updating…");
+    adoptServerFeeds(await serverIndex());
+    if (!feeds.length) { busy = false; $("refreshBtn").classList.remove("spin"); render(); return; }
     let fails = 0;
     await Promise.all(feeds.map(async f => {
       try {
