@@ -11,7 +11,8 @@
 <meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0d1015" media="(prefers-color-scheme: dark)">
 <link rel="apple-touch-icon" href="icon-180.png">
-<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -375,8 +376,11 @@ button { cursor: pointer; }
     const list = (idx && idx.list) || [];
     const known = new Set(store.get("serverKnown", []));
     let added = 0;
+    let renamed = false;
     for (const s of list) {
       const k = feedKey(s.url);
+      const have = s.url && s.title && feeds.find(f => feedKey(f.url) === k);
+      if (have && have.title !== s.title) { have.title = s.title; renamed = true; }
       if (!s.url || known.has(k)) continue;
       known.add(k);
       if (feeds.some(f => feedKey(f.url) === k)) continue;
@@ -384,7 +388,7 @@ button { cursor: pointer; }
       added++;
     }
     store.set("serverKnown", [...known]);
-    if (added) store.set("feeds", feeds);
+    if (added || renamed) store.set("feeds", feeds);
   }
   const FRESH_MS = 3 * 3600e3;
 
