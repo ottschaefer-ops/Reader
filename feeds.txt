@@ -1,10 +1,11 @@
 # Feeds the repo's workflow fetches every 20 minutes for the app. One feed per
-# line; extra addresses after the first are other names for the same feed.
+# line; extra addresses after the first are other names for the same feed,
+# and text after | is the name the app shows.
 # The app adds a feed from this list once; removing it in the app keeps it off.
 https://feeds.npr.org/1001/rss.xml
 https://riviantrackr.com/feed/ https://riviantrackr.com/
-https://9to5mac.com/guides/apple-intelligence/feed/
-https://appleinsider.com/rss/news/ https://appleinsider.com/rss/news
-https://www.motor1.com/rss/make/porsche/
-https://newsroom.porsche.com/rss/EN/index.rss
-https://www.rivianwave.com/rss https://rivianwave.com/
+https://9to5mac.com/guides/apple-intelligence/feed/ | 9 to 5 Mac - Apple Intelligence
+https://appleinsider.com/rss/news/ https://appleinsider.com/rss/news | AppleInsider
+https://www.motor1.com/rss/make/porsche/ | Porsche - Automotive News and Trends
+https://newsroom.porsche.com/rss/EN/index.rss | Porsche Newsroom
+https://www.rivianwave.com/rss https://rivianwave.com/ | Rivian Wave

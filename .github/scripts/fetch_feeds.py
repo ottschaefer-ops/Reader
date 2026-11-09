@@ -77,7 +77,9 @@ def main():
         old = {}
     feeds, order, now = {}, [], int(time.time() * 1000)
     for line in open(src, encoding="utf-8"):
-        names = line.split("#", 1)[0].split()
+        line = line.split("#", 1)[0]
+        line, _, label = line.partition("|")
+        names, label = line.split(), label.strip()
         if not names:
             continue
         url = names[0]
@@ -101,7 +103,7 @@ def main():
                 entry["file"] = ""
             entry.update(ok=False, error=str(e)[:200])
             print("FAIL", url, e)
-        order.append({"url": url, "title": entry.get("title", "")})
+        order.append({"url": url, "title": label or entry.get("title", "")})
         for n in names + [entry.get("final") or url]:
             feeds[key(n)] = entry
     with open(os.path.join(out, "index.json"), "w") as fh:
