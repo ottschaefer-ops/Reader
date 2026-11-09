@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reader</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Reader">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1015" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+<style>
+/* Layout: one column on the narrow outer screen; at 720px and up (the unfolded
+   inner screen) a feed sidebar sits beside the article list. */
+:root {
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --fg: #141922;
+  --muted: #5b6575;
+  --line: #e1e5ec;
+  --accent: #2252d1;
+  --accent-soft: #e6edfc;
+  --danger: #b4232c;
+  --read: #8a93a2;
+  --f-ui: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, system-ui, sans-serif;
+  --f-title: "Newsreader", "New York", Georgia, "Times New Roman", serif;
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1015; --surface: #151a22; --fg: #e7ebf2; --muted: #9aa4b3; --line: #252c38;
+    --accent: #7ea4ff; --accent-soft: #1c2740; --danger: #ff7a80; --read: #6c7585;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1015; --surface: #151a22; --fg: #e7ebf2; --muted: #9aa4b3; --line: #252c38;
+  --accent: #7ea4ff; --accent-soft: #1c2740; --danger: #ff7a80; --read: #6c7585;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.4 var(--f-ui); -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none;
+}
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+[hidden] { display: none !important; }
+
+.app { display: flex; height: 100%; }
+
+/* Sidebar (feeds) */
+.side {
+  display: none; flex-direction: column; width: 300px; flex: none;
+  border-right: 1px solid var(--line); background: var(--surface);
+  padding: calc(var(--sat) + 12px) 12px calc(var(--sab) + 12px) max(12px, var(--sal));
+  overflow-y: auto;
+}
+.main { flex: 1; min-width: 0; display: flex; flex-direction: column; height: 100%; }
+
+.bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: calc(var(--sat) + 10px) max(16px, var(--sar)) 10px max(16px, var(--sal));
+  background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.bar h1 { flex: 1; min-width: 0; margin: 0; font: 600 26px/1.1 var(--f-title); letter-spacing: -0.01em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.icon-btn {
+  width: 40px; height: 40px; border-radius: 20px; border: 0; background: transparent;
+  display: inline-grid; place-items: center; color: var(--accent);
+}
+.icon-btn:active { background: var(--accent-soft); }
+.icon-btn svg { width: 22px; height: 22px; }
+.spin svg { animation: spin 0.9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.tools {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 10px max(16px, var(--sar)) 10px max(16px, var(--sal));
+}
+.seg { display: inline-flex; background: var(--line); border-radius: 9px; padding: 2px; }
+.seg button { border: 0; background: transparent; padding: 5px 14px; border-radius: 7px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--surface); color: var(--fg); box-shadow: 0 1px 2px rgb(0 0 0 / 0.12); }
+.tools .spacer { flex: 1; }
+.link-btn { border: 0; background: none; color: var(--accent); font-size: 14px; font-weight: 500; padding: 6px 2px; }
+.status { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.scroller { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; position: relative; }
+.pull { height: 0; overflow: hidden; display: grid; place-items: center; color: var(--muted); font-size: 13px; transition: height 0.2s; }
+
+.list { list-style: none; margin: 0; padding: 0 0 calc(var(--sab) + 24px); }
+.item {
+  display: grid; grid-template-columns: 14px 1fr auto; gap: 4px 10px; align-items: start;
+  padding: 12px max(16px, var(--sar)) 12px max(12px, var(--sal));
+  border-bottom: 1px solid var(--line);
+}
+.dot { width: 9px; height: 9px; border-radius: 50%; margin-top: 7px; background: var(--accent); justify-self: center; }
+.item.read .dot { background: transparent; box-shadow: inset 0 0 0 1.5px var(--line); }
+.item a { color: inherit; text-decoration: none; min-width: 0; display: block; }
+.meta { font-size: 12px; color: var(--muted); display: flex; gap: 6px; min-width: 0; }
+.meta .src { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.meta .time { flex: none; font-variant-numeric: tabular-nums; }
+.item h2 { margin: 2px 0 0; font: 600 17px/1.28 var(--f-title); text-wrap: pretty; }
+.item p { margin: 4px 0 0; color: var(--muted); font-size: 14px; line-height: 1.4;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.item.read h2 { color: var(--read); font-weight: 500; }
+.toggle { border: 0; background: none; color: var(--muted); font-size: 12px; padding: 4px 0 4px 6px; white-space: nowrap; }
+
+.empty { padding: 48px 24px; text-align: center; color: var(--muted); }
+.empty strong { display: block; color: var(--fg); font-size: 17px; margin-bottom: 6px; }
+
+/* Feeds panel: sheet on narrow screens, sidebar on wide ones */
+.feeds h3 { margin: 4px 4px 10px; font: 600 22px/1.2 var(--f-title); }
+.feed-list { list-style: none; margin: 0 0 14px; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.feed-row { display: flex; align-items: center; gap: 6px; border-radius: 10px; }
+.feed-row.active { background: var(--accent-soft); }
+.feed-pick { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; border: 0; background: none; text-align: left; padding: 9px 8px; border-radius: 10px; }
+.feed-pick .name { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 500; }
+.feed-pick .err { color: var(--danger); font-size: 12px; }
+.count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.remove { border: 0; background: none; color: var(--muted); font-size: 13px; padding: 8px; border-radius: 8px; white-space: nowrap; }
+.remove.confirm { color: #fff; background: var(--danger); }
+.add { display: flex; gap: 8px; padding: 0 4px; }
+.add input { flex: 1; min-width: 0; height: 42px; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); font-size: 16px; }
+.add button { height: 42px; padding: 0 16px; border-radius: 10px; border: 0; background: var(--accent); color: #fff; font-weight: 600; }
+:root[data-theme="dark"] .add button { color: #0d1015; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .add button { color: #0d1015; } }
+.hint { margin: 8px 4px 0; font-size: 12px; color: var(--muted); }
+.hint.bad { color: var(--danger); }
+
+.sheet-wrap { position: fixed; inset: 0; z-index: 20; background: rgb(0 0 0 / 0.35); display: flex; align-items: flex-end; }
+.sheet {
+  width: 100%; max-height: 88%; overflow-y: auto; background: var(--surface);
+  border-radius: 16px 16px 0 0; padding: 16px max(16px, var(--sar)) calc(var(--sab) + 20px) max(16px, var(--sal));
+}
+.sheet-head { display: flex; align-items: center; justify-content: space-between; }
+.sheet-head .link-btn { font-weight: 600; }
+
+.toast { position: fixed; left: 50%; bottom: calc(var(--sab) + 18px); transform: translateX(-50%); z-index: 30;
+  background: var(--fg); color: var(--bg); padding: 9px 14px; border-radius: 10px; font-size: 13px; max-width: calc(100% - 32px); }
+
+@media (min-width: 720px) {
+  .side { display: flex; }
+  #feedsBtn { display: none; }
+  .sheet-wrap { display: none !important; }
+  .item { padding-left: 16px; }
+  .item h2 { font-size: 18px; }
+}
+@media (min-width: 1000px) { .side { width: 330px; } }
+@media (prefers-reduced-motion: reduce) { .spin svg { animation: none; } .pull { transition: none; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side feeds" id="side" aria-label="Feeds"></aside>
+  <main class="main">
+    <header class="bar">
+      <h1 id="heading">All articles</h1>
+      <button class="icon-btn" id="refreshBtn" aria-label="Refresh">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg>
+      </button>
+      <button class="icon-btn" id="feedsBtn" aria-label="Feeds">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+      </button>
+    </header>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="Show">
+        <button id="fAll" aria-pressed="true">All</button>
+        <button id="fUnread" aria-pressed="false">Unread</button>
+      </div>
+      <span class="status" id="status"></span>
+      <span class="spacer"></span>
+      <button class="link-btn" id="markAll">Mark all read</button>
+    </div>
+    <div class="scroller" id="scroller">
+      <div class="pull" id="pull">Pull to refresh</div>
+      <ul class="list" id="list"></ul>
+      <div class="empty" id="empty" hidden></div>
+    </div>
+  </main>
+</div>
+<div class="sheet-wrap" id="sheetWrap" hidden>
+  <div class="sheet feeds" id="sheet" role="dialog" aria-label="Feeds"></div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(() => {
+  "use strict";
+  const SEED = [
+    { url: "https://feeds.bbci.co.uk/news/rss.xml", title: "BBC News" },
+    { url: "https://feeds.npr.org/1001/rss.xml", title: "NPR News" },
+  ];
+  const KEEP_PER_FEED = 60;
+  const STALE_MS = 10 * 60 * 1000;
+
+  // ---------- storage ----------
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem("rr." + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+    set(k, v) { try { localStorage.setItem("rr." + k, JSON.stringify(v)); } catch {} },
+  };
+  let feeds = store.get("feeds", null);
+  if (!Array.isArray(feeds)) { feeds = SEED.map(f => ({ id: hash(f.url), url: f.url, title: f.title })); store.set("feeds", feeds); }
+  let items = store.get("items", {});          // feedId -> [item]
+  let read = store.get("read", {});            // itemId -> ts
+  let lastRefresh = store.get("lastRefresh", 0);
+  let filter = store.get("filter", "all");
+  let selected = "all";                        // feed id or "all"
+  let busy = false;
+  let pendingRemove = null;
+
+  function hash(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0).toString(36); }
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  // ---------- fetching ----------
+  function withTimeout(ms) { const c = new AbortController(); const t = setTimeout(() => c.abort(), ms); return { signal: c.signal, done: () => clearTimeout(t) }; }
+  async function getText(url, ms = 12000) {
+    const t = withTimeout(ms);
+    try {
+      const r = await fetch(url, { signal: t.signal, cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return await r.text();
+    } finally { t.done(); }
+  }
+  const RELAYS = [
+    u => "https://api.allorigins.win/raw?url=" + encodeURIComponent(u),
+    u => "https://corsproxy.io/?url=" + encodeURIComponent(u),
+    u => "https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent(u),
+  ];
+
+  function textOf(html) {
+    if (!html) return "";
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    let t = (doc.body?.textContent || "").replace(/\s+/g, " ").trim();
+    if (!t) { const img = doc.querySelector("img[title], img[alt]"); if (img) t = (img.getAttribute("title") || img.getAttribute("alt") || "").trim(); }
+    return t;
+  }
+  const clip = (s, n) => s.length <= n ? s : s.slice(0, n).replace(/\s+\S*$/, "") + "…";
+  function kid(el, ...names) { for (const c of el.children) if (names.includes(c.localName.toLowerCase())) return c; return null; }
+  function kidText(el, ...names) { const c = kid(el, ...names); return c ? (c.textContent || "").trim() : ""; }
+  function parseDate(s) { const t = Date.parse((s || "").trim()); return isNaN(t) ? null : t; }
+
+  function parseXml(xml, feedUrl) {
+    const doc = new DOMParser().parseFromString(xml, "application/xml");
+    if (doc.querySelector("parsererror")) throw new Error("not a feed");
+    const root = doc.documentElement, kind = root.localName.toLowerCase();
+    let title = "", raw = [];
+    if (kind === "feed") {
+      title = kidText(root, "title");
+      for (const e of root.children) {
+        if (e.localName !== "entry") continue;
+        let link = "";
+        for (const l of e.children) if (l.localName === "link" && (l.getAttribute("rel") || "alternate") === "alternate") { link = l.getAttribute("href") || ""; break; }
+        raw.push({ guid: kidText(e, "id"), title: kidText(e, "title"), link,
+          ts: parseDate(kidText(e, "published") || kidText(e, "updated")),
+          body: kidText(e, "summary") || kidText(e, "content") });
+      }
+    } else if (kind === "rss" || kind === "rdf") {
+      const ch = kid(root, "channel");
+      title = ch ? kidText(ch, "title") : "";
+      const holder = kind === "rss" && ch ? ch : root;
+      for (const e of holder.children) {
+        if (e.localName !== "item") continue;
+        let link = kidText(e, "link"); const guid = kidText(e, "guid");
+        if (!link && /^https?:/.test(guid)) link = guid;
+        raw.push({ guid, title: kidText(e, "title"), link,
+          ts: parseDate(kidText(e, "pubDate", "date", "published", "updated")),
+          body: kidText(e, "description", "encoded", "summary") });
+      }
+    } else throw new Error("not a feed");
+    return { title: textOf(title) || title, items: normalize(raw, feedUrl) };
+  }
+  function normalize(raw, feedUrl) {
+    const now = Date.now();
+    return raw.filter(r => r.title || r.link).map((r, i) => {
+      const snip = clip(textOf(r.body), 200), t = textOf(r.title) || r.title;
+      return { id: hash(feedUrl + "|" + (r.guid || r.link || r.title)), title: clip(t || snip || "Untitled", 220),
+        link: /^https?:\/\//.test(r.link) ? r.link : "", ts: r.ts || (now - i * 60000), snippet: snip === t ? "" : snip };
+    });
+  }
+  function findAlternate(html, base) {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    const l = doc.querySelector('link[rel~="alternate"][type="application/rss+xml"], link[rel~="alternate"][type="application/atom+xml"]');
+    return l ? new URL(l.getAttribute("href"), base).href : null;
+  }
+  const looksHtml = s => /^\s*(<!doctype html|<html)/i.test(s);
+
+  async function viaRss2json(url) {
+    const txt = await getText("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(url));
+    const j = JSON.parse(txt);
+    if (j.status !== "ok") throw new Error(j.message || "not a feed");
+    const raw = (j.items || []).map(x => ({ guid: x.guid, title: x.title, link: x.link,
+      ts: x.pubDate ? Date.parse(x.pubDate.replace(" ", "T") + "Z") : null, body: x.description || x.content }));
+    return { title: j.feed?.title || "", items: normalize(raw, url), via: "rss2json" };
+  }
+
+  // Most sites block a web page from reading their feed directly, so each
+  // refresh asks the site and three public relays at once and keeps the first
+  // good answer. rss2json (cached, up to 10 items) is the last resort.
+  async function loadFeed(url, depth = 0) {
+    const errors = [];
+    const attempt = async (getUrl, relayed) => {
+      try {
+        const txt = await getText(getUrl, 10000);
+        if (looksHtml(txt)) {
+          const alt = findAlternate(txt, url);
+          if (alt && depth < 1) return { ...(await loadFeed(alt, 1)), url: alt };
+          throw new Error("no feed on that page");
+        }
+        return parseXml(txt, url);
+      } catch (e) { errors.push(relayed ? new Error("relay failed") : e); throw e; }
+    };
+    try { return await Promise.any([attempt(url, false), ...RELAYS.map(r => attempt(r(url), true))]); } catch {}
+    try { return await viaRss2json(url); } catch (e) { errors.push(e); }
+    const msg = errors.map(e => e.message).find(m => /no feed|not a feed/.test(m));
+    throw new Error(msg ? "No RSS or Atom feed found at that address" : "Couldn't reach this feed");
+  }
+
+  function merge(feedId, fresh) {
+    const old = items[feedId] || [];
+    const byId = new Map(old.map(i => [i.id, i]));
+    for (const it of fresh) byId.set(it.id, it);
+    items[feedId] = [...byId.values()].sort((a, b) => b.ts - a.ts).slice(0, KEEP_PER_FEED);
+  }
+
+  async function refresh(manual) {
+    if (busy || !feeds.length) { if (!feeds.length) render(); return; }
+    busy = true; $("refreshBtn").classList.add("spin"); setStatus("Updating…");
+    let fails = 0;
+    await Promise.all(feeds.map(async f => {
+      try {
+        const r = await loadFeed(f.url);
+        merge(f.id, r.items);
+        if (r.title && (!f.title || f.title === f.url)) f.title = r.title;
+        f.error = "";
+      } catch (e) { f.error = e.message; fails++; }
+    }));
+    pruneRead();
+    lastRefresh = Date.now();
+    store.set("feeds", feeds); store.set("items", items); store.set("lastRefresh", lastRefresh); store.set("read", read);
+    busy = false; $("refreshBtn").classList.remove("spin");
+    render();
+    if (fails) toast(fails === 1 ? "1 feed couldn't update" : fails + " feeds couldn't update");
+    else if (manual) toast("Up to date");
+  }
+
+  function pruneRead() {
+    const live = new Set(Object.values(items).flat().map(i => i.id));
+    for (const id of Object.keys(read)) if (!live.has(id)) delete read[id];
+  }
+
+  // ---------- feeds ----------
+  function normUrl(s) {
+    s = s.trim(); if (!s) return null;
+    if (!/^https?:\/\//i.test(s)) s = "https://" + s;
+    try { const u = new URL(s); return u.href; } catch { return null; }
+  }
+  async function addFeed(input, hintEl, btn) {
+    const url = normUrl(input.value);
+    if (!url) { hint(hintEl, "Enter a web address, like nasa.gov/rss", true); return; }
+    if (feeds.some(f => f.url === url)) { hint(hintEl, "That feed is already in your list", true); return; }
+    btn.disabled = true; hint(hintEl, "Checking the feed…");
+    try {
+      const r = await loadFeed(url);
+      const finalUrl = r.url || url;
+      if (feeds.some(f => f.url === finalUrl)) { hint(hintEl, "That feed is already in your list", true); return; }
+      const f = { id: hash(finalUrl), url: finalUrl, title: r.title || new URL(finalUrl).hostname };
+      feeds.push(f); merge(f.id, r.items);
+      store.set("feeds", feeds); store.set("items", items);
+      input.value = ""; hint(hintEl, "Added " + f.title);
+      render();
+    } catch (e) { hint(hintEl, e.message, true); }
+    finally { btn.disabled = false; }
+  }
+  function removeFeed(id) {
+    feeds = feeds.filter(f => f.id !== id); delete items[id];
+    if (selected === id) selected = "all";
+    pruneRead(); store.set("feeds", feeds); store.set("items", items); store.set("read", read);
+    pendingRemove = null; render(); toast("Feed removed");
+  }
+  function hint(el, msg, bad) { el.textContent = msg; el.classList.toggle("bad", !!bad); }
+
+  // ---------- render ----------
+  function allItems() {
+    const names = Object.fromEntries(feeds.map(f => [f.id, f.title || f.url]));
+    const out = [];
+    for (const f of feeds) for (const it of (items[f.id] || [])) out.push({ ...it, feedId: f.id, source: names[f.id] });
+    return out.sort((a, b) => b.ts - a.ts);
+  }
+  function rel(ts) {
+    const d = Date.now() - ts, m = Math.round(d / 60000);
+    if (m < 1) return "now"; if (m < 60) return m + "m"; const h = Math.round(m / 60); if (h < 24) return h + "h";
+    const days = Math.round(h / 24); if (days < 7) return days + "d";
+    return new Date(ts).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  }
+  function setStatus(s) { $("status").textContent = s; }
+  function statusLine() { setStatus(lastRefresh ? "Updated " + (Date.now() - lastRefresh < 60000 ? "just now" : rel(lastRefresh) + " ago") : ""); }
+
+  function render() {
+    const all = allItems();
+    const scoped = selected === "all" ? all : all.filter(i => i.feedId === selected);
+    const shown = filter === "unread" ? scoped.filter(i => !read[i.id]) : scoped;
+    const f = feeds.find(x => x.id === selected);
+    $("heading").textContent = f ? f.title : "All articles";
+    $("fAll").setAttribute("aria-pressed", filter === "all");
+    $("fUnread").setAttribute("aria-pressed", filter === "unread");
+    $("markAll").hidden = !scoped.some(i => !read[i.id]);
+    $("list").innerHTML = shown.map(i => `
+      <li class="item${read[i.id] ? " read" : ""}" data-id="${esc(i.id)}">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="${esc(i.link || "#")}" target="_blank" rel="noopener" data-open="${esc(i.id)}">
+          <div class="meta"><span class="src">${esc(i.source)}</span><span class="time">· ${esc(rel(i.ts))}</span></div>
+          <h2>${esc(i.title)}</h2>
+          ${i.snippet ? `<p>${esc(i.snippet)}</p>` : ""}
+        </a>
+        <button class="toggle" data-toggle="${esc(i.id)}">${read[i.id] ? "Unread" : "Read"}</button>
+      </li>`).join("");
+    const empty = $("empty");
+    if (!feeds.length) { empty.innerHTML = "<strong>No feeds yet</strong>Add a feed's web address to start reading."; empty.hidden = false; }
+    else if (!shown.length) {
+      empty.innerHTML = filter === "unread" && scoped.length ? "<strong>All caught up</strong>Nothing unread here." : (busy ? "<strong>Loading articles…</strong>" : "<strong>No articles yet</strong>Pull down or tap refresh.");
+      empty.hidden = false;
+    } else empty.hidden = true;
+    renderFeeds($("side"), "s");
+    if (!$("sheetWrap").hidden) renderFeeds($("sheet"), "m");
+    if (!busy) statusLine();
+  }
+
+  function renderFeeds(host, k) {
+    const all = allItems();
+    const unread = id => all.filter(i => (id === "all" || i.feedId === id) && !read[i.id]).length;
+    const keepVal = host.querySelector("input")?.value || "";
+    const keepHint = host.querySelector(".hint");
+    host.innerHTML = `
+      ${k === "m" ? `<div class="sheet-head"><h3>Feeds</h3><button class="link-btn" data-close>Done</button></div>` : `<h3>Feeds</h3>`}
+      <ul class="feed-list">
+        <li class="feed-row${selected === "all" ? " active" : ""}"><button class="feed-pick" data-pick="all"><span class="name">All articles</span><span class="count">${unread("all") || ""}</span></button></li>
+        ${feeds.map(f => `<li class="feed-row${selected === f.id ? " active" : ""}">
+          <button class="feed-pick" data-pick="${esc(f.id)}"><span class="name">${esc(f.title || f.url)}</span>${f.error ? `<span class="err">!</span>` : `<span class="count">${unread(f.id) || ""}</span>`}</button>
+          <button class="remove${pendingRemove === f.id ? " confirm" : ""}" data-remove="${esc(f.id)}" aria-label="Remove ${esc(f.title || f.url)}">${pendingRemove === f.id ? "Remove" : "✕"}</button>
+        </li>`).join("")}
+      </ul>
+      <form class="add" data-add>
+        <input id="add-${k}" type="url" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Feed or site address" aria-label="Feed or site address">
+        <button type="submit">Add</button>
+      </form>
+      <p class="hint" id="hint-${k}">Paste a feed link or a site's address.</p>
+      ${feeds.filter(f => f.error).map(f => `<p class="hint bad">${esc(f.title || f.url)}: ${esc(f.error)}</p>`).join("")}`;
+    host.querySelector("input").value = keepVal;
+    if (keepHint && keepHint.id === "hint-" + k && keepHint.textContent !== "Paste a feed link or a site's address.") {
+      const h = host.querySelector("#hint-" + k); h.textContent = keepHint.textContent; h.className = keepHint.className;
+    }
+  }
+
+  let toastT;
+  function toast(msg) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 2200); }
+
+  // ---------- events ----------
+  function markRead(id, on) { if (on) read[id] = Date.now(); else delete read[id]; store.set("read", read); render(); }
+  document.addEventListener("click", e => {
+    const open = e.target.closest("[data-open]");
+    if (open) { const id = open.dataset.open; if (open.getAttribute("href") === "#") e.preventDefault(); read[id] = Date.now(); store.set("read", read); setTimeout(render, 300); return; }
+    const tg = e.target.closest("[data-toggle]");
+    if (tg) { const id = tg.dataset.toggle; markRead(id, !read[id]); return; }
+    const pick = e.target.closest("[data-pick]");
+    if (pick) { selected = pick.dataset.pick; pendingRemove = null; $("sheetWrap").hidden = true; render(); $("scroller").scrollTop = 0; return; }
+    const rm = e.target.closest("[data-remove]");
+    if (rm) { const id = rm.dataset.remove; if (pendingRemove === id) removeFeed(id); else { pendingRemove = id; render(); } return; }
+    if (e.target.closest("[data-close]") || e.target === $("sheetWrap")) { $("sheetWrap").hidden = true; pendingRemove = null; render(); return; }
+  });
+  document.addEventListener("submit", e => {
+    const form = e.target.closest("[data-add]"); if (!form) return;
+    e.preventDefault();
+    addFeed(form.querySelector("input"), form.parentElement.querySelector(".hint"), form.querySelector("button"));
+  });
+  $("refreshBtn").onclick = () => refresh(true);
+  $("feedsBtn").onclick = () => { $("sheetWrap").hidden = false; renderFeeds($("sheet"), "m"); };
+  $("fAll").onclick = () => { filter = "all"; store.set("filter", filter); render(); };
+  $("fUnread").onclick = () => { filter = "unread"; store.set("filter", filter); render(); };
+  $("markAll").onclick = () => {
+    const now = Date.now();
+    for (const i of allItems()) if (selected === "all" || i.feedId === selected) read[i.id] = read[i.id] || now;
+    store.set("read", read); render();
+  };
+
+  // pull to refresh
+  const sc = $("scroller"), pull = $("pull");
+  let startY = null, dist = 0;
+  sc.addEventListener("touchstart", e => { startY = sc.scrollTop <= 0 ? e.touches[0].clientY : null; dist = 0; }, { passive: true });
+  sc.addEventListener("touchmove", e => {
+    if (startY == null) return;
+    dist = Math.max(0, e.touches[0].clientY - startY);
+    const h = Math.min(70, dist * 0.5);
+    pull.style.transition = "none"; pull.style.height = h + "px";
+    pull.textContent = h >= 56 ? "Release to refresh" : "Pull to refresh";
+  }, { passive: true });
+  sc.addEventListener("touchend", () => {
+    if (startY == null) return;
+    pull.style.transition = ""; const go = dist * 0.5 >= 56;
+    pull.style.height = "0px"; startY = null;
+    if (go) refresh(true);
+  });
+
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && Date.now() - lastRefresh > STALE_MS) refresh(false); });
+  setInterval(() => { if (!busy) statusLine(); }, 60000);
+
+  if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
+
+  render();
+  if (Date.now() - lastRefresh > STALE_MS || !Object.keys(items).length) refresh(false);
+})();
+</script>
+</body>
+</html>
