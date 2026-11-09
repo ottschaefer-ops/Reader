@@ -274,7 +274,13 @@ button { cursor: pointer; }
       meta.content = BASE; root.style.removeProperty("--col"); root.classList.remove("cover");
       requestAnimationFrame(() => requestAnimationFrame(measure));
     }
-    const onResize = () => { clearTimeout(timer); timer = setTimeout(() => { if (geo() !== key) sync(); }, 150); };
+    // iOS can add the clock column a moment after launch or on return to the
+    // app, without the screen itself changing, so check again whenever the
+    // size changes and a few times after starting.
+    const recheck = () => { if (geo() !== key) sync(); else if (!root.classList.contains("cover")) requestAnimationFrame(measure); };
+    const onResize = () => { clearTimeout(timer); timer = setTimeout(recheck, 150); };
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) { recheck(); setTimeout(recheck, 600); } });
+    [400, 1200, 3000].forEach(ms => setTimeout(recheck, ms));
     addEventListener("resize", onResize);
     if (window.visualViewport) visualViewport.addEventListener("resize", onResize);
     addEventListener("pageshow", e => { if (e.persisted) sync(); });
