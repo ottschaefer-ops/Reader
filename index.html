@@ -459,7 +459,7 @@ button { cursor: pointer; }
           <button class="remove${pendingRemove === f.id ? " confirm" : ""}" data-remove="${esc(f.id)}" aria-label="Remove ${esc(f.title || f.url)}">${pendingRemove === f.id ? "Remove" : "✕"}</button>
         </li>`).join("")}
       </ul>
-      <form class="add" data-add>
+      <form class="add" data-add novalidate>
         <input id="add-${k}" type="url" inputmode="url" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Feed or site address" aria-label="Feed or site address">
         <button type="submit">Add</button>
       </form>
