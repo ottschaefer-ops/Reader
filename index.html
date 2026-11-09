@@ -286,12 +286,13 @@ button { cursor: pointer; }
     return { title: textOf(title) || title, items: normalize(raw, feedUrl) };
   }
   function normalize(raw, feedUrl) {
-    const now = Date.now();
+    const now = Date.now(), seen = new Set();
+    const canon = l => { try { const u = new URL(l); return u.origin + u.pathname; } catch { return ""; } };
     return raw.filter(r => r.title || r.link).map((r, i) => {
       const snip = clip(textOf(r.body), 200), t = textOf(r.title) || r.title;
-      return { id: hash(feedUrl + "|" + (r.guid || r.link || r.title)), title: clip(t || snip || "Untitled", 220),
+      return { id: hash(feedUrl + "|" + (canon(r.link) || r.guid || r.title)), title: clip(t || snip || "Untitled", 220),
         link: /^https?:\/\//.test(r.link) ? r.link : "", ts: r.ts || (now - i * 60000), snippet: snip === t ? "" : snip };
-    });
+    }).filter(it => !seen.has(it.id) && seen.add(it.id));
   }
   function findAlternate(html, base) {
     const doc = new DOMParser().parseFromString(html, "text/html");
