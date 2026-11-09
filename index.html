@@ -153,6 +153,30 @@ button { cursor: pointer; }
 .toast { position: fixed; left: 50%; bottom: calc(var(--sab) + 18px); transform: translateX(-50%); z-index: 30;
   background: var(--fg); color: var(--bg); padding: 9px 14px; border-radius: 10px; font-size: 13px; max-width: calc(100% - 32px); }
 
+/* Article view: covers the list pane (full screen when folded). Swipe sideways
+   for the next or previous article; vertical scrolling stays native. */
+.main { position: relative; }
+.art { position: absolute; inset: 0; z-index: 10; background: var(--bg); display: flex; flex-direction: column; overflow: hidden; }
+.art-bar { display: flex; align-items: center; gap: 4px;
+  padding: calc(var(--sat) + 6px) max(8px, var(--sar)) 6px max(8px, var(--sal)); border-bottom: 1px solid var(--line); }
+.art-bar .back { border: 0; background: none; color: var(--accent); font-weight: 500; padding: 8px 6px; display: inline-flex; align-items: center; gap: 2px; }
+.art-bar .back svg { width: 20px; height: 20px; }
+.art-bar .pos { flex: 1; text-align: center; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.art-bar .icon-btn:disabled { color: var(--line); }
+.art-scroll { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; touch-action: pan-y; overscroll-behavior: contain; }
+.art-card { padding: 18px max(20px, var(--sar)) calc(var(--sab) + 40px) max(20px, var(--sal)); max-width: 680px; margin: 0 auto; will-change: transform; }
+.art-card .meta { font-size: 13px; }
+.art-card h1 { margin: 6px 0 14px; font: 600 26px/1.2 var(--f-title); letter-spacing: -0.01em; text-wrap: pretty; }
+.art-body { font-size: 17px; line-height: 1.55; overflow-wrap: anywhere; }
+.art-body img, .art-body video, .art-body iframe { max-width: 100%; height: auto; border-radius: 8px; }
+.art-body a { color: var(--accent); }
+.art-body blockquote { margin: 1em 0; padding-left: 14px; border-left: 3px solid var(--line); color: var(--muted); }
+.art-body pre { overflow-x: auto; font-size: 14px; }
+.art-open { display: block; margin-top: 24px; text-align: center; padding: 12px; border-radius: 10px;
+  background: var(--accent-soft); color: var(--accent); font-weight: 600; text-decoration: none; }
+.art-hint { margin-top: 14px; text-align: center; font-size: 12px; color: var(--muted); }
+.art-edge { position: absolute; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--muted); pointer-events: none; opacity: 0; transition: opacity 0.15s; }
+
 @media (min-width: 720px) {
   .side { display: flex; }
   #feedsBtn { display: none; }
@@ -161,7 +185,7 @@ button { cursor: pointer; }
   .item h2 { font-size: 18px; }
 }
 @media (min-width: 1000px) { .side { width: 330px; } }
-@media (prefers-reduced-motion: reduce) { .spin svg { animation: none; } .pull { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .spin svg { animation: none; } .pull, .art-card { transition: none !important; } }
 </style>
 </head>
 <body>
@@ -191,6 +215,15 @@ button { cursor: pointer; }
       <ul class="list" id="list"></ul>
       <div class="empty" id="empty" hidden></div>
     </div>
+    <section class="art" id="art" hidden aria-label="Article">
+      <div class="art-bar">
+        <button class="back" id="artBack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>Articles</button>
+        <span class="pos" id="artPos"></span>
+        <button class="icon-btn" id="artPrev" aria-label="Previous article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
+        <button class="icon-btn" id="artNext" aria-label="Next article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+      </div>
+      <div class="art-scroll" id="artScroll"><article class="art-card" id="artCard"></article></div>
+    </section>
   </main>
 </div>
 <div class="sheet-wrap" id="sheetWrap" hidden>
@@ -268,7 +301,7 @@ button { cursor: pointer; }
         for (const l of e.children) if (l.localName === "link" && (l.getAttribute("rel") || "alternate") === "alternate") { link = l.getAttribute("href") || ""; break; }
         raw.push({ guid: kidText(e, "id"), title: kidText(e, "title"), link,
           ts: parseDate(kidText(e, "published") || kidText(e, "updated")),
-          body: kidText(e, "summary") || kidText(e, "content") });
+          body: kidText(e, "summary") || kidText(e, "content"), full: kidText(e, "content") });
       }
     } else if (kind === "rss" || kind === "rdf") {
       const ch = kid(root, "channel");
@@ -280,7 +313,7 @@ button { cursor: pointer; }
         if (!link && /^https?:/.test(guid)) link = guid;
         raw.push({ guid, title: kidText(e, "title"), link,
           ts: parseDate(kidText(e, "pubDate", "date", "published", "updated")),
-          body: kidText(e, "description", "encoded", "summary") });
+          body: kidText(e, "description", "encoded", "summary"), full: kidText(e, "encoded") });
       }
     } else throw new Error("not a feed");
     return { title: textOf(title) || title, items: normalize(raw, feedUrl) };
@@ -291,7 +324,8 @@ button { cursor: pointer; }
     return raw.filter(r => r.title || r.link).map((r, i) => {
       const snip = clip(textOf(r.body), 200), t = textOf(r.title) || r.title;
       return { id: hash(feedUrl + "|" + (canon(r.link) || r.guid || r.title)), title: clip(t || snip || "Untitled", 220),
-        link: /^https?:\/\//.test(r.link) ? r.link : "", ts: r.ts || (now - i * 60000), snippet: snip === t ? "" : snip };
+        link: /^https?:\/\//.test(r.link) ? r.link : "", ts: r.ts || (now - i * 60000), snippet: snip === t ? "" : snip,
+        body: (() => { const b = String((r.full && r.full.length > (r.body || "").length ? r.full : r.body) || ""); return textOf(b).length > snip.length ? b.slice(0, 8000) : ""; })() };
     }).filter(it => !seen.has(it.id) && seen.add(it.id));
   }
   function findAlternate(html, base) {
@@ -306,7 +340,7 @@ button { cursor: pointer; }
     const j = JSON.parse(txt);
     if (j.status !== "ok") throw new Error(j.message || "not a feed");
     const raw = (j.items || []).map(x => ({ guid: x.guid, title: x.title, link: x.link,
-      ts: x.pubDate ? Date.parse(x.pubDate.replace(" ", "T") + "Z") : null, body: x.description || x.content }));
+      ts: x.pubDate ? Date.parse(x.pubDate.replace(" ", "T") + "Z") : null, body: x.description || x.content, full: x.content }));
     return { title: j.feed?.title || "", items: normalize(raw, url), via: "rss2json" };
   }
 
@@ -478,11 +512,11 @@ button { cursor: pointer; }
   function markRead(id, on) { if (on) read[id] = Date.now(); else delete read[id]; store.set("read", read); render(); }
   document.addEventListener("click", e => {
     const open = e.target.closest("[data-open]");
-    if (open) { const id = open.dataset.open; if (open.getAttribute("href") === "#") e.preventDefault(); read[id] = Date.now(); store.set("read", read); setTimeout(render, 300); return; }
+    if (open) { e.preventDefault(); openArticle(open.dataset.open); return; }
     const tg = e.target.closest("[data-toggle]");
     if (tg) { const id = tg.dataset.toggle; markRead(id, !read[id]); return; }
     const pick = e.target.closest("[data-pick]");
-    if (pick) { selected = pick.dataset.pick; pendingRemove = null; $("sheetWrap").hidden = true; render(); $("scroller").scrollTop = 0; return; }
+    if (pick) { if (view) closeArticle(false); selected = pick.dataset.pick; pendingRemove = null; $("sheetWrap").hidden = true; render(); $("scroller").scrollTop = 0; return; }
     const rm = e.target.closest("[data-remove]");
     if (rm) { const id = rm.dataset.remove; if (pendingRemove === id) removeFeed(id); else { pendingRemove = id; render(); } return; }
     if (e.target.closest("[data-close]") || e.target === $("sheetWrap")) { $("sheetWrap").hidden = true; pendingRemove = null; render(); return; }
@@ -501,6 +535,139 @@ button { cursor: pointer; }
     for (const i of allItems()) if (selected === "all" || i.feedId === selected) read[i.id] = read[i.id] || now;
     store.set("read", read); render();
   };
+
+  // ---------- article view ----------
+  // The list as it stood when an article was opened, so marking articles read
+  // (or the Unread filter) doesn't reshuffle what next and previous mean.
+  let view = null; // { ids, idx }
+  const OK_TAGS = new Set("p br a strong b em i u ul ol li blockquote h2 h3 h4 h5 img figure figcaption pre code span div small sup sub hr table thead tbody tr td th".split(" "));
+  function cleanHtml(html, base) {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    const walk = node => {
+      for (const el of [...node.children]) {
+        const tag = el.localName;
+        if (!OK_TAGS.has(tag)) { if (/^(script|style|iframe|object|embed|form|input|button|noscript|svg|link|meta)$/.test(tag)) el.remove(); else { walk(el); el.replaceWith(...el.childNodes); } continue; }
+        for (const a of [...el.attributes]) {
+          const keep = (tag === "a" && a.name === "href") || (tag === "img" && (a.name === "src" || a.name === "alt"));
+          if (!keep) el.removeAttribute(a.name);
+        }
+        if (tag === "a") {
+          let href = ""; try { href = new URL(el.getAttribute("href") || "", base).href; } catch {}
+          if (/^https?:/.test(href)) { el.setAttribute("href", href); el.setAttribute("target", "_blank"); el.setAttribute("rel", "noopener"); } else el.removeAttribute("href");
+        }
+        if (tag === "img") {
+          let src = ""; try { src = new URL(el.getAttribute("src") || "", base).href; } catch {}
+          if (!/^https?:/.test(src)) { el.remove(); continue; }
+          el.setAttribute("src", src); el.setAttribute("loading", "lazy"); el.setAttribute("referrerpolicy", "no-referrer");
+        }
+        walk(el);
+      }
+    };
+    walk(doc.body);
+    return doc.body.innerHTML.trim();
+  }
+  function shownIds() {
+    const all = allItems();
+    const scoped = selected === "all" ? all : all.filter(i => i.feedId === selected);
+    return (filter === "unread" ? scoped.filter(i => !read[i.id]) : scoped).map(i => i.id);
+  }
+  function fillArticle() {
+    const id = view.ids[view.idx], it = allItems().find(i => i.id === id);
+    const card = $("artCard");
+    if (!it) { card.innerHTML = `<div class="empty"><strong>Article gone</strong>It dropped out of its feed.</div>`; }
+    else {
+      const body = it.body ? cleanHtml(it.body, it.link || location.href) : "";
+      card.innerHTML = `
+        <div class="meta"><span class="src">${esc(it.source)}</span><span class="time">· ${esc(rel(it.ts))}</span></div>
+        <h1>${esc(it.title)}</h1>
+        <div class="art-body">${body || (it.snippet ? `<p>${esc(it.snippet)}</p>` : "")}</div>
+        ${it.link ? `<a class="art-open" href="${esc(it.link)}" target="_blank" rel="noopener">Read the full article</a>` : ""}
+        ${view.idx === 0 && view.ids.length > 1 ? `<p class="art-hint">Swipe left for the next article.</p>` : ""}`;
+      if (!read[id]) { read[id] = Date.now(); store.set("read", read); }
+    }
+    $("artPos").textContent = (view.idx + 1) + " of " + view.ids.length;
+    $("artPrev").disabled = view.idx <= 0;
+    $("artNext").disabled = view.idx >= view.ids.length - 1;
+    $("artScroll").scrollTop = 0;
+  }
+  function openArticle(id) {
+    const ids = shownIds(); const idx = Math.max(0, ids.indexOf(id));
+    view = { ids, idx };
+    $("art").hidden = false; fillArticle();
+    // A history entry, so Safari's back swipe (or the Back button) closes the article.
+    history.pushState({ art: id }, "");
+  }
+  function closeArticle(fromPop) {
+    if (!view) return;
+    view = null; $("art").hidden = true; render();
+    if (!fromPop && history.state && history.state.art) history.back();
+  }
+  const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let sliding = false;
+  function go(step) {
+    if (!view || sliding) return false;
+    const n = view.idx + step;
+    if (n < 0 || n >= view.ids.length) return false;
+    const card = $("artCard"), w = $("artScroll").clientWidth;
+    if (reduceMotion()) { view.idx = n; fillArticle(); history.replaceState({ art: view.ids[n] }, ""); return true; }
+    sliding = true;
+    card.style.transition = "transform 0.16s ease-in";
+    card.style.transform = `translateX(${-step * w}px)`;
+    setTimeout(() => {
+      view.idx = n; fillArticle(); history.replaceState({ art: view.ids[n] }, "");
+      card.style.transition = "none"; card.style.transform = `translateX(${step * w}px)`;
+      card.getBoundingClientRect();
+      card.style.transition = "transform 0.2s ease-out"; card.style.transform = "translateX(0)";
+      setTimeout(() => { sliding = false; }, 200);
+    }, 160);
+    return true;
+  }
+  $("artBack").onclick = () => closeArticle(false);
+  $("artPrev").onclick = () => go(-1);
+  $("artNext").onclick = () => go(1);
+  addEventListener("popstate", () => { if (view) closeArticle(true); });
+  document.addEventListener("keydown", e => {
+    if (!view || e.target.closest("input")) return;
+    if (e.key === "ArrowRight" || e.key === "j") go(1);
+    else if (e.key === "ArrowLeft" || e.key === "k") go(-1);
+    else if (e.key === "Escape") closeArticle(false);
+  });
+
+  // Swipe: left for the next article, right for the previous one. Touches that
+  // start at the screen's very edge are left alone for the system back swipe,
+  // and a mostly vertical move stays a normal scroll.
+  {
+    const area = $("artScroll"), card = $("artCard"), EDGE = 28;
+    let sx = 0, sy = 0, st = 0, dx = 0, mode = null; // mode: null | "x" | "y" | "skip"
+    area.addEventListener("touchstart", e => {
+      if (e.touches.length !== 1) { mode = "skip"; return; }
+      const t = e.touches[0]; sx = t.clientX; sy = t.clientY; st = Date.now(); dx = 0;
+      mode = (sx < EDGE || sx > innerWidth - EDGE) ? "skip" : null;
+    }, { passive: true });
+    area.addEventListener("touchmove", e => {
+      if (mode === "skip" || mode === "y") return;
+      const t = e.touches[0], mx = t.clientX - sx, my = t.clientY - sy;
+      if (!mode) {
+        if (Math.abs(mx) < 10 && Math.abs(my) < 10) return;
+        mode = Math.abs(mx) > Math.abs(my) * 1.2 ? "x" : "y";
+        if (mode === "y") return;
+      }
+      e.preventDefault();
+      dx = mx;
+      const atEnd = (dx > 0 && view.idx <= 0) || (dx < 0 && view.idx >= view.ids.length - 1);
+      card.style.transition = "none";
+      card.style.transform = `translateX(${atEnd ? dx * 0.3 : dx}px)`;
+    }, { passive: false });
+    const end = () => {
+      if (mode !== "x") { mode = null; return; }
+      mode = null;
+      const w = area.clientWidth, fast = Math.abs(dx) > 40 && Date.now() - st < 300;
+      if ((Math.abs(dx) > w * 0.22 || fast) && go(dx < 0 ? 1 : -1)) return;
+      card.style.transition = "transform 0.2s ease-out"; card.style.transform = "translateX(0)";
+    };
+    area.addEventListener("touchend", end);
+    area.addEventListener("touchcancel", end);
+  }
 
   // pull to refresh
   const sc = $("scroller"), pull = $("pull");
