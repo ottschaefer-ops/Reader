@@ -164,6 +164,7 @@ button { cursor: pointer; }
 .art-bar .pos { flex: 1; text-align: center; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .art-bar .icon-btn:disabled { color: var(--line); }
 .art-scroll { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; touch-action: pan-y; overscroll-behavior: contain; }
+.art-scroll.dragging { -webkit-user-select: none; user-select: none; }
 .art-card { padding: 18px max(20px, var(--sar)) calc(var(--sab) + 40px) max(20px, var(--sal)); max-width: 680px; margin: 0 auto; will-change: transform; }
 .art-card .meta { font-size: 13px; }
 .art-card h1 { margin: 6px 0 14px; font: 600 26px/1.2 var(--f-title); letter-spacing: -0.01em; text-wrap: pretty; }
@@ -635,38 +636,44 @@ button { cursor: pointer; }
 
   // Swipe: left for the next article, right for the previous one. Touches that
   // start at the screen's very edge are left alone for the system back swipe,
-  // and a mostly vertical move stays a normal scroll.
+  // and a mostly vertical move stays a normal scroll (touch-action: pan-y).
   {
     const area = $("artScroll"), card = $("artCard"), EDGE = 28;
-    let sx = 0, sy = 0, st = 0, dx = 0, mode = null; // mode: null | "x" | "y" | "skip"
-    area.addEventListener("touchstart", e => {
-      if (e.touches.length !== 1) { mode = "skip"; return; }
-      const t = e.touches[0]; sx = t.clientX; sy = t.clientY; st = Date.now(); dx = 0;
+    let sx = 0, sy = 0, st = 0, dx = 0, mode = null, pid = null, dragged = false; // mode: null | "x" | "y" | "skip"
+    area.addEventListener("pointerdown", e => {
+      if (!e.isPrimary || (e.pointerType === "mouse" && e.button !== 0)) { mode = "skip"; return; }
+      sx = e.clientX; sy = e.clientY; st = Date.now(); dx = 0; pid = e.pointerId; dragged = false;
       mode = (sx < EDGE || sx > innerWidth - EDGE) ? "skip" : null;
-    }, { passive: true });
-    area.addEventListener("touchmove", e => {
-      if (mode === "skip" || mode === "y") return;
-      const t = e.touches[0], mx = t.clientX - sx, my = t.clientY - sy;
+    });
+    area.addEventListener("pointermove", e => {
+      if (e.pointerId !== pid || mode === "skip" || mode === "y" || (e.pointerType === "mouse" && !(e.buttons & 1))) return;
+      const mx = e.clientX - sx, my = e.clientY - sy;
       if (!mode) {
         if (Math.abs(mx) < 10 && Math.abs(my) < 10) return;
         mode = Math.abs(mx) > Math.abs(my) * 1.2 ? "x" : "y";
         if (mode === "y") return;
+        dragged = true; area.classList.add("dragging");
+        try { area.setPointerCapture(pid); } catch {}
       }
-      e.preventDefault();
       dx = mx;
       const atEnd = (dx > 0 && view.idx <= 0) || (dx < 0 && view.idx >= view.ids.length - 1);
       card.style.transition = "none";
       card.style.transform = `translateX(${atEnd ? dx * 0.3 : dx}px)`;
-    }, { passive: false });
-    const end = () => {
+    });
+    const end = e => {
+      if (e.pointerId !== pid) return;
+      pid = null; area.classList.remove("dragging");
       if (mode !== "x") { mode = null; return; }
       mode = null;
       const w = area.clientWidth, fast = Math.abs(dx) > 40 && Date.now() - st < 300;
-      if ((Math.abs(dx) > w * 0.22 || fast) && go(dx < 0 ? 1 : -1)) return;
+      if (e.type === "pointerup" && (Math.abs(dx) > w * 0.22 || fast) && go(dx < 0 ? 1 : -1)) return;
       card.style.transition = "transform 0.2s ease-out"; card.style.transform = "translateX(0)";
     };
-    area.addEventListener("touchend", end);
-    area.addEventListener("touchcancel", end);
+    area.addEventListener("pointerup", end);
+    area.addEventListener("pointercancel", end);
+    // A drag isn't a tap: don't follow a link the swipe started on.
+    area.addEventListener("click", e => { if (dragged) { e.preventDefault(); e.stopPropagation(); dragged = false; } }, true);
+    area.addEventListener("dragstart", e => e.preventDefault());
   }
 
   // pull to refresh
