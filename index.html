@@ -287,7 +287,7 @@ button { cursor: pointer; }
     return t;
   }
   const clip = (s, n) => s.length <= n ? s : s.slice(0, n).replace(/\s+\S*$/, "") + "…";
-  function kid(el, ...names) { for (const c of el.children) if (names.includes(c.localName.toLowerCase())) return c; return null; }
+  function kid(el, ...names) { const want = names.map(n => n.toLowerCase()); for (const c of el.children) if (want.includes(c.localName.toLowerCase())) return c; return null; }
   function kidText(el, ...names) { const c = kid(el, ...names); return c ? (c.textContent || "").trim() : ""; }
   function parseDate(s) { const t = Date.parse((s || "").trim()); return isNaN(t) ? null : t; }
 
