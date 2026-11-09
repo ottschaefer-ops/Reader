@@ -178,6 +178,10 @@ button { cursor: pointer; }
 .art-bar .icon-btn:disabled { color: var(--line); }
 .art-scroll { flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; touch-action: pan-y; overscroll-behavior: contain; }
 .art-scroll.dragging { -webkit-user-select: none; user-select: none; }
+/* While an article is open, a sideways drag anywhere on the screen is a swipe,
+   including blank space below the article or outside the app's box. */
+:root.reading, :root.reading body, .art { touch-action: pan-y; }
+.art-card { min-height: 100%; }
 .art-card { padding: 18px max(20px, var(--sar)) calc(var(--sab) + 40px) max(20px, var(--sal)); max-width: 680px; margin: 0 auto; will-change: transform; }
 .art-card .meta { font-size: 13px; }
 .art-card h1 { margin: 6px 0 14px; font: 600 26px/1.2 var(--f-title); letter-spacing: -0.01em; text-wrap: pretty; }
@@ -684,14 +688,14 @@ button { cursor: pointer; }
   }
   function openArticle(id) {
     const ids = shownIds(); const idx = Math.max(0, ids.indexOf(id));
-    view = { ids, idx };
+    view = { ids, idx }; document.documentElement.classList.add("reading");
     $("art").hidden = false; fillArticle();
     // A history entry, so Safari's back swipe (or the Back button) closes the article.
     history.pushState({ art: id }, "");
   }
   function closeArticle(fromPop) {
     if (!view) return;
-    view = null; $("art").hidden = true; render();
+    view = null; document.documentElement.classList.remove("reading"); $("art").hidden = true; render();
     if (!fromPop && history.state && history.state.art) history.back();
   }
   const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -731,13 +735,17 @@ button { cursor: pointer; }
   {
     const area = $("artScroll"), card = $("artCard"), EDGE = 28;
     let sx = 0, sy = 0, st = 0, dx = 0, mode = null, pid = null, dragged = false; // mode: null | "x" | "y" | "skip"
-    area.addEventListener("pointerdown", e => {
+    // Inside the article view, or anywhere outside the app's box (the outer
+    // screen can leave a strip there), but not the inner screen's sidebar.
+    const inArt = t => !!view && (!(t instanceof Element) || !!t.closest("#art") || !t.closest(".app"));
+    document.addEventListener("pointerdown", e => {
+      if (!inArt(e.target)) { mode = "skip"; pid = null; return; }
       if (!e.isPrimary || (e.pointerType === "mouse" && e.button !== 0)) { mode = "skip"; return; }
       sx = e.clientX; sy = e.clientY; st = Date.now(); dx = 0; pid = e.pointerId; dragged = false;
       mode = (sx < EDGE || sx > innerWidth - EDGE) ? "skip" : null;
     });
-    area.addEventListener("pointermove", e => {
-      if (e.pointerId !== pid || mode === "skip" || mode === "y" || (e.pointerType === "mouse" && !(e.buttons & 1))) return;
+    document.addEventListener("pointermove", e => {
+      if (!view || e.pointerId !== pid || mode === "skip" || mode === "y" || (e.pointerType === "mouse" && !(e.buttons & 1))) return;
       const mx = e.clientX - sx, my = e.clientY - sy;
       if (!mode) {
         if (Math.abs(mx) < 10 && Math.abs(my) < 10) return;
@@ -760,8 +768,8 @@ button { cursor: pointer; }
       if (e.type === "pointerup" && (Math.abs(dx) > w * 0.22 || fast) && go(dx < 0 ? 1 : -1)) return;
       card.style.transition = "transform 0.2s ease-out"; card.style.transform = "translateX(0)";
     };
-    area.addEventListener("pointerup", end);
-    area.addEventListener("pointercancel", end);
+    document.addEventListener("pointerup", end);
+    document.addEventListener("pointercancel", end);
     // A drag isn't a tap: don't follow a link the swipe started on.
     area.addEventListener("click", e => { if (dragged) { e.preventDefault(); e.stopPropagation(); dragged = false; } }, true);
     area.addEventListener("dragstart", e => e.preventDefault());
