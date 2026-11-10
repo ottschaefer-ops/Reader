@@ -112,7 +112,7 @@ def items_of(body):
 
 def main():
     out = sys.argv[1]
-    token = os.environ.get("GIST_TOKEN", "")
+    token = os.environ.get("GIST_TOKEN", "").strip()
     if not token:
         print("push: no GIST_TOKEN secret, skipping")
         return
