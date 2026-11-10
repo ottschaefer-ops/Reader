@@ -538,12 +538,26 @@ button { cursor: pointer; }
   function hint(el, msg, bad) { el.textContent = msg; el.classList.toggle("bad", !!bad); }
 
   // ---------- render ----------
-  function allItems() {
+  // The same story can come from two feeds (9to5Mac's main feed and its Apple
+  // Intelligence feed). Copies share read state, and "All articles" shows one.
+  const linkKey = l => { try { const u = new URL(l); return (u.host.replace(/^www\./, "") + u.pathname).replace(/\/+$/, "").toLowerCase(); } catch { return ""; } };
+  function allItems(dedupe = false) {
     const names = Object.fromEntries(feeds.map(f => [f.id, f.title || f.url]));
     const out = [];
     for (const f of feeds) for (const it of (items[f.id] || [])) out.push({ ...it, feedId: f.id, source: names[f.id] });
-    return out.sort((a, b) => b.ts - a.ts);
+    const groups = new Map();
+    for (const it of out) { const k = linkKey(it.link); if (k) (groups.get(k) || groups.set(k, []).get(k)).push(it); }
+    for (const g of groups.values()) if (g.length > 1) {
+      const r = g.map(i => read[i.id]).find(Boolean);
+      if (r) for (const i of g) if (!read[i.id]) read[i.id] = r;
+    }
+    out.sort((a, b) => b.ts - a.ts);
+    if (!dedupe) return out;
+    const seen = new Set();
+    return out.filter(it => { const k = linkKey(it.link); if (!k) return true; if (seen.has(k)) return false; seen.add(k); return true; });
   }
+  const copiesOf = id => { const all = allItems(), it = all.find(i => i.id === id), k = it && linkKey(it.link);
+    return k ? all.filter(i => linkKey(i.link) === k).map(i => i.id) : [id]; };
   function rel(ts) {
     const d = Date.now() - ts, m = Math.round(d / 60000);
     if (m < 1) return "now"; if (m < 60) return m + "m"; const h = Math.round(m / 60); if (h < 24) return h + "h";
@@ -554,8 +568,7 @@ button { cursor: pointer; }
   function statusLine() { setStatus(lastRefresh ? "Updated " + (Date.now() - lastRefresh < 60000 ? "just now" : rel(lastRefresh) + " ago") : ""); }
 
   function render() {
-    const all = allItems();
-    const scoped = selected === "all" ? all : all.filter(i => i.feedId === selected);
+    const scoped = selected === "all" ? allItems(true) : allItems().filter(i => i.feedId === selected);
     const shown = filter === "unread" ? scoped.filter(i => !read[i.id]) : scoped;
     const f = feeds.find(x => x.id === selected);
     $("heading").textContent = f ? f.title : "All articles";
@@ -585,7 +598,8 @@ button { cursor: pointer; }
 
   function renderFeeds(host, k) {
     const all = allItems();
-    const unread = id => all.filter(i => (id === "all" || i.feedId === id) && !read[i.id]).length;
+    const dd = allItems(true);
+    const unread = id => (id === "all" ? dd : all.filter(i => i.feedId === id)).filter(i => !read[i.id]).length;
     const keepVal = host.querySelector("input")?.value || "";
     const keepHint = host.querySelector(".hint");
     host.innerHTML = `
@@ -613,7 +627,7 @@ button { cursor: pointer; }
   function toast(msg) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 2200); }
 
   // ---------- events ----------
-  function markRead(id, on) { if (on) read[id] = Date.now(); else delete read[id]; store.set("read", read); render(); }
+  function markRead(id, on) { for (const c of copiesOf(id)) { if (on) read[c] = Date.now(); else delete read[c]; } store.set("read", read); render(); }
   document.addEventListener("click", e => {
     const open = e.target.closest("[data-open]");
     if (open) { e.preventDefault(); openArticle(open.dataset.open); return; }
@@ -671,8 +685,7 @@ button { cursor: pointer; }
     return doc.body.innerHTML.trim();
   }
   function shownIds() {
-    const all = allItems();
-    const scoped = selected === "all" ? all : all.filter(i => i.feedId === selected);
+    const scoped = selected === "all" ? allItems(true) : allItems().filter(i => i.feedId === selected);
     return (filter === "unread" ? scoped.filter(i => !read[i.id]) : scoped).map(i => i.id);
   }
   function fillArticle() {

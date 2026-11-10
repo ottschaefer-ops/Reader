@@ -5,6 +5,7 @@
 https://feeds.npr.org/1001/rss.xml | NPR News
 https://riviantrackr.com/feed/ https://riviantrackr.com/ | RivianTrackr
 https://9to5mac.com/guides/apple-intelligence/feed/ | 9 to 5 Mac - Apple Intelligence
+https://9to5mac.com/feed/ | 9 to 5 Mac
 https://appleinsider.com/rss/news/ https://appleinsider.com/rss/news | AppleInsider
 https://www.motor1.com/rss/make/porsche/ | Porsche - Automotive News and Trends
 https://newsroom.porsche.com/rss/EN/index.rss | Porsche Newsroom
