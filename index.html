@@ -27,7 +27,7 @@
   --fg: #141922;
   --muted: #5b6575;
   --line: #e1e5ec;
-  --accent: #2252d1;
+  --accent: #2252d1; --star: #d99a00;
   --accent-soft: #e6edfc;
   --danger: #b4232c;
   --read: #8a93a2;
@@ -42,13 +42,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0d1015; --surface: #151a22; --fg: #e7ebf2; --muted: #9aa4b3; --line: #252c38;
-    --accent: #7ea4ff; --accent-soft: #1c2740; --danger: #ff7a80; --read: #6c7585;
+    --accent: #7ea4ff; --star: #ffc53d; --accent-soft: #1c2740; --danger: #ff7a80; --read: #6c7585;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0d1015; --surface: #151a22; --fg: #e7ebf2; --muted: #9aa4b3; --line: #252c38;
-  --accent: #7ea4ff; --accent-soft: #1c2740; --danger: #ff7a80; --read: #6c7585;
+  --accent: #7ea4ff; --star: #ffc53d; --accent-soft: #1c2740; --danger: #ff7a80; --read: #6c7585;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -72,7 +72,9 @@ button { cursor: pointer; }
 :root.cover .sheet { padding-right: calc(16px + var(--col)); }
 :root.cover .item { grid-template-columns: 14px 1fr; position: relative; }
 :root.cover .item .meta { padding-right: calc(var(--col) + 52px); }
-:root.cover .toggle { position: absolute; top: 6px; right: calc(var(--col) + 6px); padding: 3px 8px; }
+:root.cover .item .meta { padding-right: calc(var(--col) + 84px); }
+:root.cover .acts { position: absolute; top: 2px; right: calc(var(--col) + 6px); flex-direction: row; align-items: center; }
+:root.cover .toggle { padding: 3px 8px; }
 
 .app { display: flex; height: 100%; }
 
@@ -132,6 +134,16 @@ button { cursor: pointer; }
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .item.read h2 { color: var(--read); font-weight: 500; }
 .toggle { border: 0; background: none; color: var(--muted); font-size: 12px; padding: 4px 0 4px 6px; white-space: nowrap; }
+.acts { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.star { border: 0; background: none; color: var(--muted); padding: 4px 0 4px 8px; display: inline-grid; }
+.star svg { width: 20px; height: 20px; fill: none; }
+.star[aria-pressed="true"] { color: var(--star); }
+.star[aria-pressed="true"] svg { fill: currentColor; }
+.art-bar .star { padding: 8px; }
+.seg button.seg-star { padding: 5px 10px; display: inline-grid; place-items: center; }
+.seg-star svg { width: 16px; height: 16px; fill: none; }
+.seg-star[aria-pressed="true"] { color: var(--star) !important; }
+.seg-star[aria-pressed="true"] svg { fill: currentColor; }
 
 .empty { padding: 48px 24px; text-align: center; color: var(--muted); }
 .empty strong { display: block; color: var(--fg); font-size: 17px; margin-bottom: 6px; }
@@ -231,6 +243,7 @@ button { cursor: pointer; }
       <div class="seg" role="group" aria-label="Show">
         <button id="fAll" aria-pressed="true">All</button>
         <button id="fUnread" aria-pressed="false">Unread</button>
+        <button id="fStar" class="seg-star" aria-pressed="false" aria-label="Starred"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></button>
       </div>
       <span class="status" id="status"></span>
       <span class="spacer"></span>
@@ -245,6 +258,7 @@ button { cursor: pointer; }
       <div class="art-bar">
         <button class="back" id="artBack"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>Articles</button>
         <span class="pos" id="artPos"></span>
+        <button class="star" id="artStar" aria-pressed="false" aria-label="Star"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></button>
         <button class="icon-btn" id="artPrev" aria-label="Previous article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15l6-6 6 6"/></svg></button>
         <button class="icon-btn" id="artNext" aria-label="Next article"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
       </div>
@@ -306,13 +320,15 @@ button { cursor: pointer; }
   // ---------- storage ----------
   const store = {
     get(k, d) { try { const v = localStorage.getItem("rr." + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
-    set(k, v) { try { localStorage.setItem("rr." + k, JSON.stringify(v)); } catch {} if (k === "read") syncSoon(); },
+    set(k, v) { try { localStorage.setItem("rr." + k, JSON.stringify(v)); } catch {} if (k === "read" || k === "stars") syncSoon(); },
   };
   let feeds = store.get("feeds", null);
   if (!Array.isArray(feeds)) { feeds = SEED.map(f => ({ id: hash(f.url), url: f.url, title: f.title })); store.set("feeds", feeds); }
   let items = store.get("items", {});          // feedId -> [item]
   let read = store.get("read", {});            // itemId -> ts
   let tomb = store.get("tomb", {});            // itemId -> ts it was marked unread (so sync doesn't bring it back)
+  let stars = store.get("stars", {});          // itemId -> { ts starred, it: the article, kept after it leaves its feed }
+  let starTomb = store.get("starTomb", {});    // itemId -> ts it was unstarred
   let feedSync = store.get("feedSync", {});    // feedKey -> { u, t, ts }: ts > 0 added, < 0 removed
   let syncMsg = "", syncT = null, syncing = null, syncQuiet = false, syncAgain = false;
   let lastRefresh = store.get("lastRefresh", 0);
@@ -572,6 +588,30 @@ button { cursor: pointer; }
     const seen = new Set();
     return out.filter(it => { const k = linkKey(it.link); if (!k) return true; if (seen.has(k)) return false; seen.add(k); return true; });
   }
+  // Starred articles: the live copy when there is one, else the saved one.
+  const slim = i => ({ id: i.id, title: i.title, link: i.link, ts: i.ts, snippet: i.snippet || "", feedId: i.feedId, source: i.source });
+  function starredKeys() { const s = new Set(); for (const v of Object.values(stars)) { const k = v.it && linkKey(v.it.link); if (k) s.add(k); } return s; }
+  function isStarred(i, keys = starredKeys()) { if (stars[i.id]) return true; const k = linkKey(i.link); return !!k && keys.has(k); }
+  function starredItems() {
+    const live = new Map(allItems().map(i => [i.id, i])), seen = new Set(), out = [];
+    for (const [id, v] of Object.entries(stars)) {
+      const it = live.get(id) || (v.it && { body: "", ...v.it, id });
+      if (!it) continue;
+      const k = linkKey(it.link) || id;
+      if (seen.has(k)) continue; seen.add(k); out.push({ ...it, starredAt: v.ts });
+    }
+    return out.sort((a, b) => b.ts - a.ts);
+  }
+  function setStar(id, on) {
+    const it = allItems().find(i => i.id === id) || (stars[id] && stars[id].it);
+    const ids = it ? [...new Set([id, ...copiesOf(id), ...Object.keys(stars).filter(s => linkKey(stars[s].it && stars[s].it.link) === linkKey(it.link) && linkKey(it.link))])] : [id];
+    const now = Date.now();
+    for (const c of ids) {
+      if (on) { if (c === id && it) { stars[c] = { ts: now, it: slim(it) }; delete starTomb[c]; } }
+      else if (stars[c]) { delete stars[c]; starTomb[c] = now; }
+    }
+    store.set("starTomb", starTomb); store.set("stars", stars);
+  }
   const copiesOf = id => { const all = allItems(), it = all.find(i => i.id === id), k = it && linkKey(it.link);
     return k ? all.filter(i => linkKey(i.link) === k).map(i => i.id) : [id]; };
   function rel(ts) {
@@ -584,13 +624,15 @@ button { cursor: pointer; }
   function statusLine() { setStatus(lastRefresh ? "Updated " + (Date.now() - lastRefresh < 60000 ? "just now" : rel(lastRefresh) + " ago") : ""); }
 
   function render() {
-    const scoped = selected === "all" ? allItems(true) : allItems().filter(i => i.feedId === selected);
-    const shown = filter === "unread" ? scoped.filter(i => !read[i.id]) : scoped;
+    const shown = listed();
+    const scoped = filter === "starred" ? shown : selected === "all" ? allItems(true) : allItems().filter(i => i.feedId === selected);
+    const keys = starredKeys();
     const f = feeds.find(x => x.id === selected);
     $("heading").textContent = f ? f.title : "All articles";
     $("fAll").setAttribute("aria-pressed", filter === "all");
     $("fUnread").setAttribute("aria-pressed", filter === "unread");
-    $("markAll").hidden = !scoped.some(i => !read[i.id]);
+    $("fStar").setAttribute("aria-pressed", filter === "starred");
+    $("markAll").hidden = filter === "starred" || !scoped.some(i => !read[i.id]);
     $("list").innerHTML = shown.map(i => `
       <li class="item${read[i.id] ? " read" : ""}" data-id="${esc(i.id)}">
         <span class="dot" aria-hidden="true"></span>
@@ -599,12 +641,16 @@ button { cursor: pointer; }
           <h2>${esc(i.title)}</h2>
           ${i.snippet ? `<p>${esc(i.snippet)}</p>` : ""}
         </a>
-        <button class="toggle" data-toggle="${esc(i.id)}">${read[i.id] ? "Unread" : "Read"}</button>
+        <div class="acts">
+          <button class="star" data-star="${esc(i.id)}" aria-pressed="${isStarred(i, keys)}" aria-label="${isStarred(i, keys) ? "Unstar" : "Star"}"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg></button>
+          <button class="toggle" data-toggle="${esc(i.id)}">${read[i.id] ? "Unread" : "Read"}</button>
+        </div>
       </li>`).join("");
     const empty = $("empty");
     if (!feeds.length) { empty.innerHTML = "<strong>No feeds yet</strong>Add a feed's web address to start reading."; empty.hidden = false; }
     else if (!shown.length) {
-      empty.innerHTML = filter === "unread" && scoped.length ? "<strong>All caught up</strong>Nothing unread here." : (busy ? "<strong>Loading articles…</strong>" : "<strong>No articles yet</strong>Pull down or tap refresh.");
+      empty.innerHTML = filter === "starred" ? "<strong>Nothing starred</strong>Tap the star on an article to save it for later."
+        : filter === "unread" && scoped.length ? "<strong>All caught up</strong>Nothing unread here." : (busy ? "<strong>Loading articles…</strong>" : "<strong>No articles yet</strong>Pull down or tap refresh.");
       empty.hidden = false;
     } else empty.hidden = true;
     renderFeeds($("side"), "s");
@@ -814,6 +860,27 @@ button { cursor: pointer; }
     const same = JSON.stringify(Object.keys(out).sort().map(k => [k, out[k].ts])) === JSON.stringify(Object.keys(remote).sort().map(k => [k, remote[k] && remote[k].ts]));
     return { added, removed, out, same };
   }
+  // stars: itemId -> { t, i: the article } when starred, { t: -ts } when unstarred. The newer change wins.
+  function mergeStars(remote) {
+    let changed = false;
+    for (const [id, v] of Object.entries(remote || {})) {
+      if (!v || typeof v.t !== "number" || !v.t) continue;
+      if (v.t > 0) {
+        if (!v.i || typeof v.i !== "object" || (stars[id] && stars[id].ts >= v.t) || starTomb[id] >= v.t) continue;
+        const i = v.i, link = /^https?:\/\//.test(i.link || "") ? i.link : "";
+        stars[id] = { ts: v.t, it: { id, title: String(i.title || "Untitled"), link, ts: Number(i.ts) || v.t, snippet: String(i.snippet || ""), feedId: String(i.feedId || ""), source: String(i.source || "") } };
+        delete starTomb[id]; changed = true;
+      } else if (!(starTomb[id] >= -v.t) && !(stars[id] && stars[id].ts > -v.t)) {
+        if (stars[id]) { delete stars[id]; changed = true; }
+        starTomb[id] = -v.t;
+      }
+    }
+    const cut = Date.now() - KEEP_MS, out = {};
+    for (const [id, v] of Object.entries(stars)) out[id] = { t: v.ts, i: v.it };
+    for (const [id, t] of Object.entries(starTomb)) { if (t > cut) out[id] = { t: -t }; else delete starTomb[id]; }
+    const sig = o => JSON.stringify(Object.keys(o || {}).sort().map(k => [k, o[k] && o[k].t]));
+    return { changed, out, same: sig(out) === sig(remote) };
+  }
   // subs: deviceId -> { s: push subscription, ts }. Each device keeps only its own entry.
   function mergeSubs(remote) {
     const out = {}, ok = v => v && typeof v === "object" && v.s && v.s.endpoint;
@@ -858,8 +925,11 @@ button { cursor: pointer; }
         if (fm.added) setTimeout(() => refresh(false), 0);
         syncQuiet = true; store.set("tomb", tomb); store.set("read", read); syncQuiet = false;
         if (remote.pushKey && remote.pushKey.pub && remote.pushKey.pub !== store.get("pushPub", "")) store.set("pushPub", remote.pushKey.pub);
+        const st = mergeStars(remote.stars && typeof remote.stars === "object" ? remote.stars : {});
+        if (st.changed) changed = true;
+        syncQuiet = true; store.set("stars", stars); store.set("starTomb", starTomb); syncQuiet = false;
         const sb = mergeSubs(remote.subs), sn = seenNow(remote.seen);
-        if (!m.same || !fm.same || !sb.same || !sn.same) await gh("/gists/" + id, { method: "PATCH", body: JSON.stringify({ files: { [SYNC_FILE]: { content: JSON.stringify({ v: 2, marks: m.out, feeds: fm.out, subs: sb.out, seen: sn.out }) } } }) });
+        if (!m.same || !fm.same || !st.same || !sb.same || !sn.same) await gh("/gists/" + id, { method: "PATCH", body: JSON.stringify({ files: { [SYNC_FILE]: { content: JSON.stringify({ v: 2, marks: m.out, feeds: fm.out, stars: st.out, subs: sb.out, seen: sn.out }) } } }) });
         syncMsg = "";
       } catch (e) {
         syncQuiet = false;
@@ -890,6 +960,8 @@ button { cursor: pointer; }
     if (open) { e.preventDefault(); openArticle(open.dataset.open); return; }
     const tg = e.target.closest("[data-toggle]");
     if (tg) { const id = tg.dataset.toggle; markRead(id, !read[id]); return; }
+    const sb = e.target.closest("[data-star]");
+    if (sb) { setStar(sb.dataset.star, sb.getAttribute("aria-pressed") !== "true"); render(); return; }
     const pick = e.target.closest("[data-pick]");
     if (pick) { if (view) closeArticle(false); selected = pick.dataset.pick; pendingRemove = null; $("sheetWrap").hidden = true; render(); $("scroller").scrollTop = 0; return; }
     const rm = e.target.closest("[data-remove]");
@@ -930,6 +1002,14 @@ button { cursor: pointer; }
   $("feedsBtn").onclick = () => { $("sheetWrap").hidden = false; renderFeeds($("sheet"), "m"); };
   $("fAll").onclick = () => { filter = "all"; store.set("filter", filter); render(); };
   $("fUnread").onclick = () => { filter = "unread"; store.set("filter", filter); render(); };
+  $("fStar").onclick = () => { filter = "starred"; store.set("filter", filter); render(); $("scroller").scrollTop = 0; };
+  $("artStar").onclick = () => {
+    if (!view) return;
+    const id = view.ids[view.idx];
+    const on = $("artStar").getAttribute("aria-pressed") !== "true";
+    setStar(id, on);
+    $("artStar").setAttribute("aria-pressed", on); $("artStar").setAttribute("aria-label", on ? "Unstar" : "Star");
+  };
   $("markAll").onclick = () => {
     const now = Date.now();
     for (const i of allItems()) if (selected === "all" || i.feedId === selected) { read[i.id] = read[i.id] || now; delete tomb[i.id]; }
@@ -966,12 +1046,14 @@ button { cursor: pointer; }
     walk(doc.body);
     return doc.body.innerHTML.trim();
   }
-  function shownIds() {
+  function listed() {
+    if (filter === "starred") { const st = starredItems(); return selected === "all" ? st : st.filter(i => i.feedId === selected); }
     const scoped = selected === "all" ? allItems(true) : allItems().filter(i => i.feedId === selected);
-    return (filter === "unread" ? scoped.filter(i => !read[i.id]) : scoped).map(i => i.id);
+    return filter === "unread" ? scoped.filter(i => !read[i.id]) : scoped;
   }
+  const shownIds = () => listed().map(i => i.id);
   function fillArticle() {
-    const id = view.ids[view.idx], it = allItems().find(i => i.id === id);
+    const id = view.ids[view.idx], it = allItems().find(i => i.id === id) || (stars[id] && stars[id].it && { body: "", ...stars[id].it, id });
     const card = $("artCard");
     if (!it) { card.innerHTML = `<div class="empty"><strong>Article gone</strong>It dropped out of its feed.</div>`; }
     else {
@@ -984,6 +1066,8 @@ button { cursor: pointer; }
         ${view.idx === 0 && view.ids.length > 1 ? `<p class="art-hint">Swipe left for the next article.</p>` : ""}`;
       if (!read[id]) { read[id] = Date.now(); delete tomb[id]; store.set("tomb", tomb); store.set("read", read); }
     }
+    const on = !!it && isStarred(it);
+    $("artStar").setAttribute("aria-pressed", on); $("artStar").setAttribute("aria-label", on ? "Unstar" : "Star");
     $("artPos").textContent = (view.idx + 1) + " of " + view.ids.length;
     $("artPrev").disabled = view.idx <= 0;
     $("artNext").disabled = view.idx >= view.ids.length - 1;
