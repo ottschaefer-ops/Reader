@@ -20,6 +20,7 @@ def key(u):
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA,
+        "Cache-Control": "no-cache", "Pragma": "no-cache",
         "Accept": "application/rss+xml, application/atom+xml, application/xml;q=0.9, text/xml;q=0.9, text/html;q=0.8, */*;q=0.5"})
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.geturl(), r.read(8_000_000)
