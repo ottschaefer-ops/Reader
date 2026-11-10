@@ -154,6 +154,8 @@ button { cursor: pointer; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .add button { color: #0d1015; } }
 .hint { margin: 8px 4px 0; font-size: 12px; color: var(--muted); }
 .hint.bad { color: var(--danger); }
+.sync { margin-top: 26px; }
+.sync .link-btn { margin: 6px 4px 0; }
 
 .sheet-wrap { position: fixed; inset: 0; z-index: 20; background: rgb(0 0 0 / 0.35); display: flex; align-items: flex-end; }
 .sheet {
@@ -298,12 +300,14 @@ button { cursor: pointer; }
   // ---------- storage ----------
   const store = {
     get(k, d) { try { const v = localStorage.getItem("rr." + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
-    set(k, v) { try { localStorage.setItem("rr." + k, JSON.stringify(v)); } catch {} },
+    set(k, v) { try { localStorage.setItem("rr." + k, JSON.stringify(v)); } catch {} if (k === "read") syncSoon(); },
   };
   let feeds = store.get("feeds", null);
   if (!Array.isArray(feeds)) { feeds = SEED.map(f => ({ id: hash(f.url), url: f.url, title: f.title })); store.set("feeds", feeds); }
   let items = store.get("items", {});          // feedId -> [item]
   let read = store.get("read", {});            // itemId -> ts
+  let tomb = store.get("tomb", {});            // itemId -> ts it was marked unread (so sync doesn't bring it back)
+  let syncMsg = "", syncT = null, syncing = null, syncQuiet = false, syncAgain = false;
   let lastRefresh = store.get("lastRefresh", 0);
   let filter = store.get("filter", "all");
   let selected = "all";                        // feed id or "all"
@@ -602,6 +606,7 @@ button { cursor: pointer; }
     const unread = id => (id === "all" ? dd : all.filter(i => i.feedId === id)).filter(i => !read[i.id]).length;
     const keepVal = host.querySelector("input")?.value || "";
     const keepHint = host.querySelector(".hint");
+    const keepTok = host.querySelector("[data-sync] input")?.value || "";
     host.innerHTML = `
       ${k === "m" ? `<div class="sheet-head"><h3>Feeds</h3><button class="link-btn" data-close>Done</button></div>` : `<h3>Feeds</h3>`}
       <ul class="feed-list">
@@ -616,8 +621,20 @@ button { cursor: pointer; }
         <button type="submit">Add</button>
       </form>
       <p class="hint" id="hint-${k}">Paste a feed link or a site's address.</p>
-      ${feeds.filter(f => f.error).map(f => `<p class="hint bad">${esc(f.title || f.url)}: ${esc(f.error)}</p>`).join("")}`;
+      ${feeds.filter(f => f.error).map(f => `<p class="hint bad">${esc(f.title || f.url)}: ${esc(f.error)}</p>`).join("")}
+      <div class="sync">
+        <h3>Sync</h3>
+        ${syncToken()
+          ? `<p class="hint">Read articles sync across your devices.</p>${syncMsg ? `<p class="hint bad">${esc(syncMsg)}</p>` : ""}
+             <button class="link-btn" data-sync-off>Remove token</button>`
+          : `<form class="add" data-sync novalidate>
+               <input type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="GitHub token" aria-label="GitHub token">
+               <button type="submit">Save</button>
+             </form>
+             <p class="hint">Paste a GitHub token that can read and write gists, on each device, to sync read articles.</p>`}
+      </div>`;
     host.querySelector("input").value = keepVal;
+    const tokIn = host.querySelector("[data-sync] input"); if (tokIn) tokIn.value = keepTok;
     if (keepHint && keepHint.id === "hint-" + k && keepHint.textContent !== "Paste a feed link or a site's address.") {
       const h = host.querySelector("#hint-" + k); h.textContent = keepHint.textContent; h.className = keepHint.className;
     }
@@ -626,8 +643,97 @@ button { cursor: pointer; }
   let toastT;
   function toast(msg) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 2200); }
 
+  // ---------- sync read articles across devices ----------
+  // Read marks live in a secret gist on Scott's GitHub. The token is pasted into
+  // Reader on each device and kept only in that device's storage.
+  const SYNC_FILE = "reader-sync.json", KEEP_MS = 45 * 864e5;
+  function syncToken() { return store.get("syncToken", ""); }
+  function syncSoon(ms = 2500) {
+    if (syncQuiet || !syncToken()) return;
+    clearTimeout(syncT); syncT = setTimeout(syncNow, ms);
+  }
+  async function gh(path, opt = {}) {
+    const headers = { Accept: "application/vnd.github+json", Authorization: "Bearer " + syncToken() };
+    if (opt.body) headers["Content-Type"] = "application/json";
+    const r = await fetch("https://api.github.com" + path, { ...opt, headers, cache: "no-store" });
+    if (!r.ok) { const e = new Error("HTTP " + r.status); e.status = r.status; throw e; }
+    return r.json();
+  }
+  async function findGist() {
+    let id = store.get("syncGist", "");
+    if (id) return id;
+    for (let page = 1; page <= 10 && !id; page++) {
+      const list = await gh(`/gists?per_page=100&page=${page}`);
+      const g = list.find(g => g.files && g.files[SYNC_FILE]);
+      if (g) id = g.id; else if (list.length < 100) break;
+    }
+    if (!id) id = (await gh("/gists", { method: "POST", body: JSON.stringify({
+      description: "Reader: read articles, synced across devices", public: false,
+      files: { [SYNC_FILE]: { content: JSON.stringify({ v: 1, marks: {} }) } } }) })).id;
+    store.set("syncGist", id);
+    return id;
+  }
+  async function readGist(id) {
+    const g = await gh("/gists/" + id), f = g.files && g.files[SYNC_FILE];
+    if (!f) return {};
+    let text = f.content;
+    if (f.truncated) text = await (await fetch(f.raw_url, { cache: "no-store" })).text();
+    try { const j = JSON.parse(text || "{}"); return j && j.marks && typeof j.marks === "object" ? j.marks : {}; } catch { return {}; }
+  }
+  // marks: itemId -> ts read, or -ts when marked unread. The newer mark wins.
+  function mergeMarks(remote) {
+    let changed = false;
+    for (const [id, v] of Object.entries(remote)) {
+      if (typeof v !== "number" || !v) continue;
+      if (v > 0) { if (!read[id] && !(tomb[id] >= v)) { read[id] = v; delete tomb[id]; changed = true; } }
+      else if (!(tomb[id] >= -v) && !(read[id] > -v)) { if (read[id]) { delete read[id]; changed = true; } tomb[id] = -v; }
+    }
+    const cut = Date.now() - KEEP_MS, out = {};
+    for (const [id, t] of Object.entries(read)) if (t > cut) out[id] = t;
+    for (const [id, t] of Object.entries(tomb)) { if (t > cut) out[id] = -t; else delete tomb[id]; }
+    const keys = Object.keys(out);
+    const same = keys.length === Object.keys(remote).length && keys.every(k => remote[k] === out[k]);
+    return { changed, out, same };
+  }
+  function syncNow() {
+    clearTimeout(syncT); syncT = null;
+    if (!syncToken()) return Promise.resolve();
+    if (syncing) { syncAgain = true; return syncing; }
+    const before = syncMsg;
+    syncing = (async () => {
+      let changed = false;
+      try {
+        let id = await findGist(), remote;
+        try { remote = await readGist(id); }
+        catch (e) { if (e.status !== 404) throw e; store.set("syncGist", ""); id = await findGist(); remote = await readGist(id); }
+        const m = mergeMarks(remote); changed = m.changed;
+        syncQuiet = true; store.set("tomb", tomb); store.set("read", read); syncQuiet = false;
+        if (!m.same) await gh("/gists/" + id, { method: "PATCH", body: JSON.stringify({ files: { [SYNC_FILE]: { content: JSON.stringify({ v: 1, marks: m.out }) } } }) });
+        syncMsg = "";
+      } catch (e) {
+        syncQuiet = false;
+        syncMsg = e.status === 401 || e.status === 403 || e.status === 404
+          ? "GitHub didn't accept this token. Remove it and paste one that can read and write gists."
+          : "Couldn't sync just now. It'll try again.";
+      } finally {
+        syncing = null;
+        if (changed || syncMsg !== before) render();
+        if (syncAgain) { syncAgain = false; syncSoon(500); }
+      }
+    })();
+    return syncing;
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (!syncToken()) return;
+    if (!document.hidden) syncSoon(300);
+    else if (syncT) syncNow();
+  });
+
   // ---------- events ----------
-  function markRead(id, on) { for (const c of copiesOf(id)) { if (on) read[c] = Date.now(); else delete read[c]; } store.set("read", read); render(); }
+  function markRead(id, on) {
+    for (const c of copiesOf(id)) { if (on) { read[c] = Date.now(); delete tomb[c]; } else { delete read[c]; tomb[c] = Date.now(); } }
+    store.set("tomb", tomb); store.set("read", read); render();
+  }
   document.addEventListener("click", e => {
     const open = e.target.closest("[data-open]");
     if (open) { e.preventDefault(); openArticle(open.dataset.open); return; }
@@ -637,9 +743,18 @@ button { cursor: pointer; }
     if (pick) { if (view) closeArticle(false); selected = pick.dataset.pick; pendingRemove = null; $("sheetWrap").hidden = true; render(); $("scroller").scrollTop = 0; return; }
     const rm = e.target.closest("[data-remove]");
     if (rm) { const id = rm.dataset.remove; if (pendingRemove === id) removeFeed(id); else { pendingRemove = id; render(); } return; }
+    if (e.target.closest("[data-sync-off]")) { clearTimeout(syncT); store.set("syncToken", ""); store.set("syncGist", ""); syncMsg = ""; render(); toast("Sync is off on this device"); return; }
     if (e.target.closest("[data-close]") || e.target === $("sheetWrap")) { $("sheetWrap").hidden = true; pendingRemove = null; render(); return; }
   });
   document.addEventListener("submit", e => {
+    const sf = e.target.closest("[data-sync]");
+    if (sf) {
+      e.preventDefault();
+      const v = sf.querySelector("input").value.trim(); if (!v) return;
+      store.set("syncToken", v); store.set("syncGist", ""); syncMsg = "Connecting…"; render();
+      syncNow().then(() => { if (!syncMsg) toast("Sync is on"); });
+      return;
+    }
     const form = e.target.closest("[data-add]"); if (!form) return;
     e.preventDefault();
     addFeed(form.querySelector("input"), form.parentElement.querySelector(".hint"), form.querySelector("button"));
@@ -650,8 +765,8 @@ button { cursor: pointer; }
   $("fUnread").onclick = () => { filter = "unread"; store.set("filter", filter); render(); };
   $("markAll").onclick = () => {
     const now = Date.now();
-    for (const i of allItems()) if (selected === "all" || i.feedId === selected) read[i.id] = read[i.id] || now;
-    store.set("read", read); render();
+    for (const i of allItems()) if (selected === "all" || i.feedId === selected) { read[i.id] = read[i.id] || now; delete tomb[i.id]; }
+    store.set("tomb", tomb); store.set("read", read); render();
   };
 
   // ---------- article view ----------
@@ -700,7 +815,7 @@ button { cursor: pointer; }
         <div class="art-body">${body || (it.snippet ? `<p>${esc(it.snippet)}</p>` : "")}</div>
         ${it.link ? `<a class="art-open" href="${esc(it.link)}" target="_blank" rel="noopener">Read the full article</a>` : ""}
         ${view.idx === 0 && view.ids.length > 1 ? `<p class="art-hint">Swipe left for the next article.</p>` : ""}`;
-      if (!read[id]) { read[id] = Date.now(); store.set("read", read); }
+      if (!read[id]) { read[id] = Date.now(); delete tomb[id]; store.set("tomb", tomb); store.set("read", read); }
     }
     $("artPos").textContent = (view.idx + 1) + " of " + view.ids.length;
     $("artPrev").disabled = view.idx <= 0;
@@ -820,6 +935,7 @@ button { cursor: pointer; }
   if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 
   render();
+  if (syncToken()) syncNow();
   if (Date.now() - lastRefresh > STALE_MS || !Object.keys(items).length) refresh(false);
 })();
 </script>
