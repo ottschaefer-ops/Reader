@@ -1196,14 +1196,22 @@ button { cursor: pointer; }
     if (go) refresh(true);
   });
 
-  document.addEventListener("visibilitychange", () => { if (!document.hidden && Date.now() - lastRefresh > STALE_MS) refresh(false); });
+  // A push since the last refresh means there are new articles to load.
+  async function pushedSince() {
+    try { const r = await caches.match("push-at", { cacheName: "reader-flags" }); return r ? +(await r.text()) > lastRefresh : false; } catch { return false; }
+  }
+  async function refreshIfStale() {
+    if (Date.now() - lastRefresh > STALE_MS || !Object.keys(items).length || await pushedSince()) refresh(false);
+  }
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshIfStale(); });
+  if ("serviceWorker" in navigator) navigator.serviceWorker.addEventListener("message", e => { if (e.data && e.data.type === "refresh") refresh(false); });
   setInterval(() => { if (!busy) statusLine(); }, 60000);
 
   if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});
 
   render();
   if (syncToken()) syncNow();
-  if (Date.now() - lastRefresh > STALE_MS || !Object.keys(items).length) refresh(false);
+  refreshIfStale();
 })();
 </script>
 </body>
