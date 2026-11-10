@@ -470,9 +470,24 @@ button { cursor: pointer; }
     if (added) { store.set("feedSync", feedSync); syncSoon(); }
     if (added || renamed) store.set("feeds", feeds);
   }
-  // The server copy is used as is when it's this fresh; a manual refresh always
-  // asks the sites too, so a new article shows up right away.
+  // The server copy is used as is when it's this fresh (when adding a feed).
   const FRESH_MS = 25 * 60e3;
+  // Public relays keep their own copies of a feed; a changing query string on
+  // the feed's address makes them fetch it again.
+  const bust = u => u + (u.includes("?") ? "&" : "?") + "_r=" + Math.floor(Date.now() / 60000);
+
+  // A refresh asks every source at once (the server copy, the site, each relay)
+  // and merges what each one returns as it arrives, so a quick but stale copy
+  // can't hide newer articles that a slower source has.
+  async function gatherFeed(url, onPart) {
+    let got = 0, title = "";
+    const take = r => { if (!r || !r.items) return; got++; if (r.title && !title) title = r.title; onPart(r.items); };
+    const live = getUrl => getText(getUrl, 10000).then(t => { if (looksHtml(t)) throw new Error("html"); take(parseXml(t, url)); });
+    await Promise.allSettled([viaServer(url).then(take), live(url), ...RELAYS.map(r => live(r(bust(url))))]);
+    if (!got) { try { take(await viaRss2json(url)); } catch {} }
+    if (!got) take(await loadFeed(url, 0, true)); // finds a moved feed, or throws the reason
+    return { title };
+  }
 
   async function loadFeed(url, depth = 0, live = false) {
     const errors = [];
@@ -515,8 +530,7 @@ button { cursor: pointer; }
     let fails = 0;
     await Promise.all(feeds.map(async f => {
       try {
-        const r = await loadFeed(f.url, 0, !!manual);
-        merge(f.id, r.items);
+        const r = await gatherFeed(f.url, part => { merge(f.id, part); renderSoon(); });
         if (r.title && (!f.title || f.title === f.url)) f.title = r.title;
         f.error = "";
       } catch (e) { f.error = e.message; fails++; }
@@ -621,6 +635,8 @@ button { cursor: pointer; }
     return new Date(ts).toLocaleDateString(undefined, { month: "short", day: "numeric" });
   }
   function setStatus(s) { $("status").textContent = s; }
+  let renderT = 0;
+  function renderSoon() { if (!renderT) renderT = setTimeout(() => { renderT = 0; render(); }, 250); }
   function statusLine() { setStatus(lastRefresh ? "Updated " + (Date.now() - lastRefresh < 60000 ? "just now" : rel(lastRefresh) + " ago") : ""); }
 
   function render() {
