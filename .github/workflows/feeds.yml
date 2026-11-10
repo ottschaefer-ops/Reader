@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [feeds.txt, .github/scripts/fetch_feeds.py, .github/workflows/feeds.yml]
+    paths: [feeds.txt, .github/scripts/fetch_feeds.py, .github/scripts/push_badge.py, .github/scripts/webpush.mjs, .github/workflows/feeds.yml]
 
 permissions:
   contents: write
@@ -27,6 +27,11 @@ jobs:
           if git fetch -q --depth=1 origin data; then git archive FETCH_HEAD | tar -x -C prev; fi
       - name: Fetch feeds
         run: python3 .github/scripts/fetch_feeds.py feeds.txt prev out
+      - name: Update the icon count on devices
+        continue-on-error: true
+        env:
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+        run: python3 .github/scripts/push_badge.py out
       - name: Publish to the data branch
         run: |
           cd out

@@ -615,25 +615,76 @@ button { cursor: pointer; }
 
   // ---------- unread count on the home screen icon ----------
   // iOS lets a home screen web app set its icon badge once notifications are allowed.
-  // It changes only while Reader is open: iOS gives web apps no background refresh.
+  // iOS gives web apps no background refresh, so on its own it changes only while Reader is open.
   const badgeApi = () => "setAppBadge" in navigator && "Notification" in window;
   const badgeOn = () => badgeApi() && Notification.permission === "granted" && !store.get("badgeOff", false);
+  const unreadCount = () => allItems(true).filter(i => !read[i.id]).length;
   let lastBadge = -1;
   function updateBadge() {
     if (!badgeApi()) return;
-    const n = badgeOn() ? allItems(true).filter(i => !read[i.id]).length : 0;
+    const n = badgeOn() ? unreadCount() : 0;
     if (n === lastBadge) return;
     lastBadge = n;
     (n ? navigator.setAppBadge(n) : navigator.clearAppBadge()).catch(() => {});
   }
+  // To update it while Reader is closed, the repo's feed job sends a push when
+  // new articles arrive. The push key pair is made here once and kept in the
+  // sync gist, where the job reads it.
+  const pushApi = () => badgeApi() && "PushManager" in window && "serviceWorker" in navigator;
+  const pushOn = () => store.get("pushOn", false) && !!store.get("pushSub", null);
+  const unb64u = s => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/") + "=".repeat((4 - s.length % 4) % 4)), c => c.charCodeAt(0));
+  const b64u = b => btoa(String.fromCharCode(...b)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+  let pushBusy = false;
+  async function enablePush() {
+    if (pushBusy) return;
+    pushBusy = true;
+    try {
+      if (Notification.permission === "default" && await Notification.requestPermission() !== "granted") throw new Error("not allowed");
+      const reg = await navigator.serviceWorker.ready;
+      let pub = store.get("pushPub", ""), made = null;
+      if (!pub) {
+        const kp = await crypto.subtle.generateKey({ name: "ECDSA", namedCurve: "P-256" }, true, ["sign"]);
+        const j = await crypto.subtle.exportKey("jwk", kp.privateKey);
+        pub = b64u(new Uint8Array([4, ...unb64u(j.x), ...unb64u(j.y)])); made = { pub, d: j.d };
+      }
+      let sub = await reg.pushManager.getSubscription();
+      const subKey = sub && sub.options && sub.options.applicationServerKey;
+      if (sub && subKey && b64u(new Uint8Array(subKey)) !== pub) { await sub.unsubscribe(); sub = null; }
+      if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: unb64u(pub) });
+      if (made) {
+        const id = await findGist(), g = await gh("/gists/" + id), f = g.files && g.files[KEY_FILE];
+        let theirs = null; try { theirs = f && JSON.parse(f.content); } catch {}
+        if (theirs && theirs.pub && theirs.d) {
+          store.set("pushPub", theirs.pub);
+          if (theirs.pub !== pub) { await sub.unsubscribe(); toast("Tap Update while closed again"); return; }
+        } else await gh("/gists/" + id, { method: "PATCH", body: JSON.stringify({ files: { [KEY_FILE]: { content: JSON.stringify(made) } } }) });
+        store.set("pushPub", pub);
+      }
+      store.set("pushSub", sub.toJSON()); store.set("pushOn", true); store.set("badgeOff", false);
+      await syncNow();
+      toast("The count now updates while Reader is closed");
+    } catch (e) {
+      toast(Notification.permission === "denied" ? "Allow notifications for Reader in Settings first" : "Couldn't turn that on. Try again.");
+    } finally { pushBusy = false; lastBadge = -1; render(); }
+  }
+  async function disablePush(sync = true) {
+    if (!store.get("pushOn", false)) return;
+    store.set("pushOn", false); store.set("pushSub", null);
+    try { const s = await (await navigator.serviceWorker.ready).pushManager.getSubscription(); if (s) await s.unsubscribe(); } catch {}
+    if (sync) syncNow();
+  }
   function badgeHtml() {
     if (!badgeApi()) return "";
     const p = Notification.permission;
-    const body = p === "denied"
-      ? `<p class="hint">Allow notifications for Reader in Settings to show the unread count on its icon.</p>`
-      : p !== "granted" || store.get("badgeOff", false)
-        ? `<p class="hint">Show how many articles are unread on Reader's icon.</p><button class="link-btn" data-badge-on>Show count on icon</button>`
-        : `<p class="hint">Reader's icon shows your unread count. It updates whenever Reader is open.</p><button class="link-btn" data-badge-off>Hide count</button>`;
+    let body;
+    if (p === "denied") body = `<p class="hint">Allow notifications for Reader in Settings to show the unread count on its icon.</p>`;
+    else if (p !== "granted" || store.get("badgeOff", false))
+      body = `<p class="hint">Show how many articles are unread on Reader's icon.</p><button class="link-btn" data-badge-on>Show count on icon</button>`;
+    else if (pushOn())
+      body = `<p class="hint">Reader's icon shows your unread count, and it updates while Reader is closed. New articles also send a notification.</p><button class="link-btn" data-badge-off>Hide count</button>`;
+    else if (pushApi() && syncToken())
+      body = `<p class="hint">Reader's icon shows your unread count. It updates whenever Reader is open.</p><button class="link-btn" data-push-on>Update while closed</button> <button class="link-btn" data-badge-off>Hide count</button>`;
+    else body = `<p class="hint">Reader's icon shows your unread count. It updates whenever Reader is open.${pushApi() ? " Add your GitHub token under Sync to also update it while Reader is closed." : ""}</p><button class="link-btn" data-badge-off>Hide count</button>`;
     return `<div class="sync"><h3>Icon badge</h3>${body}</div>`;
   }
 
@@ -684,7 +735,7 @@ button { cursor: pointer; }
   // ---------- sync read articles across devices ----------
   // Read marks live in a secret gist on Scott's GitHub. The token is pasted into
   // Reader on each device and kept only in that device's storage.
-  const SYNC_FILE = "reader-sync.json", KEEP_MS = 45 * 864e5;
+  const SYNC_FILE = "reader-sync.json", KEY_FILE = "reader-push-key.json", KEEP_MS = 45 * 864e5;
   function syncToken() { return store.get("syncToken", ""); }
   function syncSoon(ms = 2500) {
     if (syncQuiet || !syncToken()) return;
@@ -693,7 +744,8 @@ button { cursor: pointer; }
   async function gh(path, opt = {}) {
     const headers = { Accept: "application/vnd.github+json", Authorization: "Bearer " + syncToken() };
     if (opt.body) headers["Content-Type"] = "application/json";
-    const r = await fetch("https://api.github.com" + path, { ...opt, headers, cache: "no-store" });
+    const keepalive = document.hidden && !!opt.body && opt.body.length < 60000;
+    const r = await fetch("https://api.github.com" + path, { ...opt, headers, cache: "no-store", keepalive });
     if (!r.ok) { const e = new Error("HTTP " + r.status); e.status = r.status; throw e; }
     return r.json();
   }
@@ -716,7 +768,8 @@ button { cursor: pointer; }
     if (!f) return {};
     let text = f.content;
     if (f.truncated) text = await (await fetch(f.raw_url, { cache: "no-store" })).text();
-    try { const j = JSON.parse(text || "{}"); return j && typeof j === "object" ? j : {}; } catch { return {}; }
+    let key = null; try { key = g.files[KEY_FILE] && JSON.parse(g.files[KEY_FILE].content); } catch {}
+    try { const j = JSON.parse(text || "{}"); return j && typeof j === "object" ? { ...j, pushKey: key } : { pushKey: key }; } catch { return { pushKey: key }; }
   }
   // marks: itemId -> ts read, or -ts when marked unread. The newer mark wins.
   function mergeMarks(remote) {
@@ -761,6 +814,32 @@ button { cursor: pointer; }
     const same = JSON.stringify(Object.keys(out).sort().map(k => [k, out[k].ts])) === JSON.stringify(Object.keys(remote).sort().map(k => [k, remote[k] && remote[k].ts]));
     return { added, removed, out, same };
   }
+  // subs: deviceId -> { s: push subscription, ts }. Each device keeps only its own entry.
+  function mergeSubs(remote) {
+    const out = {}, ok = v => v && typeof v === "object" && v.s && v.s.endpoint;
+    if (remote && typeof remote === "object") for (const [k, v] of Object.entries(remote)) if (ok(v)) out[k] = v;
+    const dev = deviceId(), mine = store.get("pushOn", false) && store.get("pushSub", null);
+    if (mine && mine.endpoint) { if (!out[dev] || out[dev].s.endpoint !== mine.endpoint) out[dev] = { s: mine, ts: Date.now() }; }
+    else delete out[dev];
+    const ends = o => JSON.stringify(Object.keys(o || {}).sort().map(k => ok(o[k]) ? o[k].s.endpoint : ""));
+    return { out, same: ends(out) === ends(remote) };
+  }
+  // seen: the unread count and each feed's newest article on the device that
+  // last had Reader open. The feed job counts what's newer for the icon.
+  function seenNow(remote) {
+    if (!lastRefresh) return { out: remote || null, same: true };
+    const at = {};
+    for (const f of feeds) { const l = items[f.id] || []; if (l.length) at[feedKey(f.url)] = Math.max(...l.map(i => i.ts)); }
+    if (!Object.keys(at).length) return { out: remote || null, same: true };
+    const n = unreadCount(), flat = o => JSON.stringify(Object.entries(o || {}).sort());
+    const same = !!remote && remote.n === n && flat(remote.at) === flat(at);
+    return { out: same ? remote : { t: Date.now(), n, at }, same };
+  }
+  function deviceId() {
+    let id = store.get("deviceId", "");
+    if (!id) { id = Math.random().toString(36).slice(2, 10) + Date.now().toString(36); store.set("deviceId", id); }
+    return id;
+  }
   function syncNow() {
     clearTimeout(syncT); syncT = null;
     if (!syncToken()) return Promise.resolve();
@@ -778,7 +857,9 @@ button { cursor: pointer; }
         if (fm.added || fm.removed) { syncQuiet = true; store.set("feeds", feeds); store.set("items", items); store.set("feedSync", feedSync); syncQuiet = false; }
         if (fm.added) setTimeout(() => refresh(false), 0);
         syncQuiet = true; store.set("tomb", tomb); store.set("read", read); syncQuiet = false;
-        if (!m.same || !fm.same) await gh("/gists/" + id, { method: "PATCH", body: JSON.stringify({ files: { [SYNC_FILE]: { content: JSON.stringify({ v: 2, marks: m.out, feeds: fm.out }) } } }) });
+        if (remote.pushKey && remote.pushKey.pub && remote.pushKey.pub !== store.get("pushPub", "")) store.set("pushPub", remote.pushKey.pub);
+        const sb = mergeSubs(remote.subs), sn = seenNow(remote.seen);
+        if (!m.same || !fm.same || !sb.same || !sn.same) await gh("/gists/" + id, { method: "PATCH", body: JSON.stringify({ files: { [SYNC_FILE]: { content: JSON.stringify({ v: 2, marks: m.out, feeds: fm.out, subs: sb.out, seen: sn.out }) } } }) });
         syncMsg = "";
       } catch (e) {
         syncQuiet = false;
@@ -796,7 +877,7 @@ button { cursor: pointer; }
   document.addEventListener("visibilitychange", () => {
     if (!syncToken()) return;
     if (!document.hidden) syncSoon(300);
-    else if (syncT) syncNow();
+    else syncNow();
   });
 
   // ---------- events ----------
@@ -815,12 +896,14 @@ button { cursor: pointer; }
     if (rm) { const id = rm.dataset.remove; if (pendingRemove === id) removeFeed(id); else { pendingRemove = id; render(); } return; }
     if (e.target.closest("[data-badge-on]")) {
       store.set("badgeOff", false);
+      if (pushApi() && syncToken()) { enablePush(); return; }
       const go = () => { lastBadge = -1; render(); };
       if (Notification.permission === "default") Notification.requestPermission().then(go, go); else go();
       return;
     }
-    if (e.target.closest("[data-badge-off]")) { store.set("badgeOff", true); lastBadge = -1; render(); return; }
-    if (e.target.closest("[data-sync-off]")) { clearTimeout(syncT); store.set("syncToken", ""); store.set("syncGist", ""); syncMsg = ""; render(); toast("Sync is off on this device"); return; }
+    if (e.target.closest("[data-push-on]")) { enablePush(); return; }
+    if (e.target.closest("[data-badge-off]")) { store.set("badgeOff", true); disablePush(); lastBadge = -1; render(); return; }
+    if (e.target.closest("[data-sync-off]")) { disablePush(false); clearTimeout(syncT); store.set("syncToken", ""); store.set("syncGist", ""); syncMsg = ""; render(); toast("Sync is off on this device"); return; }
     if (e.target.closest("[data-close]") || e.target === $("sheetWrap")) { $("sheetWrap").hidden = true; pendingRemove = null; render(); return; }
   });
   document.addEventListener("submit", e => {
