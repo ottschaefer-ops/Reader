@@ -441,13 +441,15 @@ button { cursor: pointer; }
     store.set("serverKnown", [...known]);
     if (added || renamed) store.set("feeds", feeds);
   }
-  const FRESH_MS = 3 * 3600e3;
+  // The server copy is used as is when it's this fresh; a manual refresh always
+  // asks the sites too, so a new article shows up right away.
+  const FRESH_MS = 25 * 60e3;
 
-  async function loadFeed(url, depth = 0) {
+  async function loadFeed(url, depth = 0, live = false) {
     const errors = [];
     let server = null;
     if (depth === 0) { try { server = await viaServer(url); } catch {} }
-    if (server && Date.now() - server.fetchedAt < FRESH_MS) return server;
+    if (server && !live && Date.now() - server.fetchedAt < FRESH_MS) return server;
     const attempt = async (getUrl, relayed) => {
       try {
         const txt = await getText(getUrl, 10000);
@@ -484,7 +486,7 @@ button { cursor: pointer; }
     let fails = 0;
     await Promise.all(feeds.map(async f => {
       try {
-        const r = await loadFeed(f.url);
+        const r = await loadFeed(f.url, 0, !!manual);
         merge(f.id, r.items);
         if (r.title && (!f.title || f.title === f.url)) f.title = r.title;
         f.error = "";
