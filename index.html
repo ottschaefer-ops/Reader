@@ -610,6 +610,31 @@ button { cursor: pointer; }
     renderFeeds($("side"), "s");
     if (!$("sheetWrap").hidden) renderFeeds($("sheet"), "m");
     if (!busy) statusLine();
+    updateBadge();
+  }
+
+  // ---------- unread count on the home screen icon ----------
+  // iOS lets a home screen web app set its icon badge once notifications are allowed.
+  // It changes only while Reader is open: iOS gives web apps no background refresh.
+  const badgeApi = () => "setAppBadge" in navigator && "Notification" in window;
+  const badgeOn = () => badgeApi() && Notification.permission === "granted" && !store.get("badgeOff", false);
+  let lastBadge = -1;
+  function updateBadge() {
+    if (!badgeApi()) return;
+    const n = badgeOn() ? allItems(true).filter(i => !read[i.id]).length : 0;
+    if (n === lastBadge) return;
+    lastBadge = n;
+    (n ? navigator.setAppBadge(n) : navigator.clearAppBadge()).catch(() => {});
+  }
+  function badgeHtml() {
+    if (!badgeApi()) return "";
+    const p = Notification.permission;
+    const body = p === "denied"
+      ? `<p class="hint">Allow notifications for Reader in Settings to show the unread count on its icon.</p>`
+      : p !== "granted" || store.get("badgeOff", false)
+        ? `<p class="hint">Show how many articles are unread on Reader's icon.</p><button class="link-btn" data-badge-on>Show count on icon</button>`
+        : `<p class="hint">Reader's icon shows your unread count. It updates whenever Reader is open.</p><button class="link-btn" data-badge-off>Hide count</button>`;
+    return `<div class="sync"><h3>Icon badge</h3>${body}</div>`;
   }
 
   function renderFeeds(host, k) {
@@ -644,7 +669,8 @@ button { cursor: pointer; }
                <button type="submit">Save</button>
              </form>
              <p class="hint">Paste a GitHub token that can read and write gists, on each device, to sync feeds and read articles.</p>`}
-      </div>`;
+      </div>
+      ${badgeHtml()}`;
     host.querySelector("input").value = keepVal;
     const tokIn = host.querySelector("[data-sync] input"); if (tokIn) tokIn.value = keepTok;
     if (keepHint && keepHint.id === "hint-" + k && keepHint.textContent !== "Paste a feed link or a site's address.") {
@@ -787,6 +813,13 @@ button { cursor: pointer; }
     if (pick) { if (view) closeArticle(false); selected = pick.dataset.pick; pendingRemove = null; $("sheetWrap").hidden = true; render(); $("scroller").scrollTop = 0; return; }
     const rm = e.target.closest("[data-remove]");
     if (rm) { const id = rm.dataset.remove; if (pendingRemove === id) removeFeed(id); else { pendingRemove = id; render(); } return; }
+    if (e.target.closest("[data-badge-on]")) {
+      store.set("badgeOff", false);
+      const go = () => { lastBadge = -1; render(); };
+      if (Notification.permission === "default") Notification.requestPermission().then(go, go); else go();
+      return;
+    }
+    if (e.target.closest("[data-badge-off]")) { store.set("badgeOff", true); lastBadge = -1; render(); return; }
     if (e.target.closest("[data-sync-off]")) { clearTimeout(syncT); store.set("syncToken", ""); store.set("syncGist", ""); syncMsg = ""; render(); toast("Sync is off on this device"); return; }
     if (e.target.closest("[data-close]") || e.target === $("sheetWrap")) { $("sheetWrap").hidden = true; pendingRemove = null; render(); return; }
   });
