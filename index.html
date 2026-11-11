@@ -427,8 +427,8 @@ button { cursor: pointer; }
 
   // The repo's own workflow fetches the feeds in feeds.txt every 20 minutes
   // into the data branch, which the app reads first. Feeds not on that list,
-  // or a server copy gone stale, fall back to asking the site and three public
-  // relays at once, then rss2json (up to 10 items).
+  // or a server copy gone stale, are also asked of the site, three public
+  // relays and rss2json (up to 10 items), all at once.
   const DATA = "https://raw.githubusercontent.com/ottschaefer-ops/Reader/data/";
   const feedKey = u => String(u || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/+$/, "");
   let indexPromise = null;
@@ -483,8 +483,7 @@ button { cursor: pointer; }
     let got = 0, title = "";
     const take = r => { if (!r || !r.items) return; got++; if (r.title && !title) title = r.title; onPart(r.items); };
     const live = getUrl => getText(getUrl, 10000).then(t => { if (looksHtml(t)) throw new Error("html"); take(parseXml(t, url)); });
-    await Promise.allSettled([viaServer(url).then(take), live(url), ...RELAYS.map(r => live(r(bust(url))))]);
-    if (!got) { try { take(await viaRss2json(url)); } catch {} }
+    await Promise.allSettled([viaServer(url).then(take), live(url), ...RELAYS.map(r => live(r(bust(url)))), viaRss2json(url).then(take)]);
     if (!got) take(await loadFeed(url, 0, true)); // finds a moved feed, or throws the reason
     return { title };
   }
