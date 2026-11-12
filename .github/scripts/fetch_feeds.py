@@ -177,6 +177,8 @@ def add_page(body, page_url, prev_body, now):
     if not re.search(rb"<rss\b", body[:2000]):
         return body, 0
     final, raw = get(page_url)
+    if os.environ.get("PAGE_DUMP"):
+        open(os.environ["PAGE_DUMP"], "wb").write(raw)
     have = {key(l) for l in dated_links(body)}
     before = {key(l): t for l, t in dated_links(prev_body).items()} if prev_body else {}
     esc = lambda t: html.escape(t, quote=False)
@@ -221,7 +223,7 @@ def main():
         entry = {"url": url, "file": path}
         try:
             final, body, title = fetch(url)
-            kept, last, note = os.path.join(prev, path), None, ""
+            kept, last, note, page_failed = os.path.join(prev, path), None, "", False
             if os.path.exists(kept):
                 with open(kept, "rb") as fh:
                     last = fh.read()
@@ -230,9 +232,9 @@ def main():
                     body, n = add_page(body, page, last, now)
                     note = " +%d from the page" % n
                 except Exception as e:
-                    note = " (page failed: %s)" % str(e)[:80]
-            if last and newest(last) > newest(body):
-                body, note = last, note + " (site gave an older copy; kept the last one)"
+                    page_failed, note = True, " (page failed: %s)" % str(e)[:80]
+            if last and (page_failed if page else newest(last) > newest(body)):
+                body, note = last, note + " (kept the last copy)"
             with open(os.path.join(out, path), "wb") as fh:
                 fh.write(body)
             entry.update(final=final, title=html.unescape(title), fetchedAt=now, ok=True)

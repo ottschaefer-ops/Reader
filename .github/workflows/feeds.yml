@@ -49,7 +49,7 @@ jobs:
             done
             start=$(date +%s)
             rm -rf out
-            if python3 .github/scripts/fetch_feeds.py feeds.txt prev out; then
+            if PAGE_DUMP=out/page.html python3 .github/scripts/fetch_feeds.py feeds.txt prev out; then
               python3 .github/scripts/push_badge.py out || echo "push step failed"
               (
                 cd out
