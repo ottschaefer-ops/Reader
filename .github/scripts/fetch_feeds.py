@@ -140,12 +140,12 @@ def text_of(fragment):
 
 def page_items(page_url, page, now):
     """Headlines on a news page: a heading holding a link, with a date
-    (DD/MM/YYYY or YYYY-MM-DD) between it and the heading before or after."""
+    (DD/MM/YYYY or YYYY-MM-DD) between it and the heading before."""
     host = key(page_url).split("/")[0]
     out, seen = [], set()
     heads = list(re.finditer(r"<h([1-4])\b[^>]*>(.*?)</h\1>", page, re.S | re.I))
     for i, m in enumerate(heads):
-        # The date sits between this heading and the ones around it.
+        # The date sits between the heading before and this one.
         lo = max(heads[i - 1].end() if i else 0, m.start() - 1500)
         hi = min(heads[i + 1].start() if i + 1 < len(heads) else len(page), m.end() + 600)
         a = re.search(r"<a\b[^>]*\bhref=[\"']([^\"'#]+)[\"'][^>]*>(.*?)</a>", m.group(2), re.S | re.I)
@@ -157,13 +157,18 @@ def page_items(page_url, page, now):
             continue
         pat = r"\b(\d{2})/(\d{2})/(\d{4})\b|\b(\d{4})-(\d{2})-(\d{2})\b"
         before = list(re.finditer(pat, page[lo:m.start()]))
-        d = before[-1] if before else re.search(pat, page[m.end():hi])
-        if not d:
+        if not before:
+            continue
+        d = before[-1]
+        # A date in another block (a list or section that closed) isn't this headline's.
+        if re.search(r"</(section|article|li|ul|ol|table|nav|header|footer)\b", page[lo + d.end():m.start()], re.I):
             continue
         g = d.groups()
         try:
             day = datetime(int(g[2] or g[3]), int(g[1] or g[4]), int(g[0] or g[5]), 12, tzinfo=timezone.utc)
         except ValueError:
+            continue
+        if day.timestamp() * 1000 > now + 864e5:
             continue
         p = re.search(r"<p\b[^>]*>(.*?)</p>", page[m.end():hi + 900 if hi == m.end() + 600 else hi], re.S | re.I)
         seen.add(link)
@@ -177,8 +182,6 @@ def add_page(body, page_url, prev_body, now):
     if not re.search(rb"<rss\b", body[:2000]):
         return body, 0
     final, raw = get(page_url)
-    if os.environ.get("PAGE_DUMP"):
-        open(os.environ["PAGE_DUMP"], "wb").write(raw)
     have = {key(l) for l in dated_links(body)}
     before = {key(l): t for l, t in dated_links(prev_body).items()} if prev_body else {}
     esc = lambda t: html.escape(t, quote=False)
