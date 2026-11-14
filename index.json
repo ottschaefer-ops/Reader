@@ -1,0 +1,119 @@
+{
+ "updated": 1794676667142,
+ "list": [
+  {
+   "url": "https://feeds.npr.org/1001/rss.xml",
+   "title": "NPR News"
+  },
+  {
+   "url": "https://riviantrackr.com/feed/",
+   "title": "RivianTrackr"
+  },
+  {
+   "url": "https://9to5mac.com/guides/apple-intelligence/feed/",
+   "title": "9 to 5 Mac - Apple Intelligence"
+  },
+  {
+   "url": "https://9to5mac.com/feed/",
+   "title": "9 to 5 Mac"
+  },
+  {
+   "url": "https://appleinsider.com/rss/news/",
+   "title": "AppleInsider"
+  },
+  {
+   "url": "https://www.motor1.com/rss/make/porsche/",
+   "title": "Porsche - Automotive News and Trends"
+  },
+  {
+   "url": "https://newsroom.porsche.com/rss/EN/index.rss",
+   "title": "Porsche Newsroom"
+  },
+  {
+   "url": "https://www.rivianwave.com/rss",
+   "title": "Rivian Wave"
+  }
+ ],
+ "feeds": {
+  "feeds.npr.org/1001/rss.xml": {
+   "url": "https://feeds.npr.org/1001/rss.xml",
+   "file": "f/03e8cf4a184b.xml",
+   "final": "https://feeds.npr.org/1001/rss.xml",
+   "title": "NPR Topics: News",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "riviantrackr.com/feed": {
+   "url": "https://riviantrackr.com/feed/",
+   "file": "f/9c56459fcff8.xml",
+   "final": "https://riviantrackr.com/feed/",
+   "title": "RivianTrackr",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "riviantrackr.com": {
+   "url": "https://riviantrackr.com/feed/",
+   "file": "f/9c56459fcff8.xml",
+   "final": "https://riviantrackr.com/feed/",
+   "title": "RivianTrackr",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "9to5mac.com/guides/apple-intelligence/feed": {
+   "url": "https://9to5mac.com/guides/apple-intelligence/feed/",
+   "file": "f/075256d78b46.xml",
+   "final": "https://9to5mac.com/guides/apple-intelligence/feed/",
+   "title": "Apple Intelligence Archives - 9to5Mac",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "9to5mac.com/feed": {
+   "url": "https://9to5mac.com/feed/",
+   "file": "f/53f861e871ed.xml",
+   "final": "https://9to5mac.com/feed/",
+   "title": "9to5Mac",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "appleinsider.com/rss/news": {
+   "url": "https://appleinsider.com/rss/news/",
+   "file": "f/44055d4cf47a.xml",
+   "final": "https://appleinsider.com/rss/news/",
+   "title": "AppleInsider News",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "motor1.com/rss/make/porsche": {
+   "url": "https://www.motor1.com/rss/make/porsche/",
+   "file": "f/1ec85e7142e4.xml",
+   "final": "https://www.motor1.com/rss/make/porsche/",
+   "title": "Porsche - Automotive News and Trends | Motor1.com",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "newsroom.porsche.com/rss/en/index.rss": {
+   "url": "https://newsroom.porsche.com/rss/EN/index.rss",
+   "file": "f/9da82810501d.xml",
+   "final": "https://newsroom.porsche.com/rss/EN/index.rss",
+   "title": "Porsche Newsroom",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "rivianwave.com/rss": {
+   "url": "https://www.rivianwave.com/rss",
+   "file": "f/f78541fdbf6a.xml",
+   "final": "https://www.rivianwave.com/rss",
+   "title": "Rivian Wave",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  },
+  "rivianwave.com": {
+   "url": "https://www.rivianwave.com/rss",
+   "file": "f/f78541fdbf6a.xml",
+   "final": "https://www.rivianwave.com/rss",
+   "title": "Rivian Wave",
+   "fetchedAt": 1794676667142,
+   "ok": true
+  }
+ }
+}

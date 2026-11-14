@@ -1,0 +1,2323 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>9to5Mac</title>
+	<atom:link href="https://9to5mac.com/feed/" rel="self" type="application/rss+xml" />
+	<link>https://9to5mac.com/</link>
+	<description>Apple News &#38; Mac Rumors Breaking All Day</description>
+	<lastBuildDate>Sat, 14 Nov 2026 13:05:07 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=7.1.4</generator>
+
+<image>
+	<url>https://9to5mac.com/wp-content/uploads/sites/6/2019/10/cropped-cropped-mac1-1.png?w=32</url>
+	<title>9to5Mac</title>
+	<link>https://9to5mac.com/</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<site xmlns="com-wordpress:feed-additions:1">146091842</site>	<item>
+		<title>Apple @ Work: The spiritual successor to the Xserve is here, thanks to Apple silicon and MLX</title>
+		<link>https://9to5mac.com/2026/11/14/apple-work-the-spiritual-successor-to-the-xserve-is-here-and-apple-never-had-to-ship-an-llm-to-get-there/</link>
+					<comments>https://9to5mac.com/2026/11/14/apple-work-the-spiritual-successor-to-the-xserve-is-here-and-apple-never-had-to-ship-an-llm-to-get-there/#respond</comments>
+		
+		<dc:creator><![CDATA[Bradley C]]></dc:creator>
+		<pubDate>Sat, 14 Nov 2026 14:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1075100</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/apple-at-work-27.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><em><a href="https://mosyle.net/3RDn" target="_blank" rel="noreferrer noopener">Apple @ Work is exclusively brought to you by Mosyle</a>, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional grade platform all the solutions necessary to seamlessly and automatically deploy, manage, and protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work ready with no effort and at an affordable cost. <a href="https://mosyle.net/3RDn" target="_blank" rel="noreferrer noopener">Request your EXTENDED TRIAL</a> today and understand why Mosyle is everything you need to work with Apple</em>.</p>
+
+
+
+<p class="wp-block-paragraph">I’ve spent the past few weeks thinking about how Apple built up the best deal in enterprise AI. Two things happened that make me think Apple knew that all along (or maybe they didn’t and got lucky). Meta <a href="https://9to5mac.com/2026/10/15/meta-launches-new-muse-spark-open-model-optimized-to-run-on-mac-studio/">released</a> its most capable open-weight model yet and optimized it to run on a Mac Studio. I also spent time with Osaurus, an app that runs a usable local AI model on something as small as a 16 GB Apple silicon laptop without needing a network connection. They even have two models that will run on 8 GB.</p>
+
+
+
+<p class="wp-block-paragraph">The Xserve has been dead since 2011, but its spiritual successor sits on a desk rather than in a rack.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-at-work" data-layer-viewtype="unknown" data-post-id="1075100" href="https://9to5mac.com/2026/11/14/apple-work-the-spiritual-successor-to-the-xserve-is-here-and-apple-never-had-to-ship-an-llm-to-get-there/#more-1075100" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/14/apple-work-the-spiritual-successor-to-the-xserve-is-here-and-apple-never-had-to-ship-an-llm-to-get-there/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1075100</post-id>	</item>
+		<item>
+		<title>Early Black Friday Apple deals: AirPods, AirTag 2, MacBook Air, Apple Pencil, Mac mini, more</title>
+		<link>https://9to5mac.com/2026/11/14/early-black-friday-apple-deals-apple-tv-4k-airpods/</link>
+					<comments>https://9to5mac.com/2026/11/14/early-black-friday-apple-deals-apple-tv-4k-airpods/#respond</comments>
+		
+		<dc:creator><![CDATA[Justin Kahn]]></dc:creator>
+		<pubDate>Sat, 14 Nov 2026 13:05:05 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079622</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Early-Black-Friday-Apple-deals-Apple-TV-4K-AirPods.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Alongside the release of the new<a href="https://link.amazon/B09Sbqnjp"> Apple TV 4K</a>, we also have loads of the <a href="https://link.amazon/B04mOOpXS">early Black Friday offers</a> flying with the lowest prices to date on <a href="https://link.amazon/B0194rqAp">AirTag 2 at $17.50</a>, rare discounts on <a href="https://link.amazon/B0h1rXrwC">Magic Mouse</a>, the lowest price yet on the 2026 Magic Keyboard and more, alongside the <a href="https://link.amazon/B0iPLc4Pq">$50 price drop on AirPods Pro 3</a>. </p>
+
+
+
+<p class="wp-block-paragraph">This week’s impressive $250 price drops on <a href="https://link.amazon/B01UhxPzV">M5 MacBook Air</a> are also joined by <a href="https://link.amazon/B04dhCZ8F">M6 Mac mini at up to <strong>$150 off</strong></a>, the best prices to date on <a href="https://link.amazon/B0iO3mH7D">Apple Watch Ultra 4 at nearly $100 off</a>, the iPhone Duo-ready Apple Pencil USB-C, chargers, official Apple iPhone 18 Pro cases, and more. Check it all out below.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5toys,9to5toys-lunch-break,deals" data-layer-viewtype="unknown" data-post-id="1079622" href="https://9to5mac.com/2026/11/14/early-black-friday-apple-deals-apple-tv-4k-airpods/#more-1079622" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/14/early-black-friday-apple-deals-apple-tv-4k-airpods/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079622</post-id>	</item>
+		<item>
+		<title>Tired of paying for cloud storage every month? pCloud’s Black Friday Lifetime deal is the cure for subscription fatigue</title>
+		<link>https://9to5mac.com/2026/11/13/tired-paying-cloud-storage-every-month-pclouds-black-friday-lifetime-deal-cure-subscription-fatigue/</link>
+					<comments>https://9to5mac.com/2026/11/13/tired-paying-cloud-storage-every-month-pclouds-black-friday-lifetime-deal-cure-subscription-fatigue/#comments</comments>
+		
+		<dc:creator><![CDATA[Sponsored Post]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 23:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1075516</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/pCloud-2.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Software used to be a one-time purchase, but over time, with the addition of cloud storage and services, everything has become a subscription. One company even <a href="https://www.thedrive.com/news/bmw-is-giving-up-on-heated-seat-subscriptions-because-people-hated-them">tried to make your car seat heaters a subscription</a>. Count the subscriptions you’re paying for right now: iCloud, a password manager, a couple of streaming services, a music service, maybe a VPN, and whatever other app decided this year that it needed to be $4.99 per month for something that used to be a one-time purchase.</p>
+
+
+
+<p class="wp-block-paragraph">Everything is a service now, and a lot of people are hitting the point where one more monthly charge is one too many on principle alone. Cloud storage is the one that’s hardest to cancel, because your photos and files are in it. That’s exactly why <a href="https://bit.ly/4kun0ae" data-type="link" data-id="https://bit.ly/4kun0ae" target="_blank" rel="noreferrer noopener sponsored nofollow">pCloud’s Lifetime plans</a> are worth a look this Black Friday: you pay once, and your storage is yours for life!</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1075516" href="https://9to5mac.com/2026/11/13/tired-paying-cloud-storage-every-month-pclouds-black-friday-lifetime-deal-cure-subscription-fatigue/#more-1075516" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/tired-paying-cloud-storage-every-month-pclouds-black-friday-lifetime-deal-cure-subscription-fatigue/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1075516</post-id>	</item>
+		<item>
+		<title>Apple details HomeView facial recognition, repair options, and more in new support guides</title>
+		<link>https://9to5mac.com/2026/11/13/apple-details-homeview-facial-recognition-repair-options-and-more-in-new-support-guides/</link>
+					<comments>https://9to5mac.com/2026/11/13/apple-details-homeview-facial-recognition-repair-options-and-more-in-new-support-guides/#comments</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 21:59:21 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079642</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/homeview-hand-touch.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Coinciding with the launch of Apple HomeView, the company has been updating its support website with new guides covering everything from facial recognition and user profiles to troubleshooting and repairs. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="homeview" data-layer-viewtype="unknown" data-post-id="1079642" href="https://9to5mac.com/2026/11/13/apple-details-homeview-facial-recognition-repair-options-and-more-in-new-support-guides/#more-1079642" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/apple-details-homeview-facial-recognition-repair-options-and-more-in-new-support-guides/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079642</post-id>	</item>
+		<item>
+		<title>9to5Mac Overtime 090: iPhone Duo honeymoon</title>
+		<link>https://9to5mac.com/2026/11/13/9to5mac-overtime-090-iphone-duo-honeymoon/</link>
+					<comments>https://9to5mac.com/2026/11/13/9to5mac-overtime-090-iphone-duo-honeymoon/#respond</comments>
+		
+		<dc:creator><![CDATA[Jeff Benjamin]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 21:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1077986</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/9to5Mac-Overtime-90.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">The Overtime crew revisits the iPhone Duo after prolonged usage. Is it still worth it without a telephoto lens or Face ID? We dig into its multitasking chops, standout FaceTime features, and how it stacks up against the Galaxy Z Fold 8. Plus, we break down Apple’s unprecedented product blitz and rumors of a second-gen MacBook Neo.</p>
+
+
+
+<ul class="wp-block-list">
+<li><strong><a href="https://bit.ly/4sEtlBZ">Sponsored by Memoket</a></strong>: Memoket Gem is an AI wearable that slots beside your Apple Watch. One press captures a conversation, and KITE memory connects it to what you said weeks ago. Save 10% with code LL86MDO6 on Amazon and <a href="https://bit.ly/4sEtlBZ">Memoket’s websit</a>e.</li>
+</ul>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5mac-overtime,podcast" data-layer-viewtype="unknown" data-post-id="1077986" href="https://9to5mac.com/2026/11/13/9to5mac-overtime-090-iphone-duo-honeymoon/#more-1077986" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/9to5mac-overtime-090-iphone-duo-honeymoon/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1077986</post-id>	</item>
+		<item>
+		<title>Epic formally asks SCOTUS to uphold contempt ruling against Apple</title>
+		<link>https://9to5mac.com/2026/11/13/epic-formally-asks-scotus-to-uphold-contempt-ruling-against-apple/</link>
+					<comments>https://9to5mac.com/2026/11/13/epic-formally-asks-scotus-to-uphold-contempt-ruling-against-apple/#comments</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 20:00:50 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079603</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2024/03/epic-app-store.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Epic Games has submitted its official response to Apple’s Supreme Court appeal, urging the justices to uphold the contempt ruling over App Store payment restrictions. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl,epic-games" data-layer-viewtype="unknown" data-post-id="1079603" href="https://9to5mac.com/2026/11/13/epic-formally-asks-scotus-to-uphold-contempt-ruling-against-apple/#more-1079603" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/epic-formally-asks-scotus-to-uphold-contempt-ruling-against-apple/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079603</post-id>	</item>
+		<item>
+		<title>Apple releases tvOS 27.2.1 and HomePod 27.2.1, here&#8217;s what&#8217;s new</title>
+		<link>https://9to5mac.com/2026/11/13/apple-releases-tvos-27-2-1-and-homepod-27-2-1-heres-whats-new/</link>
+					<comments>https://9to5mac.com/2026/11/13/apple-releases-tvos-27-2-1-and-homepod-27-2-1-heres-whats-new/#respond</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 19:33:08 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079578</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2024/12/apple-tv-homepod-mini.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple has just released tvOS 27.2.1 for Apple TV 4K and HomePod 27.2.1 for HomePod models, here’s what’s new.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="homepod,tvos-27" data-layer-viewtype="unknown" data-post-id="1079578" href="https://9to5mac.com/2026/11/13/apple-releases-tvos-27-2-1-and-homepod-27-2-1-heres-whats-new/#more-1079578" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/apple-releases-tvos-27-2-1-and-homepod-27-2-1-heres-whats-new/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079578</post-id>	</item>
+		<item>
+		<title>Perplexity brings AI agents feature called Teammates to the Mac</title>
+		<link>https://9to5mac.com/2026/11/13/perplexity-brings-ai-agents-feature-called-teammates-to-the-mac/</link>
+					<comments>https://9to5mac.com/2026/11/13/perplexity-brings-ai-agents-feature-called-teammates-to-the-mac/#respond</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 19:31:05 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079577</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/05/perplexity-mac-app.webp?w=1600" /></div><p class="wp-block-paragraph">This week, Perplexity has deployed its new proactive agentic AI feature called Teammates to the Mac. Perplexity Teammates were previously limited to iOS and the web.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ai,apps,mac,perplexity" data-layer-viewtype="unknown" data-post-id="1079577" href="https://9to5mac.com/2026/11/13/perplexity-brings-ai-agents-feature-called-teammates-to-the-mac/#more-1079577" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/perplexity-brings-ai-agents-feature-called-teammates-to-the-mac/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079577</post-id>	</item>
+		<item>
+		<title>iOS 27.3 adds three new features I’ve used almost every day</title>
+		<link>https://9to5mac.com/2026/11/13/ios-27-3-adds-three-new-features-ive-used-almost-every-day/</link>
+					<comments>https://9to5mac.com/2026/11/13/ios-27-3-adds-three-new-features-ive-used-almost-every-day/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 18:56:41 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079549</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/ios-27-3-iphone-fi.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">iOS 27.3 is coming <a href="https://9to5mac.com/2026/10/29/ios-27-3-release-date-heres-when-to-expect-new-iphone-features/" data-type="post" data-id="1076486">next month</a>, and during the beta so far there are three new features I’ve been using almost every day.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ios-27,ios-27-3" data-layer-viewtype="unknown" data-post-id="1079549" href="https://9to5mac.com/2026/11/13/ios-27-3-adds-three-new-features-ive-used-almost-every-day/#more-1079549" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/ios-27-3-adds-three-new-features-ive-used-almost-every-day/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079549</post-id>	</item>
+		<item>
+		<title>9to5Mac Daily: November 13, 2026 – New Apple TV 4K and HomeView now available</title>
+		<link>https://9to5mac.com/2026/11/13/daily-november-13-2026/</link>
+					<comments>https://9to5mac.com/2026/11/13/daily-november-13-2026/#respond</comments>
+		
+		<dc:creator><![CDATA[Seth Kurkowski]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 18:04:08 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079527</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">Listen to a recap of the top stories of the day from </span><em style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">9to5Mac</em><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">. 9to5Mac Daily is available </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://podcasts.apple.com/us/podcast/9to5mac-daily/id1331816080" target="_blank" rel="noreferrer noopener">on iTunes and Apple’s Podcasts app</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://www.stitcher.com/podcast/9to5mac-daily">Stitcher</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://tunein.com/radio/9to5Mac-Daily-p1089524/">TuneIn</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://play.google.com/music/m/I5d4dzs7dauazmfxvvrynyiuram?t=9to5Mac_Daily">Google Play</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, or through our </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://feedpress.me/9to5macdaily">dedicated RSS feed</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;"> for Overcast and other podcast players.</span></p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://bit.ly/41bWB64"><strong>Sponsored by Backblaze</strong></a>: Backup you can rely on. Save 20% with code <strong>9to5daily</strong>.</p>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/MacDaily_11-13-26.mp3"></audio></figure>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5mac-daily,podcast" data-layer-viewtype="unknown" data-post-id="1079527" href="https://9to5mac.com/2026/11/13/daily-november-13-2026/#more-1079527" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/daily-november-13-2026/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079527</post-id>	</item>
+		<item>
+		<title>This tiny iOS 27 camera feature really makes a huge difference</title>
+		<link>https://9to5mac.com/2026/11/13/this-tiny-ios-27-camera-feature-really-makes-a-huge-difference/</link>
+					<comments>https://9to5mac.com/2026/11/13/this-tiny-ios-27-camera-feature-really-makes-a-huge-difference/#respond</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 17:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079059</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/iPhone-18-Pro-and-iOS-27-customizable-controls.jpeg?quality=82&#038;strip=all&#038;w=1200" /></div><p class="wp-block-paragraph">When shooting both <a href="https://www.instagram.com/benlovejoyuk" target="_blank" rel="noreferrer noopener">photos</a> and <a href="https://www.youtube.com/@benlovejoy" target="_blank" rel="noreferrer noopener">videos</a> on my iPhone, I make regular use of a few different third-party apps, mostly because I like to take manual control.</p>
+
+
+
+<p class="wp-block-paragraph">But a combination of the new Pro controls on the <a href="https://9to5mac.com/guides/iphone-18-pro/" target="_blank" rel="noreferrer noopener">iPhone 18 Pro</a> and a new feature introduced with iOS 27 means there are more times when I can stick to Apple’s stock Camera app. If you aren’t already using customizable controls, I highly recommend doing so …</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ios-27,iphone-18-pro,iphone-diary" data-layer-viewtype="unknown" data-post-id="1079059" href="https://9to5mac.com/2026/11/13/this-tiny-ios-27-camera-feature-really-makes-a-huge-difference/#more-1079059" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/this-tiny-ios-27-camera-feature-really-makes-a-huge-difference/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079059</post-id>	</item>
+		<item>
+		<title>Apple Maps in iOS 27 has hidden new feature I&#8217;ve been loving</title>
+		<link>https://9to5mac.com/2026/11/13/apple-maps-in-ios-27-has-hidden-new-feature-ive-been-loving/</link>
+					<comments>https://9to5mac.com/2026/11/13/apple-maps-in-ios-27-has-hidden-new-feature-ive-been-loving/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 16:59:38 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079459</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/07/apple-maps-ios-27-app-icon-colors.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">iOS 27 gave Apple Maps a <a href="https://9to5mac.com/2026/09/24/heres-everything-new-for-apple-maps-in-ios-27/">handful of new features</a>, and my favorite is one that keeps offering fresh updates every week: Local Lists.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-maps,ios-27" data-layer-viewtype="unknown" data-post-id="1079459" href="https://9to5mac.com/2026/11/13/apple-maps-in-ios-27-has-hidden-new-feature-ive-been-loving/#more-1079459" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/apple-maps-in-ios-27-has-hidden-new-feature-ive-been-loving/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079459</post-id>	</item>
+		<item>
+		<title>Deals: Apple TV 4K release day discount, Apple Watch Ultra $250 off, AirPods Pro 3, AirTag 2 all-time low, more</title>
+		<link>https://9to5mac.com/2026/11/13/deals-apple-tv-4k-discount-airpods-pro-3-airtag-2/</link>
+					<comments>https://9to5mac.com/2026/11/13/deals-apple-tv-4k-discount-airpods-pro-3-airtag-2/#respond</comments>
+		
+		<dc:creator><![CDATA[Justin Kahn]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 16:27:06 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079463</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Apple-deals-Apple-TV-4K-Ultra-AirPods-Pro-3.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Alongside Amazon’s<strong> </strong><a href="https://link.amazon/B02WMyI7W">now live early Black Friday sale</a>, it has also brought back its <a href="https://link.amazon/B0cmlWTfZ">discount on the new Apple TV 4K</a> for release day with much faster shipping times than Apple for most folks, alongside all-time low pricing on <a href="https://link.amazon/B0e5i8Ohx">AirTag 2</a> at <a href="https://link.amazon/B0e5i8Ohx"><strong>$17.50 each</strong></a>,<a href="https://link.amazon/B0iPLc4Pq"> AirPods Pro 3 deal at <strong>$50 off</strong></a>,<strong> </strong>and<strong> </strong><a href="https://link.amazon/B0i4t6rSc">Apple Watch Ultra 4</a> at nearly <a href="https://link.amazon/B0i4t6rSc"><strong>$100 off</strong></a>. However, Amazon has also now brought back the deep clearance deal on <a href="https://link.amazon/B0dhxKVZu">Apple Watch Ultra 3 configs at <strong>$250 off</strong></a> the list price and is now delivering even more color options on the major <a href="https://link.amazon/B0aFdLZ5z">M5 MacBook Air deals at <strong>$250 off</strong></a>. Head below for a closer look. </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5toys,9to5toys-lunch-break,deals" data-layer-viewtype="unknown" data-post-id="1079463" href="https://9to5mac.com/2026/11/13/deals-apple-tv-4k-discount-airpods-pro-3-airtag-2/#more-1079463" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/deals-apple-tv-4k-discount-airpods-pro-3-airtag-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079463</post-id>	</item>
+		<item>
+		<title>iOS 27.2 has two CarPlay improvements, here’s what’s new</title>
+		<link>https://9to5mac.com/2026/11/13/ios-27-2-has-two-carplay-improvements-heres-whats-new/</link>
+					<comments>https://9to5mac.com/2026/11/13/ios-27-2-has-two-carplay-improvements-heres-whats-new/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 15:59:49 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1076107</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/carplay-ios-27-home-screen-car.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">iOS 27.2 <a href="https://9to5mac.com/2026/10/26/apple-releases-ios-27-2-heres-whats-new/">arrived last month</a> with new features for <a href="https://9to5mac.com/2026/10/27/ios-27-2-adds-new-messages-feature-thats-already-a-favorite/" data-type="post" data-id="1072162">Messages</a>, <a href="https://9to5mac.com/2026/10/22/apple-tv-is-adding-two-new-features-with-ios-27-2/" data-type="post" data-id="1075341">Apple TV</a>, and more, plus two improvements for CarPlay. Here’s what’s new for CarPlay users.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="carplay,ios-27,ios-27-2" data-layer-viewtype="unknown" data-post-id="1076107" href="https://9to5mac.com/2026/11/13/ios-27-2-has-two-carplay-improvements-heres-whats-new/#more-1076107" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/ios-27-2-has-two-carplay-improvements-heres-whats-new/feed/</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1076107</post-id>	</item>
+		<item>
+		<title>OpenAI launches ChatGPT Wallet, enabling &#8216;dot&#8217; agents to make purchases</title>
+		<link>https://9to5mac.com/2026/11/13/openai-launches-chatgpt-wallet-enabling-dot-agents-to-make-purchases/</link>
+					<comments>https://9to5mac.com/2026/11/13/openai-launches-chatgpt-wallet-enabling-dot-agents-to-make-purchases/#comments</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 15:46:54 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079396</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/chatgpt-green.webp?w=1600" /></div><p class="wp-block-paragraph">OpenAI is launching ChatGPT Wallet, which it says is “setting a new bar for secure payments by agents.”</p>
+
+
+
+<p class="wp-block-paragraph">ChatGPT Wallet works with OpenAI’s “dots” agent feature and includes a partnership with American Express, MasterCard, and Visa. Here’s how it works.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apps,chatgpt,openai" data-layer-viewtype="unknown" data-post-id="1079396" href="https://9to5mac.com/2026/11/13/openai-launches-chatgpt-wallet-enabling-dot-agents-to-make-purchases/#more-1079396" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/openai-launches-chatgpt-wallet-enabling-dot-agents-to-make-purchases/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079396</post-id>	</item>
+		<item>
+		<title>Security Bite: Apple details Secure Exclaves, a glimpse at its ambient computing future</title>
+		<link>https://9to5mac.com/2026/11/13/security-bite-apple-details-secure-exclaves-a-glimpse-at-its-ambient-computing-future/</link>
+					<comments>https://9to5mac.com/2026/11/13/security-bite-apple-details-secure-exclaves-a-glimpse-at-its-ambient-computing-future/#respond</comments>
+		
+		<dc:creator><![CDATA[Arin Waichulis]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 15:42:20 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079138</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/07/sb-lg-27-dark.webp?w=1500" /></div><p class="wp-block-paragraph"><em>9to5Mac Security Bite is exclusively brought to you by </em><a href="https://mosyle.net/87PQ" target="_blank" rel="noreferrer noopener"><strong>Mosyle, the only Apple Unified Platform</strong>.</a> <em>Making Apple devices work-ready and enterprise-safe is all we do. Our unique integrated approach to management and security combines state-of-the-art Apple-specific security solutions for fully automated Hardening &amp; Compliance, Next Generation EDR, AI-powered Zero Trust, and exclusive Privilege Management with the most powerful and modern Apple MDM on the market. The result is a totally automated Apple Unified Platform currently trusted by over 45,000 organizations to make millions of Apple devices work-ready with no effort and at an affordable cost. </em><strong><em><a href="https://mosyle.net/87PQ" target="_blank" rel="noreferrer noopener">Request your EXTENDED TRIAL</a></em></strong><em> today and understand why Mosyle is everything you need to work with Apple</em>.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<p class="wp-block-paragraph">Apple published a <a href="https://security.apple.com/blog/secure-exclaves/">new security research post</a> this week detailing Secure Exclaves, a new architecture built to handle what the company calls “ambient sensing.” The latter isn’t anything new. “Hey, Siri” has been using a version of this always-on listening technology for years. The difference now (particularly on newer devices like <a href="https://9to5mac.com/2026/10/28/apple-watch-series-12-ultra-4-adding-two-new-features-soon/" data-type="link" data-id="https://9to5mac.com/2026/10/28/apple-watch-series-12-ultra-4-adding-two-new-features-soon/">Apple Watch Series 12</a> and <a href="https://9to5mac.com/2026/11/12/apple-homeview-review-an-adorable-smart-display-that-earns-its-place/" data-type="link" data-id="https://9to5mac.com/2026/11/12/apple-homeview-review-an-adorable-smart-display-that-earns-its-place/">HomeView</a>) is new features need far more data from your surroundings, and Apple has changed where that data gets processed.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="security-bite" data-layer-viewtype="unknown" data-post-id="1079138" href="https://9to5mac.com/2026/11/13/security-bite-apple-details-secure-exclaves-a-glimpse-at-its-ambient-computing-future/#more-1079138" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/security-bite-apple-details-secure-exclaves-a-glimpse-at-its-ambient-computing-future/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079138</post-id>	</item>
+		<item>
+		<title>Apple Home&#8217;s new video doorbell, smart cameras now available to order</title>
+		<link>https://9to5mac.com/2026/11/13/apple-homes-new-video-doorbell-smart-cameras-now-available-to-order/</link>
+					<comments>https://9to5mac.com/2026/11/13/apple-homes-new-video-doorbell-smart-cameras-now-available-to-order/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 15:14:32 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079364</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/lg-indoor-camera-apple-home-collection.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Today Apple has launched two Home products: <a href="https://link.amazon/B0in9kUu1">HomeView</a> and a new <a href="https://link.amazon/B0bX9LvGZ">Apple TV 4K</a>. Additionally, the first three accessories in the Apple Home Collection are now available to order: a video doorbell and two smart home security cameras.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-home,apple-home-collection" data-layer-viewtype="unknown" data-post-id="1079364" href="https://9to5mac.com/2026/11/13/apple-homes-new-video-doorbell-smart-cameras-now-available-to-order/#more-1079364" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/apple-homes-new-video-doorbell-smart-cameras-now-available-to-order/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079364</post-id>	</item>
+		<item>
+		<title>PSA: YouTube app not working on your new Apple TV? Here’s the fix</title>
+		<link>https://9to5mac.com/2026/11/13/new-apple-tv-youtube-broken-fix/</link>
+					<comments>https://9to5mac.com/2026/11/13/new-apple-tv-youtube-broken-fix/#respond</comments>
+		
+		<dc:creator><![CDATA[Chance Miller]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 14:21:50 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079354</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/apple-tv-4k-4th-gen-3.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">If you just unboxed your new Apple TV 4K, you might run into a problem using the YouTube app. Some users report an error message that reads: “YouTube is not yet available on this device.”</p>
+
+
+
+<p class="wp-block-paragraph">Here’s how to fix this problem.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv,apps" data-layer-viewtype="unknown" data-post-id="1079354" href="https://9to5mac.com/2026/11/13/new-apple-tv-youtube-broken-fix/#more-1079354" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/new-apple-tv-youtube-broken-fix/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079354</post-id>	</item>
+		<item>
+		<title>tvOS 27.2.1 launching soon with Siri AI for older Apple TV 4K models</title>
+		<link>https://9to5mac.com/2026/11/13/tvos-27-2-1-launching-soon-with-siri-ai-for-older-apple-tv-4k-models/</link>
+					<comments>https://9to5mac.com/2026/11/13/tvos-27-2-1-launching-soon-with-siri-ai-for-older-apple-tv-4k-models/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 14:15:56 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079340</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/apple-tv-homepod-mini-siri-ai.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Today the new Apple TV 4K has arrived (<a href="https://link.amazon/B0aaK8plC">order here</a>) with Siri AI as a major tentpole feature. But older Apple TV 4K models are about to get Siri AI too via a tvOS 27.2.1 software update.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv,apple-tv-4k,siri,siri-ai,tvos-27,tvos-27-2" data-layer-viewtype="unknown" data-post-id="1079340" href="https://9to5mac.com/2026/11/13/tvos-27-2-1-launching-soon-with-siri-ai-for-older-apple-tv-4k-models/#more-1079340" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/tvos-27-2-1-launching-soon-with-siri-ai-for-older-apple-tv-4k-models/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079340</post-id>	</item>
+		<item>
+		<title>New Apple TV 4K and HomeView now available: Here&#8217;s everything you need to know</title>
+		<link>https://9to5mac.com/2026/11/13/new-apple-tv-4k-and-homeview-now-available-heres-everything-you-need-to-know/</link>
+					<comments>https://9to5mac.com/2026/11/13/new-apple-tv-4k-and-homeview-now-available-heres-everything-you-need-to-know/#comments</comments>
+		
+		<dc:creator><![CDATA[Chance Miller]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 13:57:26 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079335</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/homeview-08.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">The new Apple TV 4K and HomeView smart display are officially available. The first pre-orders have arrived for eager shoppers, and you can now also head to your local Apple Store to buy select configurations.</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://link.amazon/B0ewSLty1">Buy HomeView on Amazon</a></li>
+
+
+
+<li><a href="https://link.amazon/B09oRbCJN">Buy Apple TV 4K (4th generation) on Amazon</a>: Launch day discount now live!</li>
+
+
+
+<li><a href="https://link.amazon/B0hU3L7yO">Buy the new Siri Remote on Amazon </a></li>
+</ul>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv,homeview" data-layer-viewtype="unknown" data-post-id="1079335" href="https://9to5mac.com/2026/11/13/new-apple-tv-4k-and-homeview-now-available-heres-everything-you-need-to-know/#more-1079335" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/13/new-apple-tv-4k-and-homeview-now-available-heres-everything-you-need-to-know/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079335</post-id>	</item>
+		<item>
+		<title>Apple TV just debuted three new originals, including a heist thriller series</title>
+		<link>https://9to5mac.com/2026/11/12/apple-tv-just-debuted-three-new-originals-including-a-heist-thriller-series/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-tv-just-debuted-three-new-originals-including-a-heist-thriller-series/#comments</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2026 02:02:34 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079323</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/01/apple-tv-logo-black.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple TV subscribers can now watch three new originals, including a heist thriller series, a film based on true events, and the first of two holiday specials coming to the platform this season. Watch the trailers below.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv" data-layer-viewtype="unknown" data-post-id="1079323" href="https://9to5mac.com/2026/11/12/apple-tv-just-debuted-three-new-originals-including-a-heist-thriller-series/#more-1079323" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-tv-just-debuted-three-new-originals-including-a-heist-thriller-series/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079323</post-id>	</item>
+		<item>
+		<title>9to5Mac Daily: November 12, 2026 – OLED iPad Air rumors, MacBook Pro teardown</title>
+		<link>https://9to5mac.com/2026/11/12/daily-november-12-2026/</link>
+					<comments>https://9to5mac.com/2026/11/12/daily-november-12-2026/#respond</comments>
+		
+		<dc:creator><![CDATA[Seth Kurkowski]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 22:45:57 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079311</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">Listen to a recap of the top stories of the day from </span><em style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">9to5Mac</em><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">. 9to5Mac Daily is available </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://podcasts.apple.com/us/podcast/9to5mac-daily/id1331816080" target="_blank" rel="noreferrer noopener">on iTunes and Apple’s Podcasts app</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://www.stitcher.com/podcast/9to5mac-daily">Stitcher</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://tunein.com/radio/9to5Mac-Daily-p1089524/">TuneIn</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://play.google.com/music/m/I5d4dzs7dauazmfxvvrynyiuram?t=9to5Mac_Daily">Google Play</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, or through our </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://feedpress.me/9to5macdaily">dedicated RSS feed</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;"> for Overcast and other podcast players.</span></p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://bit.ly/41bWB64"><strong>Sponsored by Backblaze</strong></a>: Backup you can rely on. Save 20% with code <strong>9to5daily</strong>.</p>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/MacDaily_11-12-26.mp3"></audio></figure>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5mac-daily,podcast" data-layer-viewtype="unknown" data-post-id="1079311" href="https://9to5mac.com/2026/11/12/daily-november-12-2026/#more-1079311" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/daily-november-12-2026/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079311</post-id>	</item>
+		<item>
+		<title>Apple HomeView launches tomorrow, but its first security update is already here</title>
+		<link>https://9to5mac.com/2026/11/12/apple-homeview-launches-tomorrow-but-its-first-security-update-is-already-here/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-homeview-launches-tomorrow-but-its-first-security-update-is-already-here/#comments</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 21:14:40 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079302</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/homeview-siri-calendar.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">While the first HomeView units won’t reach customers until tomorrow, Apple today released a software update addressing nine security vulnerabilities. Here are the details.</p>
+
+
+
+<p class="wp-block-paragraph">Pre-order Apple HomeView</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="homeview" data-layer-viewtype="unknown" data-post-id="1079302" href="https://9to5mac.com/2026/11/12/apple-homeview-launches-tomorrow-but-its-first-security-update-is-already-here/#more-1079302" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-homeview-launches-tomorrow-but-its-first-security-update-is-already-here/feed/</wfw:commentRss>
+			<slash:comments>9</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079302</post-id>	</item>
+		<item>
+		<title>Opera One for iOS adds Data Saver feature, cutting browsing data usage by up to 80%</title>
+		<link>https://9to5mac.com/2026/11/12/opera-one-for-ios-adds-data-saver-feature-cutting-browsing-data-usage-by-up-to-80/</link>
+					<comments>https://9to5mac.com/2026/11/12/opera-one-for-ios-adds-data-saver-feature-cutting-browsing-data-usage-by-up-to-80/#respond</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 20:52:21 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079292</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/opera-one.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Opera today announced that its Data Saver feature is now available on iOS, in a press release that also revealed a 20% year-over-year increase in the browser’s monthly active users. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apps,opera" data-layer-viewtype="unknown" data-post-id="1079292" href="https://9to5mac.com/2026/11/12/opera-one-for-ios-adds-data-saver-feature-cutting-browsing-data-usage-by-up-to-80/#more-1079292" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/opera-one-for-ios-adds-data-saver-feature-cutting-browsing-data-usage-by-up-to-80/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079292</post-id>	</item>
+		<item>
+		<title>Apple TV announces new film &#8216;Connector&#8217; starring Brad Pitt</title>
+		<link>https://9to5mac.com/2026/11/12/apple-tv-announces-new-film-connector-starring-brad-pitt/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-tv-announces-new-film-connector-starring-brad-pitt/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 20:12:44 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079268</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/brad-pitt-wolfs-table.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple is reuniting with Brad Pitt, the star of its most successful film of all time: <a href="https://tv.apple.com/movie/f1-the-movie/umc.cmc.3t6dvnnr87zwd4wmvpdx5came?itscg=30200&amp;itsct=tv_box_link&amp;mttnsubad=umc.cmc.3t6dvnnr87zwd4wmvpdx5came&amp;at=1000l3cvR">F1 The Movie</a>. Here are the details on Connector, a new Apple Original Films project with Pitt attached to star.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv" data-layer-viewtype="unknown" data-post-id="1079268" href="https://9to5mac.com/2026/11/12/apple-tv-announces-new-film-connector-starring-brad-pitt/#more-1079268" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-tv-announces-new-film-connector-starring-brad-pitt/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079268</post-id>	</item>
+		<item>
+		<title>Elton John’s Apple Music show to feature King Charles in November 14 special</title>
+		<link>https://9to5mac.com/2026/11/12/elton-johns-apple-music-show-to-feature-king-charles-in-november-14-special/</link>
+					<comments>https://9to5mac.com/2026/11/12/elton-johns-apple-music-show-to-feature-king-charles-in-november-14-special/#comments</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 20:07:30 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079269</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/elton-john-king-charles.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple Music and Buckingham Palace today announced that King Charles will join the next episode of Sir Elton John’s Rocket Hour to discuss the 50th anniversary of his charity and the role music has played in its work over the years. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-music" data-layer-viewtype="unknown" data-post-id="1079269" href="https://9to5mac.com/2026/11/12/elton-johns-apple-music-show-to-feature-king-charles-in-november-14-special/#more-1079269" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/elton-johns-apple-music-show-to-feature-king-charles-in-november-14-special/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079269</post-id>	</item>
+		<item>
+		<title>X now lets you share 5x more photos and videos per post</title>
+		<link>https://9to5mac.com/2026/11/12/x-now-lets-you-share-5x-more-photos-and-videos-per-post/</link>
+					<comments>https://9to5mac.com/2026/11/12/x-now-lets-you-share-5x-more-photos-and-videos-per-post/#comments</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 20:05:12 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079270</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/x-app.webp?w=1600" /></div><p class="wp-block-paragraph">Since the Twitter days, X has limited media-per-post to four items. As of today, you can share five times more photos and videos per post.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apps,ipad,iphone,x" data-layer-viewtype="unknown" data-post-id="1079270" href="https://9to5mac.com/2026/11/12/x-now-lets-you-share-5x-more-photos-and-videos-per-post/#more-1079270" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/x-now-lets-you-share-5x-more-photos-and-videos-per-post/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079270</post-id>	</item>
+		<item>
+		<title>iOS 27&#8217;s Find My app adds convenient feature I&#8217;ve long wished for</title>
+		<link>https://9to5mac.com/2026/11/12/ios-27s-find-my-app-adds-convenient-feature-ive-long-wished-for/</link>
+					<comments>https://9to5mac.com/2026/11/12/ios-27s-find-my-app-adds-convenient-feature-ive-long-wished-for/#respond</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 19:21:20 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079237</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/find-my-27.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">iOS 27 is packed with new features, including <a href="https://9to5mac.com/2026/09/29/ios-27-find-my-adds-new-ways-to-hide-your-location-more/">several for the Find My app</a>. One upgrade to Find My—custom sharing durations—grants a feature request I’ve had for years.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="find-my,ios-27" data-layer-viewtype="unknown" data-post-id="1079237" href="https://9to5mac.com/2026/11/12/ios-27s-find-my-app-adds-convenient-feature-ive-long-wished-for/#more-1079237" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/ios-27s-find-my-app-adds-convenient-feature-ive-long-wished-for/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079237</post-id>	</item>
+		<item>
+		<title>Microsoft Outlook experiencing widespread outage</title>
+		<link>https://9to5mac.com/2026/11/12/microsoft-outlook-experiencing-widespread-outage/</link>
+					<comments>https://9to5mac.com/2026/11/12/microsoft-outlook-experiencing-widespread-outage/#comments</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 18:54:54 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079240</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2023/04/outlook-profiles.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Everybody’s working for the weekend, but Microsoft Outlook clocked out early. The mission-critical email service is facing a widespread outage.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1079240" href="https://9to5mac.com/2026/11/12/microsoft-outlook-experiencing-widespread-outage/#more-1079240" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/microsoft-outlook-experiencing-widespread-outage/feed/</wfw:commentRss>
+			<slash:comments>16</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079240</post-id>	</item>
+		<item>
+		<title>HomeView review, new Apple TV launches, Apple holiday ad</title>
+		<link>https://9to5mac.com/2026/11/12/happy-hour-616/</link>
+					<comments>https://9to5mac.com/2026/11/12/happy-hour-616/#comments</comments>
+		
+		<dc:creator><![CDATA[Chance Miller]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 18:51:11 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079194</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2024/02/9to5mac-happy-hour-lead1.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Chance is back again with a review of another new Apple product. This week, we dive into the HomeView, the app experiences, speaker quality, what it’s like to use Siri AI and more on Apple’s first smart display. Also, Apple releases its best holiday ad in years and the new Apple TV 4K also launches.</p>
+
+
+
+<p class="wp-block-paragraph">And in Happy Hour Plus, John Ternus apparently pressures Craig Federighi to move faster on AI. Subscribe at <a href="https://9to5mac.com/join">9to5mac.com/join</a>.</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://quince.com/happyhour">Sponsored by Quince</a>: Give the gift of quality this holiday season. Visit <a href="https://quince.com/happyhour">quince.com/happyhour</a> for free shipping on your order and 365-day returns.</li>
+
+
+
+<li><a href="https://framer.com/happyhour">Sponsored by Framer</a>: Build a production-ready website without the handoffs. Visit <a href="https://framer.com/happyhour">framer.com/happyhour</a> for 30% off a Framer Pro annual plan.</li>
+
+
+
+<li><a href="https://glean.com/happyhour">Sponsored by Glean</a>: The enterprise AI platform bringing context to your business. Visit <a href="https://glean.com/happyhour">glean.com/happyhour</a> to unlock an exclusive offer just for Happy Hour listeners.</li>
+
+
+
+<li><a href="https://shopify.com/happyhour">Sponsored by Shopify</a>: If you’re ready to launch your business before Black Friday, start your free trial at <a href="https://shopify.com/happyhour">shopify.com/happyhour</a>.</li>
+</ul>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://claritaspod.com/measure/dts.podtrac.com/redirect.mp3/pfx.vpixl.com/sla7w/pscrb.fm/rss/p/9to5mac.com/wp-content/uploads/sites/6/2026/11/HH-616.mp3"></audio></figure>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5mac-happy-hour,podcast" data-layer-viewtype="unknown" data-post-id="1079194" href="https://9to5mac.com/2026/11/12/happy-hour-616/#more-1079194" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/happy-hour-616/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079194</post-id>	</item>
+		<item>
+		<title>Grok Bot for Mac adds integration with Apple Mail, Messages, Notes, and more</title>
+		<link>https://9to5mac.com/2026/11/12/grok-bot-for-mac-adds-integration-with-apple-mail-messages-notes-and-more/</link>
+					<comments>https://9to5mac.com/2026/11/12/grok-bot-for-mac-adds-integration-with-apple-mail-messages-notes-and-more/#comments</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 18:40:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079213</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/08/grokbot.webp?w=1600" /></div><p class="wp-block-paragraph">Grok Bot for Mac just gained a bunch of new Apple integrations, including Messages, Mail, Notes, and more.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ai,apps,grok-bot,icloud,mac" data-layer-viewtype="unknown" data-post-id="1079213" href="https://9to5mac.com/2026/11/12/grok-bot-for-mac-adds-integration-with-apple-mail-messages-notes-and-more/#more-1079213" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/grok-bot-for-mac-adds-integration-with-apple-mail-messages-notes-and-more/feed/</wfw:commentRss>
+			<slash:comments>12</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079213</post-id>	</item>
+		<item>
+		<title>Google announces Gemini 4 Hydrogen with ‘significant leaps’ in speed, intelligence</title>
+		<link>https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/</link>
+					<comments>https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/#respond</comments>
+		
+		<dc:creator><![CDATA[9to5Google]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 18:20:44 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Gemini-4-Hydrogen-cover.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">After this week’s <a href="https://9to5google.com/2026/11/10/gemini-app-4-carbon/">Carbon availability</a>, Google today unveiled Gemini 4 Hydrogen instead of keeping the “Flash” branding. This model is billed as bringing “cutting-edge intelligence to everyone.”</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="gemini,gemini-app" data-layer-viewtype="unknown" data-post-id="1079202" href="https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/#more-1079202" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5google.com/2026/11/12/gemini-4-hydrogen-launch/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079202</post-id>	</item>
+		<item>
+		<title>Apple Sports adds UFC events with real-time stats and results</title>
+		<link>https://9to5mac.com/2026/11/12/apple-sports-adds-ufc-events-with-real-time-stats-and-results/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-sports-adds-ufc-events-with-real-time-stats-and-results/#comments</comments>
+		
+		<dc:creator><![CDATA[Benjamin Mayo]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 17:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078470</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/apple-sports-ufc.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple continues to expand the appeal of its free Sports app, which focuses on delivering real-time sports scores and stats, across many different sports. </p>
+
+
+
+<p class="wp-block-paragraph">Today, Apple is adding UFC into the mix, so MMA fans can track the fights live through the unified Apple Sports experience. </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-sports" data-layer-viewtype="unknown" data-post-id="1078470" href="https://9to5mac.com/2026/11/12/apple-sports-adds-ufc-events-with-real-time-stats-and-results/#more-1078470" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-sports-adds-ufc-events-with-real-time-stats-and-results/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078470</post-id>	</item>
+		<item>
+		<title>Deals: HomeView discount, M5 iPad Pro $300 off, Magic Keyboard, AirTag 2 all-time low, more</title>
+		<link>https://9to5mac.com/2026/11/12/deals-homeview-m5-ipad-pro-magic-keyboard-airtag-2/</link>
+					<comments>https://9to5mac.com/2026/11/12/deals-homeview-m5-ipad-pro-magic-keyboard-airtag-2/#respond</comments>
+		
+		<dc:creator><![CDATA[Justin Kahn]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 16:29:30 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079143</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Apple-deals-HomeView-iPad-Pro-AirTag-2.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">As the Amazon <a href="https://link.amazon/B0dbXgFnt">early Black Friday sale</a> rolls on and <a href="https://howl.link/3bnvoeyya6yn3">Walmart launches its giant event</a>, we are still tracking the <a href="https://link.amazon/B0e5i8Ohx">2026 AirTag 2</a> Mac to its lowest price ever <a href="https://link.amazon/B0e5i8Ohx">at <strong>$17.50 each</strong></a>, rare deals on <a href="https://link.amazon/B0iVJeswH">Magic Mouse</a> and <a href="https://link.amazon/B0ccRASzP">Magic Trackpad</a>, <a href="https://link.amazon/B08xrzdrV">$250 price drops</a> on <a href="https://link.amazon/B08xrzdrV">M5 MacBook Air</a>, and even more. Amazon’s <a href="https://link.amazon/B098wWDBA">HomeView pre-order discount</a> is still live with shipping as soon as Monday (here’s <a href="https://9to5mac.com/2026/11/12/apple-homeview-review-an-adorable-smart-display-that-earns-its-place/">our hands-on review</a>), and we are now tracking a rare <a href="https://link.amazon/B09wTq6tE">$300 off this M5 iPad Pro model</a> as well as this deal on <a href="https://9to5toys.com/2026/11/12/rare-amazon-deal-apple-ipad-magic-keyboard-case-today/">Apple’s iPad Magic Keyboard Case today</a>. From there we move onto a collection of early Black Friday deals on official <a href="https://link.amazon/B0eyjD5OX">Apple Watch bands from <strong>$32</strong></a> and the ongoing ongoing <a href="https://link.amazon/B0iPLc4Pq">AirPods Pro 3 deal at $50 off</a>. Everything else awaits below. </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5toys,9to5toys-lunch-break,deals" data-layer-viewtype="unknown" data-post-id="1079143" href="https://9to5mac.com/2026/11/12/deals-homeview-m5-ipad-pro-magic-keyboard-airtag-2/#more-1079143" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/deals-homeview-m5-ipad-pro-magic-keyboard-airtag-2/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079143</post-id>	</item>
+		<item>
+		<title>Apple Notes adds a powerful new advantage in iOS 27.3</title>
+		<link>https://9to5mac.com/2026/11/12/apple-notes-adds-a-powerful-new-advantage-in-ios-27-3/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-notes-adds-a-powerful-new-advantage-in-ios-27-3/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 16:10:20 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079085</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/notes-app-icon-ios-27.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">There’s no shortage of note-taking apps on the App Store, but Apple Notes has long been my favorite, and in iOS 27.3 it’s gaining a new advantage: extensive app controls via Siri AI.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-notes,ios-27,ios-27-3" data-layer-viewtype="unknown" data-post-id="1079085" href="https://9to5mac.com/2026/11/12/apple-notes-adds-a-powerful-new-advantage-in-ios-27-3/#more-1079085" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-notes-adds-a-powerful-new-advantage-in-ios-27-3/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079085</post-id>	</item>
+		<item>
+		<title>President Trump calls on Tim Cook to be next NVIDIA CEO</title>
+		<link>https://9to5mac.com/2026/11/12/president-trump-calls-on-tim-cook-to-be-next-nvidia-ceo/</link>
+					<comments>https://9to5mac.com/2026/11/12/president-trump-calls-on-tim-cook-to-be-next-nvidia-ceo/#comments</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 15:46:18 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079086</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2025/08/trump-cook-oval.webp?w=1600" /></div><p class="wp-block-paragraph">Jensen Huang is <a href="https://9to5mac.com/2026/11/12/jensen-huang-resigns-as-ceo-of-nvidia/">out as CEO of NVIDIA</a> after reported love affairs with an alleged Chinese spy and a high-ranking executive at the company. Naturally, the American President has called on former Apple CEO Tim Cook to take over as chief executive officer of NVIDIA.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl,tim-cook" data-layer-viewtype="unknown" data-post-id="1079086" href="https://9to5mac.com/2026/11/12/president-trump-calls-on-tim-cook-to-be-next-nvidia-ceo/#more-1079086" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/president-trump-calls-on-tim-cook-to-be-next-nvidia-ceo/feed/</wfw:commentRss>
+			<slash:comments>33</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079086</post-id>	</item>
+		<item>
+		<title>New Apple TV comedy starring Elizabeth Banks, Ted Danson coming soon</title>
+		<link>https://9to5mac.com/2026/11/12/new-apple-tv-comedy-starring-elizabeth-banks-ted-danson-coming-soon/</link>
+					<comments>https://9to5mac.com/2026/11/12/new-apple-tv-comedy-starring-elizabeth-banks-ted-danson-coming-soon/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 15:21:02 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079068</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/shes-fine-banks-delaney.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple TV has <a href="https://www.apple.com/tv-pr/news/2026/11/apple-tv-unveils-first-look-at-shes-fine-new-comedy-starring-and-executive-produced-by-emmy-award-nominee-elizabeth-banks-created-by-emmy-award-nominee-liz-heldens-and-matt-ward-premiering-globally-wednesday-january-27/">announced</a> a new comedy, She’s Fine, that’s coming soon with stars Elizabeth Banks and Ted Danson. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv" data-layer-viewtype="unknown" data-post-id="1079068" href="https://9to5mac.com/2026/11/12/new-apple-tv-comedy-starring-elizabeth-banks-ted-danson-coming-soon/#more-1079068" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/new-apple-tv-comedy-starring-elizabeth-banks-ted-danson-coming-soon/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079068</post-id>	</item>
+		<item>
+		<title>Apple Home Collection accessories available for pre-order this Friday</title>
+		<link>https://9to5mac.com/2026/11/12/apple-home-collection-accessories-available-for-pre-order-this-friday/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-home-collection-accessories-available-for-pre-order-this-friday/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 14:19:22 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1079012</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/apple-home-collection-lg-schneider.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple’s new HomeView (<a href="https://9to5mac.com/2026/11/12/apple-homeview-review-an-adorable-smart-display-that-earns-its-place/">review here</a>) and Apple TV 4K (<a href="https://9to5mac.com/2026/11/12/apple-tv-4k-review-the-best-streamer-comes-at-a-cost/">review</a>) arrive in stores this Friday, November 13. And that same day, the first Apple Home Collection accessories will be available for pre-order.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-home,apple-home-collection" data-layer-viewtype="unknown" data-post-id="1079012" href="https://9to5mac.com/2026/11/12/apple-home-collection-accessories-available-for-pre-order-this-friday/#more-1079012" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-home-collection-accessories-available-for-pre-order-this-friday/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079012</post-id>	</item>
+		<item>
+		<title>Google’s new Android XR glasses work with iOS, Made for iPhone certified</title>
+		<link>https://9to5google.com/2026/11/12/google-glasses-iphone-support/</link>
+					<comments>https://9to5google.com/2026/11/12/google-glasses-iphone-support/#respond</comments>
+		
+		<dc:creator><![CDATA[9to5Google]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 14:05:46 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5google.com/2026/11/12/google-glasses-iphone-support/</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/android-xr-intelligent-eyewear-warby-parker-34.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Google today <a href="https://9to5google.com/?p=736529">announced</a> Android XR audio glasses called Intelligent Eyewear that notably support iOS with Made for iPhone certification.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="android-xr,ios" data-layer-viewtype="unknown" data-post-id="1079019" href="https://9to5google.com/2026/11/12/google-glasses-iphone-support/#more-1079019" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5google.com/2026/11/12/google-glasses-iphone-support/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1079019</post-id>	</item>
+		<item>
+		<title>Apple HomeView review: An adorable smart display that earns its place</title>
+		<link>https://9to5mac.com/2026/11/12/apple-homeview-review-an-adorable-smart-display-that-earns-its-place/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-homeview-review-an-adorable-smart-display-that-earns-its-place/#comments</comments>
+		
+		<dc:creator><![CDATA[Chance Miller]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 14:00:33 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078711</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/homeview-09.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple’s HomeView smart display is here. It combines a 7-inch display with Siri AI and an all-new software experience that actually feels really familiar.</p>
+
+
+
+<p class="wp-block-paragraph">I’ve spent the last ten days living with HomeView in my kitchen. Here’s everything you need to know.</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://link.amazon/A00s9qVVT">Pre-order HomeView now (save $10)</a></li>
+</ul>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="homeview,review" data-layer-viewtype="unknown" data-post-id="1078711" href="https://9to5mac.com/2026/11/12/apple-homeview-review-an-adorable-smart-display-that-earns-its-place/#more-1078711" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-homeview-review-an-adorable-smart-display-that-earns-its-place/feed/</wfw:commentRss>
+			<slash:comments>42</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078711</post-id>	</item>
+		<item>
+		<title>Apple TV 4K review: The best streamer comes at a cost</title>
+		<link>https://9to5mac.com/2026/11/12/apple-tv-4k-review-the-best-streamer-comes-at-a-cost/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-tv-4k-review-the-best-streamer-comes-at-a-cost/#comments</comments>
+		
+		<dc:creator><![CDATA[Chance Miller]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 14:00:13 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078817</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/apple-tv-4k-4th-gen-color-1.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">It’s been four years since Apple last updated the Apple TV 4K, but a new version is here. There’s Siri AI support, a faster chip, an improved remote, and more. </p>
+
+
+
+<p class="wp-block-paragraph">Here’s everything that’s changed, what’s better, and whether the new Apple TV 4K justifies its new $299 price.</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="https://link.amazon/B0fdUfdZe">Pre-order the new Apple TV 4K</a></li>
+
+
+
+<li><a href="https://link.amazon/B0bcyfFWz">Pre-order the new Siri Remote</a></li>
+</ul>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv,review" data-layer-viewtype="unknown" data-post-id="1078817" href="https://9to5mac.com/2026/11/12/apple-tv-4k-review-the-best-streamer-comes-at-a-cost/#more-1078817" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-tv-4k-review-the-best-streamer-comes-at-a-cost/feed/</wfw:commentRss>
+			<slash:comments>19</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078817</post-id>	</item>
+		<item>
+		<title>Mount Thor raises $45 million to build Mac data centers for AI agents</title>
+		<link>https://9to5mac.com/2026/11/12/mount-thor-raises-45-million-to-build-mac-data-centers-for-ai-agents/</link>
+					<comments>https://9to5mac.com/2026/11/12/mount-thor-raises-45-million-to-build-mac-data-centers-for-ai-agents/#respond</comments>
+		
+		<dc:creator><![CDATA[Bradley C]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 14:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078599</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/AI-Apple-2.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><em><a href="https://mosyle.net/3RDn" target="_blank" rel="noreferrer noopener">Apple @ Work is exclusively brought to you by Mosyle</a>, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-grade platform all the solutions necessary to seamlessly and automatically deploy, manage &amp; protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work-ready with no effort and at an affordable cost. </em><a href="https://mosyle.net/3RDn" target="_blank" rel="noreferrer noopener"><em>Request your EXTENDED TRIAL</em></a><em> today and understand why Mosyle is everything you need to work with Apple</em>.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://www.mountthor.com" target="_blank" rel="noreferrer noopener">Mount Thor</a>, a Bay Area startup building cloud infrastructure on Apple silicon, announced today that it has raised $45 million across Seed and Series A rounds. The pitch to its investors was simple: AI agents are incredible on Apple silicon, and nobody is renting them at data-center scale.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1078599" href="https://9to5mac.com/2026/11/12/mount-thor-raises-45-million-to-build-mac-data-centers-for-ai-agents/#more-1078599" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/mount-thor-raises-45-million-to-build-mac-data-centers-for-ai-agents/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078599</post-id>	</item>
+		<item>
+		<title>Jensen Huang resigns as CEO of Nvidia</title>
+		<link>https://9to5mac.com/2026/11/12/jensen-huang-resigns-as-ceo-of-nvidia/</link>
+					<comments>https://9to5mac.com/2026/11/12/jensen-huang-resigns-as-ceo-of-nvidia/#comments</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 13:59:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078892</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/jensen-huang-nvidia.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Jensen Huang has resigned as the CEO of Nvidia following recent reports of extramarital affairs, including one involving a woman suspected of spying for China. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="nvidia" data-layer-viewtype="unknown" data-post-id="1078892" href="https://9to5mac.com/2026/11/12/jensen-huang-resigns-as-ceo-of-nvidia/#more-1078892" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/jensen-huang-resigns-as-ceo-of-nvidia/feed/</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078892</post-id>	</item>
+		<item>
+		<title>Apple adjusts iPhone and Apple Watch trade-in values, adds Samsung foldables</title>
+		<link>https://9to5mac.com/2026/11/12/apple-adjusts-iphone-and-apple-watch-trade-in-values-adds-samsung-foldables/</link>
+					<comments>https://9to5mac.com/2026/11/12/apple-adjusts-iphone-and-apple-watch-trade-in-values-adds-samsung-foldables/#respond</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 13:51:55 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078973</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2024/05/iphone-7-plus-trade-in-value.png?w=1600" /></div><p class="wp-block-paragraph">Apple has once again adjusted the trade-in values for some of its devices, while adding several Samsung foldables to the list. Here are the new values.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1078973" href="https://9to5mac.com/2026/11/12/apple-adjusts-iphone-and-apple-watch-trade-in-values-adds-samsung-foldables/#more-1078973" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/apple-adjusts-iphone-and-apple-watch-trade-in-values-adds-samsung-foldables/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078973</post-id>	</item>
+		<item>
+		<title>Peacock thinks vertical video will make you watch one more hour per month</title>
+		<link>https://9to5mac.com/2026/11/12/peacock-thinks-vertical-video-will-make-you-watch-one-more-hour-per-month/</link>
+					<comments>https://9to5mac.com/2026/11/12/peacock-thinks-vertical-video-will-make-you-watch-one-more-hour-per-month/#comments</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 13:42:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078972</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Peacock-thinks-vertical-video-will-make-you-watch-one-more-hour-per-month.jpeg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">NBCUniversal has announced what it describes as the largest mobile update ever to the <a href="https://9to5mac.com/guides/peacock/" target="_blank" rel="noreferrer noopener">Peacock</a> iPhone app, with a bigger emphasis on vertical video. The company reportedly expects this to increase average usage of the app by one hour per user per month …</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apps,peacock" data-layer-viewtype="unknown" data-post-id="1078972" href="https://9to5mac.com/2026/11/12/peacock-thinks-vertical-video-will-make-you-watch-one-more-hour-per-month/#more-1078972" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/peacock-thinks-vertical-video-will-make-you-watch-one-more-hour-per-month/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078972</post-id>	</item>
+		<item>
+		<title>Foxconn revenue climbs 46%; Bloomberg forecasts 16M iPhone Duo sales</title>
+		<link>https://9to5mac.com/2026/11/12/foxconn-revenue-climbs-46-bloomberg-forecasts-16m-iphone-duo-sales/</link>
+					<comments>https://9to5mac.com/2026/11/12/foxconn-revenue-climbs-46-bloomberg-forecasts-16m-iphone-duo-sales/#comments</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 13:16:02 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078954</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Foxconn-revenue-climbs-46-Bloomberg-forecasts-16M-iPhone-Duo-sales.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Key <a href="https://9to5mac.com/guides/aapl/" target="_blank" rel="noreferrer noopener">Apple</a> manufacturing partner <a href="https://9to5mac.com/guides/foxconn/" target="_blank" rel="noreferrer noopener">Foxconn</a> has announced a year-on-year revenue increase of 46%, thanks to a mix of consumer electronics and server demand.</p>
+
+
+
+<p class="wp-block-paragraph">Separately, <em>Bloomberg Intelligence</em> has forecast sales of 16 million <a href="https://9to5mac.com/guides/iphone-duo/" target="_blank" rel="noreferrer noopener">iPhone Duo</a> units in the first 12 months …</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl,foxconn,iphone-duo" data-layer-viewtype="unknown" data-post-id="1078954" href="https://9to5mac.com/2026/11/12/foxconn-revenue-climbs-46-bloomberg-forecasts-16m-iphone-duo-sales/#more-1078954" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/foxconn-revenue-climbs-46-bloomberg-forecasts-16m-iphone-duo-sales/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078954</post-id>	</item>
+		<item>
+		<title>30% of iPhone Duo buyers may have returned it, but I don&#8217;t think Apple should worry</title>
+		<link>https://9to5mac.com/2026/11/12/30-of-iphone-duo-buyers-may-have-returned-it-but-i-dont-think-apple-should-worry/</link>
+					<comments>https://9to5mac.com/2026/11/12/30-of-iphone-duo-buyers-may-have-returned-it-but-i-dont-think-apple-should-worry/#comments</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 12:45:48 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078933</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/30-of-iPhone-Duo-buyers-may-have-returned-it-but-I-dont-think-Apple-should-worry.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">A poll of <em>9to5Mac</em> readers who were lucky enough to take delivery of their <a href="https://9to5mac.com/guides/iphone-duo/" target="_blank" rel="noreferrer noopener">iPhone Duo</a> in the first few days shows that 30% of them have returned it for a refund.</p>
+
+
+
+<p class="wp-block-paragraph">While that could be considered bad news for the future of the device, I don’t personally consider it either surprising or worrying … </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="iphone-duo,opinion" data-layer-viewtype="unknown" data-post-id="1078933" href="https://9to5mac.com/2026/11/12/30-of-iphone-duo-buyers-may-have-returned-it-but-i-dont-think-apple-should-worry/#more-1078933" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/30-of-iphone-duo-buyers-may-have-returned-it-but-i-dont-think-apple-should-worry/feed/</wfw:commentRss>
+			<slash:comments>25</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078933</post-id>	</item>
+		<item>
+		<title>Nvidia CEO Jensen Huang set to be fired, with Johny Srouji among possible replacements [U]</title>
+		<link>https://9to5mac.com/2026/11/12/nvidia-ceo-jensen-huang-set-to-be-fired-with-johny-srouji-listed-among-possible-replacements/</link>
+					<comments>https://9to5mac.com/2026/11/12/nvidia-ceo-jensen-huang-set-to-be-fired-with-johny-srouji-listed-among-possible-replacements/#comments</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 11:59:29 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078917</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Nvidia-CEO-Jensen-Huang-set-to-be-fired-with-Johny-Srouji-listed-among-possible-replacements.jpg?quality=82&#038;strip=all&#038;w=1500" /></div><p class="wp-block-paragraph">Following reports of a potential second affair – this time with a subordinate – <a href="https://9to5mac.com/guides/nvidia/" target="_blank" rel="noreferrer noopener">Nvidia</a> CEO Jensen Huang looks certain to be fired by the company’s board, probably later today (though he may be allowed to ‘resign’). <a href="https://9to5mac.com/guides/aapl/" target="_blank" rel="noreferrer noopener">Apple’s</a> chief hardware officer Johny Srouji has been listed among the potential replacements, though this seems unlikely.</p>
+
+
+
+<p class="wp-block-paragraph"><em>Update: As we predicted, <a href="https://9to5mac.com/2026/11/12/jensen-huang-resigns-as-ceo-of-nvidia/" target="_blank" rel="noreferrer noopener">he’s gone today</a> and Kress was indeed named interim CEO …</em></p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl,nvidia" data-layer-viewtype="unknown" data-post-id="1078917" href="https://9to5mac.com/2026/11/12/nvidia-ceo-jensen-huang-set-to-be-fired-with-johny-srouji-listed-among-possible-replacements/#more-1078917" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/nvidia-ceo-jensen-huang-set-to-be-fired-with-johny-srouji-listed-among-possible-replacements/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078917</post-id>	</item>
+		<item>
+		<title>Here&#8217;s Apple&#8217;s new ad for the holiday season, featuring MacBook Neo</title>
+		<link>https://9to5mac.com/2026/11/12/heres-apples-new-ad-for-the-holiday-season-featuring-macbook-neo/</link>
+					<comments>https://9to5mac.com/2026/11/12/heres-apples-new-ad-for-the-holiday-season-featuring-macbook-neo/#comments</comments>
+		
+		<dc:creator><![CDATA[Benjamin Mayo]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 11:47:20 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078918</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/macbook-neo-apple-holiday-film.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">The last few years of Apple holiday ads have revolved around iPhone, Apple Watch and AirPods. For 2026, the new holiday film <a href="https://www.youtube.com/watch?v=Sp54mxnWjUM">“The Dreamer”</a> diverts from tradition and instead puts the spotlight on the Mac, specifically the <a href="https://link.amazon/B0gO4E8cD">MacBook Neo</a> … although even the iPhone 3GS gets a cameo appearance.</p>
+
+
+
+<p class="wp-block-paragraph">Watch the new ad after the break …</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl" data-layer-viewtype="unknown" data-post-id="1078918" href="https://9to5mac.com/2026/11/12/heres-apples-new-ad-for-the-holiday-season-featuring-macbook-neo/#more-1078918" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/heres-apples-new-ad-for-the-holiday-season-featuring-macbook-neo/feed/</wfw:commentRss>
+			<slash:comments>7</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078918</post-id>	</item>
+		<item>
+		<title>Gentler Streak 6.0 adds a new wellbeing timeline and customizable dashboard</title>
+		<link>https://9to5mac.com/2026/11/12/gentler-streak-6-0-adds-a-new-wellbeing-timeline-and-customizable-dashboard/</link>
+					<comments>https://9to5mac.com/2026/11/12/gentler-streak-6-0-adds-a-new-wellbeing-timeline-and-customizable-dashboard/#respond</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 08:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078903</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/gentler-wellbeing.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">In an update rolling out today, Gentler Streak is introducing new ways for users to track their wellbeing and personalize the app’s guidance based on how they feel. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1078903" href="https://9to5mac.com/2026/11/12/gentler-streak-6-0-adds-a-new-wellbeing-timeline-and-customizable-dashboard/#more-1078903" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/12/gentler-streak-6-0-adds-a-new-wellbeing-timeline-and-customizable-dashboard/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078903</post-id>	</item>
+		<item>
+		<title>9to5Mac Daily: November 11, 2026 – New Apple TV feature, more</title>
+		<link>https://9to5mac.com/2026/11/11/daily-november-11-2026/</link>
+					<comments>https://9to5mac.com/2026/11/11/daily-november-11-2026/#respond</comments>
+		
+		<dc:creator><![CDATA[Seth Kurkowski]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2026 04:01:11 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078889</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">Listen to a recap of the top stories of the day from </span><em style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">9to5Mac</em><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">. 9to5Mac Daily is available </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://podcasts.apple.com/us/podcast/9to5mac-daily/id1331816080" target="_blank" rel="noreferrer noopener">on iTunes and Apple’s Podcasts app</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://www.stitcher.com/podcast/9to5mac-daily">Stitcher</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://tunein.com/radio/9to5Mac-Daily-p1089524/">TuneIn</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://play.google.com/music/m/I5d4dzs7dauazmfxvvrynyiuram?t=9to5Mac_Daily">Google Play</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, or through our </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://feedpress.me/9to5macdaily">dedicated RSS feed</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;"> for Overcast and other podcast players.</span></p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://bit.ly/41bWB64"><strong>Sponsored by Backblaze</strong></a>: Backup you can rely on. Save 20% with code <strong>9to5daily</strong>.</p>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/MacDaily_11-11-26.mp3"></audio></figure>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5mac-daily,podcast" data-layer-viewtype="unknown" data-post-id="1078889" href="https://9to5mac.com/2026/11/11/daily-november-11-2026/#more-1078889" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/daily-november-11-2026/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078889</post-id>	</item>
+		<item>
+		<title>iPhone Duo one week later: The future, or not for me?</title>
+		<link>https://9to5mac.com/2026/11/11/iphone-duo-one-week-later-the-future-or-not-for-me/</link>
+					<comments>https://9to5mac.com/2026/11/11/iphone-duo-one-week-later-the-future-or-not-for-me/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 21:33:21 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078666</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/iphone-duo-23.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">My iPhone Duo arrived last Thursday, so I’ve had a week to use it as my daily carry. My early experience has been mixed, so I keep asking myself an important question: is this the iPhone’s future and I just need to adapt, or is the Duo simply not for everyone?</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="iphone,iphone-duo" data-layer-viewtype="unknown" data-post-id="1078666" href="https://9to5mac.com/2026/11/11/iphone-duo-one-week-later-the-future-or-not-for-me/#more-1078666" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/iphone-duo-one-week-later-the-future-or-not-for-me/feed/</wfw:commentRss>
+			<slash:comments>52</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078666</post-id>	</item>
+		<item>
+		<title>Binance warns iPhone crypto holders of security flaw researchers say remains unpatched</title>
+		<link>https://9to5mac.com/2026/11/11/binance-warns-iphone-crypto-holders-of-security-flaw-researchers-say-remains-unpatched/</link>
+					<comments>https://9to5mac.com/2026/11/11/binance-warns-iphone-crypto-holders-of-security-flaw-researchers-say-remains-unpatched/#comments</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 21:17:30 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078681</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2024/06/apple-hacked.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Crypto exchange Binance has warned iPhone users about an iOS vulnerability that could allow malicious apps to access sensitive data stored by other apps. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="iphone,security" data-layer-viewtype="unknown" data-post-id="1078681" href="https://9to5mac.com/2026/11/11/binance-warns-iphone-crypto-holders-of-security-flaw-researchers-say-remains-unpatched/#more-1078681" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/binance-warns-iphone-crypto-holders-of-security-flaw-researchers-say-remains-unpatched/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078681</post-id>	</item>
+		<item>
+		<title>Apple Invites app now lets hosts poll guests, plus new emoji effect added</title>
+		<link>https://9to5mac.com/2026/11/11/apple-invites-app-now-lets-hosts-poll-guests-plus-new-emoji-effect-added/</link>
+					<comments>https://9to5mac.com/2026/11/11/apple-invites-app-now-lets-hosts-poll-guests-plus-new-emoji-effect-added/#comments</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 21:08:46 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078671</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/apple-invites-app.webp?w=1600" /></div><p class="wp-block-paragraph">Apple Invites, an iCloud+ feature, just added two new features in this month’s update.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-invites,apps,icloud,iphone" data-layer-viewtype="unknown" data-post-id="1078671" href="https://9to5mac.com/2026/11/11/apple-invites-app-now-lets-hosts-poll-guests-plus-new-emoji-effect-added/#more-1078671" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/apple-invites-app-now-lets-hosts-poll-guests-plus-new-emoji-effect-added/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078671</post-id>	</item>
+		<item>
+		<title>Apple reportedly met with Thai officials over spyware alerts sent to politicians</title>
+		<link>https://9to5mac.com/2026/11/11/apple-reportedly-met-with-thai-officials-over-spyware-alerts-sent-to-politicians/</link>
+					<comments>https://9to5mac.com/2026/11/11/apple-reportedly-met-with-thai-officials-over-spyware-alerts-sent-to-politicians/#respond</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 20:18:07 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078660</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/mercenary-alert-2.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><em><a href="https://www.bloomberg.com/news/articles/2026-11-11/thai-officials-meet-apple-over-spyware-alerts-to-politicians">Bloomberg</a></em> reports that Apple has met with Thai government officials in the wake of its recent wave of iPhone alerts about mercenary spyware attacks. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl" data-layer-viewtype="unknown" data-post-id="1078660" href="https://9to5mac.com/2026/11/11/apple-reportedly-met-with-thai-officials-over-spyware-alerts-sent-to-politicians/#more-1078660" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/apple-reportedly-met-with-thai-officials-over-spyware-alerts-sent-to-politicians/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078660</post-id>	</item>
+		<item>
+		<title>OpenAI’s personal finance features for ChatGPT expands to Mac app</title>
+		<link>https://9to5mac.com/2026/11/11/openais-personal-finance-features-for-chatgpt-expands-to-mac-app/</link>
+					<comments>https://9to5mac.com/2026/11/11/openais-personal-finance-features-for-chatgpt-expands-to-mac-app/#comments</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 19:58:26 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078651</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/chatgpt-green.webp?w=1600" /></div><p class="wp-block-paragraph">Earlier this year, OpenAI introduced ChatGPT Finances. The feature started on the mobile app and website, but it’s been missing from ChatGPT’s desktop app. Starting today. ChatGPT Finances is now available on the Mac as well.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ai,apps,chatgpt,mac" data-layer-viewtype="unknown" data-post-id="1078651" href="https://9to5mac.com/2026/11/11/openais-personal-finance-features-for-chatgpt-expands-to-mac-app/#more-1078651" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/openais-personal-finance-features-for-chatgpt-expands-to-mac-app/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078651</post-id>	</item>
+		<item>
+		<title>iCloud+ has new perk in iOS 27 if you pay for more storage</title>
+		<link>https://9to5mac.com/2026/11/11/icloud-has-new-perk-in-ios-27-if-you-pay-for-more-storage/</link>
+					<comments>https://9to5mac.com/2026/11/11/icloud-has-new-perk-in-ios-27-if-you-pay-for-more-storage/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 19:32:54 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078621</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/08/icloud-ios-27-blue.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">The tentpole feature of iCloud+ is cloud storage, but Apple keeps improving and expanding the service to include other perks too. And in iOS 27, iCloud+ has a new benefit for high-storage tiers: AI features for HomeKit cameras.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="icloud,ios-27" data-layer-viewtype="unknown" data-post-id="1078621" href="https://9to5mac.com/2026/11/11/icloud-has-new-perk-in-ios-27-if-you-pay-for-more-storage/#more-1078621" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/icloud-has-new-perk-in-ios-27-if-you-pay-for-more-storage/feed/</wfw:commentRss>
+			<slash:comments>13</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078621</post-id>	</item>
+		<item>
+		<title>Apple offers a military discount, here’s how to get it</title>
+		<link>https://9to5mac.com/2026/11/11/apple-offers-a-military-discount-heres-how-to-get-it/</link>
+					<comments>https://9to5mac.com/2026/11/11/apple-offers-a-military-discount-heres-how-to-get-it/#respond</comments>
+		
+		<dc:creator><![CDATA[Michael Bower]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 18:01:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1075822</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/apple-military-discount.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">If you’re a member of the U.S. military, Apple offers an easy way to save 10% on eligible products and accessories. It’s available to current and veteran members of the U.S. military and their immediate family members living in the same household. While you’ll need to verify your eligibility to access the discount, the process is simple. There are also a few limitations you’ll want to know about before placing an order. Here’s everything you need to know.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="discount,military" data-layer-viewtype="unknown" data-post-id="1075822" href="https://9to5mac.com/2026/11/11/apple-offers-a-military-discount-heres-how-to-get-it/#more-1075822" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/apple-offers-a-military-discount-heres-how-to-get-it/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1075822</post-id>	</item>
+		<item>
+		<title>Google Gemini for CarPlay now available</title>
+		<link>https://9to5mac.com/2026/11/11/google-confirms-gemini-app-coming-to-apple-carplay/</link>
+					<comments>https://9to5mac.com/2026/11/11/google-confirms-gemini-app-coming-to-apple-carplay/#comments</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 17:29:13 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078562</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/04/gemini-mac.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Google’s Gemini AI chatbot app for Apple CarPlay is now available. The company confirmed that it is bringing the full Gemini Live conversation experience to CarPlay on Wednesday, and the app update arrived on Thursday.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ai,apps,carplay,gemini" data-layer-viewtype="unknown" data-post-id="1078562" href="https://9to5mac.com/2026/11/11/google-confirms-gemini-app-coming-to-apple-carplay/#more-1078562" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/google-confirms-gemini-app-coming-to-apple-carplay/feed/</wfw:commentRss>
+			<slash:comments>7</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078562</post-id>	</item>
+		<item>
+		<title>watchOS 27.3: Three new features coming soon to Apple Watch</title>
+		<link>https://9to5mac.com/2026/11/11/watchos-27-3-three-new-features-coming-soon-to-apple-watch/</link>
+					<comments>https://9to5mac.com/2026/11/11/watchos-27-3-three-new-features-coming-soon-to-apple-watch/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 16:33:39 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078511</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/apple-watch-series-12-watchos-27-2-music.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">watchOS 27.3 will launch to all users <a href="https://9to5mac.com/2026/10/29/ios-27-3-release-date-heres-when-to-expect-new-iphone-features/" data-type="post" data-id="1076486">next month</a> and introduce these three new Apple Watch features.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-watch,watchos-27,watchos-27-3" data-layer-viewtype="unknown" data-post-id="1078511" href="https://9to5mac.com/2026/11/11/watchos-27-3-three-new-features-coming-soon-to-apple-watch/#more-1078511" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/watchos-27-3-three-new-features-coming-soon-to-apple-watch/feed/</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078511</post-id>	</item>
+		<item>
+		<title>Deals: AirTag 2 $17.50 each, Magic Mouse, Trackpad, AirPods, TechWoven, MacBook Air $250 off, more</title>
+		<link>https://9to5mac.com/2026/11/11/deals-airtag-2-magic-mouse-trackpad-macbook-air/</link>
+					<comments>https://9to5mac.com/2026/11/11/deals-airtag-2-magic-mouse-trackpad-macbook-air/#respond</comments>
+		
+		<dc:creator><![CDATA[Justin Kahn]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 16:27:43 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078513</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Apple-deals-early-black-friday-singles-day.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">The Amazon <a href="https://link.amazon/B0dbXgFnt">early Black Friday sale is now live</a> and, alongside the ongoing <a href="https://link.amazon/B0iPLc4Pq">AirPods Pro 3 at $50 off</a> and <a href="https://link.amazon/B0i4t6rSc">Apple Watch Ultra 4 at nearly <strong>$100 off</strong></a>, we are getting some official Apple early Black Friday deals today too. Firstly, the <a href="https://link.amazon/B0e5i8Ohx">2026 AirTag 2</a> has now returned to its <a href="https://link.amazon/B0e5i8Ohx">lowest price ever at <strong>$17.50 each</strong></a> alongside some rare price drops on the latest <a href="https://link.amazon/B0iVJeswH">Magic Mouse models</a> at up to nearly <a href="https://link.amazon/B0iVJeswH"><strong>25% off</strong></a>, and Amazon’s best prices on <a href="https://link.amazon/B0ccRASzP">Apple’s Magic Trackpad</a>. Joining some new all-time lows going live today on Apple’s latest collection of <a href="https://link.amazon/B01Wkb0GG">iPhone 18 Pro and Pro Max cases</a> at up to <a href="https://link.amazon/B01Wkb0GG">40% off</a>, we also still have the impressive <a href="https://link.amazon/B08xrzdrV">$250 price drops on M5 MacBook Air</a>, and even more waiting below. </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5toys,9to5toys-lunch-break,deals" data-layer-viewtype="unknown" data-post-id="1078513" href="https://9to5mac.com/2026/11/11/deals-airtag-2-magic-mouse-trackpad-macbook-air/#more-1078513" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/deals-airtag-2-magic-mouse-trackpad-macbook-air/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078513</post-id>	</item>
+		<item>
+		<title>iPhone is the winner of new battery test, topping all Androids</title>
+		<link>https://9to5mac.com/2026/11/11/iphone-is-the-winner-of-new-battery-test-topping-all-androids/</link>
+					<comments>https://9to5mac.com/2026/11/11/iphone-is-the-winner-of-new-battery-test-topping-all-androids/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 15:58:27 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078495</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/09/iphone-18-pro-pro-max-hand.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Last week <em>CNET</em> <a href="https://www.cnet.com/tech/mobile/phones-best-battery-life-test/'">published</a> an extensive battery test and the iPhone came out on top. But it wasn’t just one iPhone model that performed well, as several iPhones topped <em>CNET’s</em> list.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="iphone" data-layer-viewtype="unknown" data-post-id="1078495" href="https://9to5mac.com/2026/11/11/iphone-is-the-winner-of-new-battery-test-topping-all-androids/#more-1078495" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/iphone-is-the-winner-of-new-battery-test-topping-all-androids/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078495</post-id>	</item>
+		<item>
+		<title>iOS 27.3 adds new setting to bypass website cookie popups (eventually)</title>
+		<link>https://9to5mac.com/2026/11/11/ios-27-3-adds-new-setting-to-bypass-website-cookie-popups-eventually/</link>
+					<comments>https://9to5mac.com/2026/11/11/ios-27-3-adds-new-setting-to-bypass-website-cookie-popups-eventually/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 15:07:20 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078467</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2025/09/iphone-17-pro-max-cosmic-orange-fi-2.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">iOS 27.3 is currently in beta and <a href="https://9to5mac.com/guides/ios-27-3/" data-type="ninetofive_guides" data-id="590185336">packed with new features</a>, including a ‘Global Privacy Control’ setting in Safari that could someday put an end to cookie consent pop-ups.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ios-27,ios-27-3,safari" data-layer-viewtype="unknown" data-post-id="1078467" href="https://9to5mac.com/2026/11/11/ios-27-3-adds-new-setting-to-bypass-website-cookie-popups-eventually/#more-1078467" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/ios-27-3-adds-new-setting-to-bypass-website-cookie-popups-eventually/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078467</post-id>	</item>
+		<item>
+		<title>If you bought an iPhone Duo, have you kept or returned it? [Poll]</title>
+		<link>https://9to5mac.com/2026/11/11/if-you-bought-an-iphone-duo-have-you-kept-or-returned-it-poll/</link>
+					<comments>https://9to5mac.com/2026/11/11/if-you-bought-an-iphone-duo-have-you-kept-or-returned-it-poll/#comments</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 14:13:49 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078440</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/iphone-duo-one-handed-front-display.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">When Apple announced the <a href="https://9to5mac.com/guides/iphone-duo/" target="_blank" rel="noreferrer noopener">iPhone Duo</a> back in September, the company called it “the most transformational change to iPhone since the original,” and there’s no doubt that it generated a huge amount of excitement.</p>
+
+
+
+<p class="wp-block-paragraph">But a new report suggests that for some buyers the novelty quickly wore off, and they ended up returning their devices. Is this just a handful of people, or is it more common … ?</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="polls,iphone-duo" data-layer-viewtype="unknown" data-post-id="1078440" href="https://9to5mac.com/2026/11/11/if-you-bought-an-iphone-duo-have-you-kept-or-returned-it-poll/#more-1078440" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/if-you-bought-an-iphone-duo-have-you-kept-or-returned-it-poll/feed/</wfw:commentRss>
+			<slash:comments>47</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078440</post-id>	</item>
+		<item>
+		<title>HomeKit Weekly: SwitchBot’s Curtain Track 4 is the easiest smart curtain retrofit yet</title>
+		<link>https://9to5mac.com/2026/11/11/switchbot-curtain-track-4/</link>
+		
+		<dc:creator><![CDATA[Bradley C]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 14:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078201</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/SwitchBot-Curtain-Track-4-2.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">The worst part of owning smart curtain motors is charging them, because it usually means taking the whole motor down from the track or running a really long USB cord to charge it. Today, SwitchBot has released the <a href="https://link.amazon/B0fMFN5E1">SwitchBot Curtain Track 4</a> aimed at solving that problem with a battery module that detaches on its own, so the motor stays in place, and you only take down the part that needs to charge.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="homekit-weekly" data-layer-viewtype="unknown" data-post-id="1078201" href="https://9to5mac.com/2026/11/11/switchbot-curtain-track-4/#more-1078201" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078201</post-id>	</item>
+		<item>
+		<title>WhatsApp may soon replace the Communities tab on iOS</title>
+		<link>https://9to5mac.com/2026/11/11/whatsapp-may-soon-replace-the-communities-tab-on-ios/</link>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 13:41:13 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078343</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/whatsapp-04.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Some WhatsApp beta testers on iOS are seeing a new option in the app’s bottom navigation bar that replaces the Communities tab. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="whatsapp" data-layer-viewtype="unknown" data-post-id="1078343" href="https://9to5mac.com/2026/11/11/whatsapp-may-soon-replace-the-communities-tab-on-ios/#more-1078343" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078343</post-id>	</item>
+		<item>
+		<title>I feel a little nostalgic about the Apple Support Community forums, but it was time</title>
+		<link>https://9to5mac.com/2026/11/11/i-feel-a-little-nostalgic-about-the-apple-support-community-forums-but-it-was-time/</link>
+					<comments>https://9to5mac.com/2026/11/11/i-feel-a-little-nostalgic-about-the-apple-support-community-forums-but-it-was-time/#comments</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 13:31:53 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078415</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/I-feel-a-little-nostalgic-about-the-Apple-Support-Community-forums-but-it-was-time.jpeg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Yesterday brought a surprise move by <a href="https://9to5mac.com/guides/aapl/" target="_blank" rel="noreferrer noopener">Apple</a> when it abruptly ceased write access to the Apple Support Community and announced that it would be <a href="https://9to5mac.com/2026/11/10/end-of-an-era-apple-support-community-forums-will-permanently-close-on-november-20/" target="_blank" rel="noreferrer noopener">permanently closing</a> in just over a week.</p>
+
+
+
+<p class="wp-block-paragraph">While the news does make me a little nostalgic, I do have to say that I think its time had long since come and gone …</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl,opinion" data-layer-viewtype="unknown" data-post-id="1078415" href="https://9to5mac.com/2026/11/11/i-feel-a-little-nostalgic-about-the-apple-support-community-forums-but-it-was-time/#more-1078415" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/i-feel-a-little-nostalgic-about-the-apple-support-community-forums-but-it-was-time/feed/</wfw:commentRss>
+			<slash:comments>16</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078415</post-id>	</item>
+		<item>
+		<title>This video lets you actually see the &#8216;incredible&#8217; new MacBook Pro cooling system</title>
+		<link>https://9to5mac.com/2026/11/11/this-video-lets-you-actually-see-the-incredible-new-macbook-pro-cooling-system/</link>
+					<comments>https://9to5mac.com/2026/11/11/this-video-lets-you-actually-see-the-incredible-new-macbook-pro-cooling-system/#respond</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 12:47:32 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078387</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/This-video-lets-you-actually-see-the-incredible-new-MacBook-Pro-cooling-system.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">When Apple launched the new <a href="https://9to5mac.com/guides/macbook-pro/" target="_blank" rel="noreferrer noopener">MacBook Pro</a> with PROLED XDR display, the company <a href="https://www.apple.com/uk/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/" target="_blank" rel="noreferrer noopener">said</a> that it had completely redesigned the cooling system for “incredible sustained performance.”</p>
+
+
+
+<p class="wp-block-paragraph">That could sound like marketing hype, but a YouTuber has found a great way to let us actually <em>see</em> the new system living up to Apple’s claims …</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="macbook-pro" data-layer-viewtype="unknown" data-post-id="1078387" href="https://9to5mac.com/2026/11/11/this-video-lets-you-actually-see-the-incredible-new-macbook-pro-cooling-system/#more-1078387" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/this-video-lets-you-actually-see-the-incredible-new-macbook-pro-cooling-system/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078387</post-id>	</item>
+		<item>
+		<title>Early Black Friday deals now live on official Apple Magic accessories, AirTag 2, Pencil, more</title>
+		<link>https://9to5mac.com/2026/11/11/black-friday-deals-live-apple-magic-airtag-pencil/</link>
+		
+		<dc:creator><![CDATA[Justin Kahn]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 12:31:23 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078356</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Black-Friday-Apple-accessorry-deals.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><strong>Update 10/11:</strong> After going completely out of stock yesterday, Apple’s <a href="https://link.amazon/B0afh2oP2">2026 next-generation Apple Polishing Cloth</a> is now available for purchase again at <a href="https://link.amazon/B0afh2oP2"><strong>$9 Prime shipped</strong></a> via Amazon. </p>
+
+
+
+<p class="wp-block-paragraph">Amazon’s <a href="https://link.amazon/B0bUzbADt">early Black Friday sale is now live</a>, and it includes a number of official Apple accessory deals starting this morning. Alongside some big-ticket deals on <a href="https://link.amazon/B0iPLc4Pq">AirPods Pro 3 at $50 off</a>, the <a href="https://link.amazon/B0gpBEfwx">$250 price drop</a> on <a href="https://link.amazon/B01UhxPzV">M5 MacBook Air</a>, and <a href="https://link.amazon/B07ALLHk6">Apple Watch Ultra 4</a> at nearly <a href="https://link.amazon/B07ALLHk6">$100 off</a>, there are some serious Apple add-on offers going live today. </p>
+
+
+
+<p class="wp-block-paragraph">We have the return of all-time low pricing on <a href="https://link.amazon/B0e5i8Ohx">AirTag 2 at $17.50 each</a>, some rare discounts on the latest <a href="https://link.amazon/B0iVJeswH">Magic Mouse</a> in <a href="https://link.amazon/B0dy2cd2K">black</a> and the classic <a href="https://link.amazon/B0iVJeswH">white/silver</a> livery, the ongoing low on its <a href="https://link.amazon/B0aT28T79">2026 Magic Keyboard</a>, and the lowest price around for the iPhone Duo-ready <a href="https://link.amazon/B00wLTAdd">Apple Pencil USB-C.</a> All of that joins as much as <a href="https://link.amazon/B0gbowZMY">40% off Apple’s iPhone 18 Pro case lineup</a> (several models have hit new all-time lows as of this morning), and even more waiting down below. </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="deals" data-layer-viewtype="unknown" data-post-id="1078356" href="https://9to5mac.com/2026/11/11/black-friday-deals-live-apple-magic-airtag-pencil/#more-1078356" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078356</post-id>	</item>
+		<item>
+		<title>Reddit Reviews goes against the whole philosophy of the platform, say users</title>
+		<link>https://9to5mac.com/2026/11/11/reddit-reviews-goes-against-the-whole-philosophy-of-the-platform-say-users/</link>
+					<comments>https://9to5mac.com/2026/11/11/reddit-reviews-goes-against-the-whole-philosophy-of-the-platform-say-users/#comments</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 12:18:14 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078361</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Reddit-Reviews-goes-against-the-whole-philosophy-of-the-platform-say-users.jpeg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Many Redditors have expressed dismay at the launch of Reddit Reviews, a new AI-powered feature which aims to summarise posts about particular products.</p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://9to5mac.com/guides/reddit/" target="_blank" rel="noreferrer noopener">Reddit</a> is positioning the feature as a way to save time and effort when researching a potential purchase, but many Redditors say that replacing human interaction with AI summaries is antithetical to the whole philosophy of the platform – and is going to make the existing spam problem massively worse …</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apps,reddit" data-layer-viewtype="unknown" data-post-id="1078361" href="https://9to5mac.com/2026/11/11/reddit-reviews-goes-against-the-whole-philosophy-of-the-platform-say-users/#more-1078361" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/11/reddit-reviews-goes-against-the-whole-philosophy-of-the-platform-say-users/feed/</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078361</post-id>	</item>
+		<item>
+		<title>End of an era: Apple Support Community forums will permanently close on November 20</title>
+		<link>https://9to5mac.com/2026/11/10/end-of-an-era-apple-support-community-forums-will-permanently-close-on-november-20/</link>
+					<comments>https://9to5mac.com/2026/11/10/end-of-an-era-apple-support-community-forums-will-permanently-close-on-november-20/#comments</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 02:49:08 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078333</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/apple-support-forums.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Users visiting the Apple Support Community tonight were greeted with a message informing them that the platform will permanently shut down on November 20. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl" data-layer-viewtype="unknown" data-post-id="1078333" href="https://9to5mac.com/2026/11/10/end-of-an-era-apple-support-community-forums-will-permanently-close-on-november-20/#more-1078333" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/end-of-an-era-apple-support-community-forums-will-permanently-close-on-november-20/feed/</wfw:commentRss>
+			<slash:comments>13</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078333</post-id>	</item>
+		<item>
+		<title>Apple Music debuts Labrinth’s new single, created live on the touchscreen MacBook Pro</title>
+		<link>https://9to5mac.com/2026/11/10/apple-music-debuts-labrinths-new-single-created-live-on-the-touchscreen-macbook-pro/</link>
+					<comments>https://9to5mac.com/2026/11/10/apple-music-debuts-labrinths-new-single-created-live-on-the-touchscreen-macbook-pro/#respond</comments>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 01:31:51 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078323</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/labrinth-apple-store.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Following <a href="https://9to5mac.com/2026/11/04/livestream-watch-labrinth-create-a-song-from-scratch-tonight-using-apples-new-macbook-pro/">last week’s livestream</a>, when Labrinth composed and recorded a song overnight at Apple Tower Theatre in Los Angeles on the <a href="https://link.amazon/A0bspCQfK">new touchscreen MacBook Pro</a>, the single is now available on Apple Music. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-music" data-layer-viewtype="unknown" data-post-id="1078323" href="https://9to5mac.com/2026/11/10/apple-music-debuts-labrinths-new-single-created-live-on-the-touchscreen-macbook-pro/#more-1078323" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/apple-music-debuts-labrinths-new-single-created-live-on-the-touchscreen-macbook-pro/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078323</post-id>	</item>
+		<item>
+		<title>9to5Mac Daily: November 10, 2026 – iOS 27.2.1, HomeView rumors</title>
+		<link>https://9to5mac.com/2026/11/10/daily-november-10-2026/</link>
+		
+		<dc:creator><![CDATA[Seth Kurkowski]]></dc:creator>
+		<pubDate>Wed, 11 Nov 2026 00:00:34 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078296</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">Listen to a recap of the top stories of the day from </span><em style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">9to5Mac</em><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">. 9to5Mac Daily is available </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://podcasts.apple.com/us/podcast/9to5mac-daily/id1331816080" target="_blank" rel="noreferrer noopener">on iTunes and Apple’s Podcasts app</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://www.stitcher.com/podcast/9to5mac-daily">Stitcher</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://tunein.com/radio/9to5Mac-Daily-p1089524/">TuneIn</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://play.google.com/music/m/I5d4dzs7dauazmfxvvrynyiuram?t=9to5Mac_Daily">Google Play</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, or through our </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://feedpress.me/9to5macdaily">dedicated RSS feed</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;"> for Overcast and other podcast players.</span></p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://bit.ly/41bWB64"><strong>Sponsored by Backblaze</strong></a>: Backup you can rely on. Save 20% with code <strong>9to5daily</strong>.</p>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/MacDaily_11-10-26.mp3"></audio></figure>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5mac-daily,podcast" data-layer-viewtype="unknown" data-post-id="1078296" href="https://9to5mac.com/2026/11/10/daily-november-10-2026/#more-1078296" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078296</post-id>	</item>
+		<item>
+		<title>Apple confirms ongoing outage affecting iCloud and more [U]</title>
+		<link>https://9to5mac.com/2026/11/10/apple-confirms-ongoing-outage-affecting-icloud-and-more/</link>
+					<comments>https://9to5mac.com/2026/11/10/apple-confirms-ongoing-outage-affecting-icloud-and-more/#respond</comments>
+		
+		<dc:creator><![CDATA[Chance Miller]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 23:48:49 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078295</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/08/icloud-ios-27-blue.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><strong>Update, 5:18 p.m. PT:</strong> Apple says all outages have now been resolved.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<p class="wp-block-paragraph">If you’re having problems accessing iCloud and other Apple services this evening, you’re not alone. Apple has confirmed an ongoing outage affecting iCloud, Find My, and more. </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="icloud" data-layer-viewtype="unknown" data-post-id="1078295" href="https://9to5mac.com/2026/11/10/apple-confirms-ongoing-outage-affecting-icloud-and-more/#more-1078295" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/apple-confirms-ongoing-outage-affecting-icloud-and-more/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078295</post-id>	</item>
+		<item>
+		<title>iFixit tears down touchscreen MacBook Pro, reveals light-up Apple logo details</title>
+		<link>https://9to5mac.com/2026/11/10/ifixit-tears-down-touchscreen-macbook-pro-reveals-light-up-apple-logo-details/</link>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 23:14:49 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078284</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/ifixit-mbp-touch-teardown.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">iFixit published its teardown of the <a href="https://link.amazon/A0bspCQfK">new MacBook Pro with PROLED XDR Display</a> today, revealing interesting details about how Apple brought back its illuminated logo on the lid. Watch it below.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="macbook-pro" data-layer-viewtype="unknown" data-post-id="1078284" href="https://9to5mac.com/2026/11/10/ifixit-tears-down-touchscreen-macbook-pro-reveals-light-up-apple-logo-details/#more-1078284" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078284</post-id>	</item>
+		<item>
+		<title>CleanupBuddy 2.0 expands beyond the keyboard with new display cleaning features</title>
+		<link>https://9to5mac.com/2026/11/10/cleanupbuddy-2-0-expands-beyond-the-keyboard-with-new-display-cleaning-features/</link>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 22:56:55 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078274</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/cleanup-buddy.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Developer Gui Rambo updated CleanupBuddy today, expanding its ability to prevent accidental inputs while cleaning your Mac from the keyboard to the touchscreen. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apps" data-layer-viewtype="unknown" data-post-id="1078274" href="https://9to5mac.com/2026/11/10/cleanupbuddy-2-0-expands-beyond-the-keyboard-with-new-display-cleaning-features/#more-1078274" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078274</post-id>	</item>
+		<item>
+		<title>Apple to investigate accident that killed three workers at iPhone parts factory in India</title>
+		<link>https://9to5mac.com/2026/11/10/apple-to-investigate-accident-that-killed-three-workers-at-iphone-parts-factory-in-india/</link>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 21:34:43 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078269</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2023/03/apple-india.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><a href="https://www.reuters.com/world/india/three-workers-die-tata-electronics-iphone-parts-plant-new-indian-express-reports-2026-11-10/"><em>Reuters</em></a> reports that three contract workers died after inhaling gas during an inspection at a Tata Electronics factory that produces iPhone components in India. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl,india" data-layer-viewtype="unknown" data-post-id="1078269" href="https://9to5mac.com/2026/11/10/apple-to-investigate-accident-that-killed-three-workers-at-iphone-parts-factory-in-india/#more-1078269" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078269</post-id>	</item>
+		<item>
+		<title>Spotify’s AI DJ adds nine voices and a setting to reduce interruptions</title>
+		<link>https://9to5mac.com/2026/11/10/spotifys-ai-dj-adds-nine-voices-and-a-setting-to-reduce-interruptions/</link>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 20:48:41 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078266</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/05/spotify-dj.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Spotify today expanded customization options for its AI DJ, allowing users to choose between different voices and personalities, as well as control how much the DJ talks between songs. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="spotify" data-layer-viewtype="unknown" data-post-id="1078266" href="https://9to5mac.com/2026/11/10/spotifys-ai-dj-adds-nine-voices-and-a-setting-to-reduce-interruptions/#more-1078266" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078266</post-id>	</item>
+		<item>
+		<title>Apple just released new AirPods Pro 3 firmware and more</title>
+		<link>https://9to5mac.com/2026/11/10/apple-just-released-new-airpods-pro-3-firmware-airpods-5-more/</link>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 20:06:19 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078260</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/04/airpods-pro-3-upside-down.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple is rolling out brand new firmware for select AirPods models today, including AirPods Pro 3. Here are the details on how to update.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="airpods,airpods-pro" data-layer-viewtype="unknown" data-post-id="1078260" href="https://9to5mac.com/2026/11/10/apple-just-released-new-airpods-pro-3-firmware-airpods-5-more/#more-1078260" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078260</post-id>	</item>
+		<item>
+		<title>Apple TV shares trailers for upcoming Snoopy and Fraggle Rock holiday specials</title>
+		<link>https://9to5mac.com/2026/11/10/apple-tv-shares-trailers-for-upcoming-snoopy-and-fraggle-rock-holiday-specials/</link>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 19:57:28 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078258</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2025/10/apple-tv-holiday.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">With the holidays fast approaching, Apple TV has shared trailers for two upcoming specials featuring Snoopy and the Fraggles. Watch them below.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv" data-layer-viewtype="unknown" data-post-id="1078258" href="https://9to5mac.com/2026/11/10/apple-tv-shares-trailers-for-upcoming-snoopy-and-fraggle-rock-holiday-specials/#more-1078258" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078258</post-id>	</item>
+		<item>
+		<title>iOS 27.2 adds new features in six iPhone apps, details here</title>
+		<link>https://9to5mac.com/2026/11/10/ios-27-2-adds-new-features-in-six-iphone-apps-details-here/</link>
+					<comments>https://9to5mac.com/2026/11/10/ios-27-2-adds-new-features-in-six-iphone-apps-details-here/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 19:50:14 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1074929</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/ios-27-app-icons-grid.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">iOS 27.2 recently launched with new features for iPhone users, including improvements across six Apple apps. Here’s what’s new.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ios-27,ios-27-2" data-layer-viewtype="unknown" data-post-id="1074929" href="https://9to5mac.com/2026/11/10/ios-27-2-adds-new-features-in-six-iphone-apps-details-here/#more-1074929" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/ios-27-2-adds-new-features-in-six-iphone-apps-details-here/feed/</wfw:commentRss>
+			<slash:comments>7</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1074929</post-id>	</item>
+		<item>
+		<title>Apple has new Mac app coming to make running local AI models easy</title>
+		<link>https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/</link>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 19:15:32 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078253</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/Mac-mini.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Leaker Aaron Perris has <a href="https://x.com/aaronp613/status/2120229190477992162?a=em8hy9-X3UtcmFWDyN0&amp;s=61">discovered evidence</a> of a new Mac app in the works at Apple called Harbor, which makes it easy to run local AI models across one or more Macs.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ai" data-layer-viewtype="unknown" data-post-id="1078253" href="https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/#more-1078253" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078253</post-id>	</item>
+		<item>
+		<title>Apple announces Swift Student Challenge 2027 with new twist</title>
+		<link>https://9to5mac.com/2026/11/10/apple-announces-swift-student-challenge-2027-with-new-twist/</link>
+					<comments>https://9to5mac.com/2026/11/10/apple-announces-swift-student-challenge-2027-with-new-twist/#respond</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 18:11:28 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078244</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/swift-student-challenge-2027.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple has <a href="https://developer.apple.com/swift-student-challenge/">announced</a> details for 2027’s Swift Student Challenge, and there’s a new twist this year: students can submit an app for any Apple platform.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1078244" href="https://9to5mac.com/2026/11/10/apple-announces-swift-student-challenge-2027-with-new-twist/#more-1078244" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/apple-announces-swift-student-challenge-2027-with-new-twist/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078244</post-id>	</item>
+		<item>
+		<title>New Apple TV 4K remote&#8217;s best feature requires a newer iPhone model</title>
+		<link>https://9to5mac.com/2026/11/10/new-apple-tv-4k-remotes-best-feature-requires-a-newer-iphone-model/</link>
+					<comments>https://9to5mac.com/2026/11/10/new-apple-tv-4k-remotes-best-feature-requires-a-newer-iphone-model/#respond</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 17:47:32 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078240</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/siri-remote-4th-gen-apple.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">A new Apple TV 4K releases this Friday (<a href="https://link.amazon/B09g4Xrqi">pre-order here</a>), with an upgraded Siri Remote. But the new remote’s best feature might not work on your iPhone.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv,apple-tv-4k,siri-remote" data-layer-viewtype="unknown" data-post-id="1078240" href="https://9to5mac.com/2026/11/10/new-apple-tv-4k-remotes-best-feature-requires-a-newer-iphone-model/#more-1078240" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/new-apple-tv-4k-remotes-best-feature-requires-a-newer-iphone-model/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078240</post-id>	</item>
+		<item>
+		<title>Satechi expands lineup of color-matched accessories for MacBook Neo</title>
+		<link>https://9to5mac.com/2026/11/10/satechi-new-macbook-neo-accessories/</link>
+		
+		<dc:creator><![CDATA[Chance Miller]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 17:00:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078226</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/neo_collection_banner.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Earlier this year, <a href="https://9to5mac.com/2026/07/16/hands-on-satechis-new-color-matched-macbook-neo-accessories-add-ports-and-extra-functionality/">Satechi launched</a> a line of Mac accessories in colors inspired by the <a href="https://link.amazon/B05Gy9ARZ">MacBook Neo</a>. Now, the company is back with a new expansion of that line with four new accessories: </p>
+
+
+
+<ul class="wp-block-list">
+<li>MacBook Neo OntheGo 45W GaN Charger with 60W Max <strong><a href="https://link.amazon/B03UKpB1Q">$30</a></strong></li>
+
+
+
+<li>MacBook Neo Core USB-C to 4K HDMI Adapter <strong><a href="https://link.amazon/B01IDYIae">$30</a></strong></li>
+
+
+
+<li>MacBook Neo Slim EX1 Wireless Keyboard <strong><a href="https://link.amazon/B06UsHzpu">$50</a></strong></li>
+
+
+
+<li>MacBook Neo Form Desk Mat <strong><a href="https://link.amazon/B0dkcDJFG">$40</a></strong></li>
+</ul>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="mac,macbook-neo" data-layer-viewtype="unknown" data-post-id="1078226" href="https://9to5mac.com/2026/11/10/satechi-new-macbook-neo-accessories/#more-1078226" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078226</post-id>	</item>
+		<item>
+		<title>Deals: M5 MacBook Air up to $300 off, M6 Mac mini, AirPods Pro 3, HomeView, Magic Trackpad, more</title>
+		<link>https://9to5mac.com/2026/11/10/deals-macbook-air-mac-mini-airpods-homeview-trackpad/</link>
+		
+		<dc:creator><![CDATA[Justin Kahn]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 16:31:02 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078224</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Apple-deals-MacBook-Air-HomeView-AirPods-Trackpad.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Amazon now <strong>$150 off</strong> and these Amazon all-time lows on <a href="https://link.amazon/B0ccRASzP">Apple’s Magic Trackpad</a> in <a href="https://link.amazon/B0ccRASzP">white</a> and <a href="https://link.amazon/B0fYji9ag">black</a>. We have Twelve South’s adjustable metal <a href="https://9to5toys.com/2026/11/10/twelve-souths-adjustable-metal-curve-mini-stand-is-oled-ipad-mini-and-iphone-duo-ready-down-at-40/">Curve Mini stand</a> for your OLED iPad mini and/or iPhone Duo down <a href="https://9to5toys.com/2026/11/10/twelve-souths-adjustable-metal-curve-mini-stand-is-oled-ipad-mini-and-iphone-duo-ready-down-at-40/">at $40</a>, the popular <a href="https://link.amazon/B00ssqspr">Airfly Drive CarPlay wireless adapter</a> back in-stock, and loads more accessory deals waiting below. </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1078224" href="https://9to5mac.com/2026/11/10/deals-macbook-air-mac-mini-airpods-homeview-trackpad/#more-1078224" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078224</post-id>	</item>
+		<item>
+		<title>iPadOS 27.3 adds new iPad setting I instantly turned on</title>
+		<link>https://9to5mac.com/2026/11/10/ipados-27-3-adds-new-ipad-setting-i-instantly-turned-on/</link>
+					<comments>https://9to5mac.com/2026/11/10/ipados-27-3-adds-new-ipad-setting-i-instantly-turned-on/#respond</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 16:14:54 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078219</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/05/ipad-pro-ipados-26-5-lock-screen.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">iPadOS 27.3 is <a href="https://9to5mac.com/2026/11/03/watchos-27-3-ipados-27-3-and-more-now-available-in-beta/" data-type="post" data-id="1076080">currently available in beta</a>, and it introduces a new iPad setting for app windowing that I instantly turned on. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ipados-27,ipados-27-3" data-layer-viewtype="unknown" data-post-id="1078219" href="https://9to5mac.com/2026/11/10/ipados-27-3-adds-new-ipad-setting-i-instantly-turned-on/#more-1078219" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/ipados-27-3-adds-new-ipad-setting-i-instantly-turned-on/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078219</post-id>	</item>
+		<item>
+		<title>Apple TV launches new sign language accessibility feature</title>
+		<link>https://9to5mac.com/2026/11/10/apple-tv-new-sign-language-accessibility/</link>
+					<comments>https://9to5mac.com/2026/11/10/apple-tv-new-sign-language-accessibility/#respond</comments>
+		
+		<dc:creator><![CDATA[Benjamin Mayo]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 16:06:43 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078131</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/apple-tv-sign-language.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple today launched a neat new accessibility feature for the Apple TV streaming service. Users will now have the option to watch with a sign language interpretation for some of Apple’s original movies. </p>
+
+
+
+<p class="wp-block-paragraph">The feature is launching this Friday with the debut of the new film <a href="https://tinyurl.com/beingheumannappletv">Being Heumann</a>, as well as <a href="https://tinyurl.com/fappletv">F1: The Movie</a>. Support for more titles will follow later.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-tv" data-layer-viewtype="unknown" data-post-id="1078131" href="https://9to5mac.com/2026/11/10/apple-tv-new-sign-language-accessibility/#more-1078131" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/apple-tv-new-sign-language-accessibility/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078131</post-id>	</item>
+		<item>
+		<title>Apple Arcade unveils three new games from hit franchises</title>
+		<link>https://9to5mac.com/2026/11/10/apple-arcade-unveils-three-new-games-from-hit-franchises/</link>
+					<comments>https://9to5mac.com/2026/11/10/apple-arcade-unveils-three-new-games-from-hit-franchises/#respond</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 15:25:21 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078209</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2025/07/apple-arcade.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple Arcade <a href="https://9to5mac.com/2026/11/05/apple-arcade-adds-four-games-including-crossy-road-rush-and-nba-2k27-with-wnba-teams/">just added new games</a> last week, but today another title has debuted, and several more have been announced for release soon. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-arcade" data-layer-viewtype="unknown" data-post-id="1078209" href="https://9to5mac.com/2026/11/10/apple-arcade-unveils-three-new-games-from-hit-franchises/#more-1078209" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/apple-arcade-unveils-three-new-games-from-hit-franchises/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078209</post-id>	</item>
+		<item>
+		<title>Apple’s new HomeView to add two major features not yet announced, per leaks</title>
+		<link>https://9to5mac.com/2026/11/10/apples-new-homeview-to-add-two-major-features-not-yet-announced-per-leaks/</link>
+					<comments>https://9to5mac.com/2026/11/10/apples-new-homeview-to-add-two-major-features-not-yet-announced-per-leaks/#comments</comments>
+		
+		<dc:creator><![CDATA[Ryan Christoffel]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 14:52:57 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078186</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/homeview-hand-touch.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">Apple’s HomeView arrives this Friday (<a href="https://link.amazon/B07C8viuJ">pre-order here</a>), but leaks indicate there are already two major new features in the works that haven’t been announced. Here’s what to expect.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="homeview" data-layer-viewtype="unknown" data-post-id="1078186" href="https://9to5mac.com/2026/11/10/apples-new-homeview-to-add-two-major-features-not-yet-announced-per-leaks/#more-1078186" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/apples-new-homeview-to-add-two-major-features-not-yet-announced-per-leaks/feed/</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078186</post-id>	</item>
+		<item>
+		<title>Screens 5.10 adds two highly-requested remote desktop features</title>
+		<link>https://9to5mac.com/2026/11/10/screens-5-10-adds-two-highly-requested-remote-desktop-features/</link>
+					<comments>https://9to5mac.com/2026/11/10/screens-5-10-adds-two-highly-requested-remote-desktop-features/#respond</comments>
+		
+		<dc:creator><![CDATA[Zac Hall]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 14:33:53 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078078</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Screens-510.webp?w=1600" /></div><p class="wp-block-paragraph">Screens, the remote desktop app for iPhone, iPad, Mac, and Apple Vision Pro, is adding two highly-requested features. Version 5.10 introduces remote Mac audio and automatic desktop resizing through Apple’s High Performance Screen Sharing technology.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1078078" href="https://9to5mac.com/2026/11/10/screens-5-10-adds-two-highly-requested-remote-desktop-features/#more-1078078" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/screens-5-10-adds-two-highly-requested-remote-desktop-features/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078078</post-id>	</item>
+		<item>
+		<title>Another report backs OLED iPad Air early next year</title>
+		<link>https://9to5mac.com/2026/11/10/another-report-backs-oled-ipad-air-early-next-year/</link>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 14:23:14 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078175</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Another-report-backs-OLED-iPad-Air-early-next-year.jpeg?quality=82&#038;strip=all&#038;w=1400" /></div><p class="wp-block-paragraph">Following <a href="https://9to5mac.com/2026/11/03/new-ipad-mini-a20-pro-review/" target="_blank" rel="noreferrer noopener">the recent update</a> to the <a href="https://9to5mac.com/guides/ipad-mini/" target="_blank" rel="noreferrer noopener">iPad mini</a>, we’re expecting the <a href="https://9to5mac.com/guides/ipad-air/" target="_blank" rel="noreferrer noopener">iPad Air</a> to be next in line to be upgraded to an <a href="https://9to5mac.com/guides/oled/" target="_blank" rel="noreferrer noopener">OLED</a> screen.</p>
+
+
+
+<p class="wp-block-paragraph">Previous reports have gradually narrowed down the launch to early 2027, and a new supply chain report echoes this …</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="" data-layer-viewtype="unknown" data-post-id="1078175" href="https://9to5mac.com/2026/11/10/another-report-backs-oled-ipad-air-early-next-year/#more-1078175" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078175</post-id>	</item>
+		<item>
+		<title>Adobe unveils new AI tools for Photoshop, Premiere, and more, with MCP support coming in 2027</title>
+		<link>https://9to5mac.com/2026/11/10/adobe-unveils-new-ai-tools-for-photoshop-premiere-and-more-with-mcp-support-coming-in-2027/</link>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 14:18:40 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078170</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/adobe-max.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><a href="https://9to5mac.com/guides/adobe/">Adobe</a> today announced a sweeping set of updates at its annual Adobe MAX conference, focused on giving users more ways to automate complex workflows, edit content, and work across its creative apps. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="adobe" data-layer-viewtype="unknown" data-post-id="1078170" href="https://9to5mac.com/2026/11/10/adobe-unveils-new-ai-tools-for-photoshop-premiere-and-more-with-mcp-support-coming-in-2027/#more-1078170" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078170</post-id>	</item>
+		<item>
+		<title>Ring&#8217;s wheeled and flying robots will patrol your home</title>
+		<link>https://9to5mac.com/2026/11/10/rings-wheeled-and-flying-robots-will-patrol-your-home/</link>
+					<comments>https://9to5mac.com/2026/11/10/rings-wheeled-and-flying-robots-will-patrol-your-home/#comments</comments>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 13:58:00 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078169</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Rings-Drone-Cam-and-Rover-Cam-will-check-out-suspicious-activity-in-your-home.jpg?quality=82&#038;strip=all&#038;w=1436" /></div><p class="wp-block-paragraph">Some people use a whole bunch of fixed cameras to monitor their homes, but <a href="https://link.amazon/B06tRhzlX" target="_blank" rel="noreferrer noopener">Amazon</a> has just announced a more flexible solution through wheeled and flying robots.</p>
+
+
+
+<p class="wp-block-paragraph">Both the $250 Drone Cam and $1,000 Rover Cam can respond to alarms or door and window sensor alerts in order to go check out what’s happening and send live video … </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="amazon,ring" data-layer-viewtype="unknown" data-post-id="1078169" href="https://9to5mac.com/2026/11/10/rings-wheeled-and-flying-robots-will-patrol-your-home/#more-1078169" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/rings-wheeled-and-flying-robots-will-patrol-your-home/feed/</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078169</post-id>	</item>
+		<item>
+		<title>Apple Maps could soon factor in how long it takes you to park</title>
+		<link>https://9to5mac.com/2026/11/10/apple-maps-could-soon-factor-in-how-long-it-takes-you-to-park/</link>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 13:32:12 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078159</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Apple-Maps-could-soon-factor-in-how-long-it-takes-you-to-park.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph">On some journeys in busy cities, it feels like it can take you longer to park than it does to drive there in the first place. Code spotted in iOS 27.3 suggests that <a href="https://9to5mac.com/guides/apple-maps/" target="_blank" rel="noreferrer noopener">Apple Maps</a> may soon factor in parking time when it provides journey ETAs.</p>
+
+
+
+<p class="wp-block-paragraph">Separately, Waze has partnered with Garmin to help improve the safety of cyclists by using real-time location tracking to alert nearby drivers … </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-maps,garmin,waze" data-layer-viewtype="unknown" data-post-id="1078159" href="https://9to5mac.com/2026/11/10/apple-maps-could-soon-factor-in-how-long-it-takes-you-to-park/#more-1078159" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078159</post-id>	</item>
+		<item>
+		<title>Google DeepMind analysis proves Signal and WhatsApp encryption is secure</title>
+		<link>https://9to5mac.com/2026/11/10/google-deepmind-analysis-proves-signal-and-whatsapp-encryption-is-secure/</link>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 12:39:23 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078151</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Google-DeepMind-analysis-proves-Signal-and-WhatsApp-encryption-is-secure.webp?w=1600" /></div><p class="wp-block-paragraph">The <a href="https://9to5mac.com/guides/signal/" target="_blank" rel="noreferrer noopener">Signal</a> protocol has long been considered the gold standard for end-to-end encrypted messaging, with Edward Snowden a notable advocate. Now a Google DeepMind analysis has “formally verified” the <a href="https://9to5mac.com/guides/security/" target="_blank" rel="noreferrer noopener">security</a> of the protocol.</p>
+
+
+
+<p class="wp-block-paragraph">In addition to its use in the Signal app, the same protocol is also used by <a href="https://9to5mac.com/guides/whatsapp/" target="_blank" rel="noreferrer noopener">WhatsApp</a> and Google Messages, and the work has been described as “a landmark development” … </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="ai,security,signal,whatsapp" data-layer-viewtype="unknown" data-post-id="1078151" href="https://9to5mac.com/2026/11/10/google-deepmind-analysis-proves-signal-and-whatsapp-encryption-is-secure/#more-1078151" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078151</post-id>	</item>
+		<item>
+		<title>Instagram Effect Builder lets you create images with an AI prompt</title>
+		<link>https://9to5mac.com/2026/11/10/instagram-effect-builder-lets-you-create-images-with-an-ai-prompt/</link>
+		
+		<dc:creator><![CDATA[Ben Lovejoy]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 11:56:53 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078146</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/Instagram-Effect-Builder-lets-you-create-images-with-an-AI-prompt.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><a href="https://9to5mac.com/guides/instagram/" target="_blank" rel="noreferrer noopener">Instagram</a> launched an <a href="https://9to5mac.com/2025/04/22/instagram-edits-launch-app-store/" target="_blank" rel="noreferrer noopener">Edits app for iPhone</a> back in 2025, with <a href="https://9to5mac.com/2026/11/05/instagram-launches-edits-for-mac-with-multi-track-video-editing-and-4k-exports/" target="_blank" rel="noreferrer noopener">a Mac version</a> introduced just a few days ago. Meta has now supplemented this with an AI-powered Instagram Effect Builder, letting users create imagery for Stories simply by describing what they want to see … </p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apps,instagram" data-layer-viewtype="unknown" data-post-id="1078146" href="https://9to5mac.com/2026/11/10/instagram-effect-builder-lets-you-create-images-with-an-ai-prompt/#more-1078146" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078146</post-id>	</item>
+		<item>
+		<title>Apple @ Work Podcast: Osaurus wants your company’s AI to run on the Mac, not in the cloud</title>
+		<link>https://9to5mac.com/2026/11/10/apple-work-podcast-osaurus-wants-your-companys-ai-to-run-on-the-mac-not-in-the-cloud/</link>
+					<comments>https://9to5mac.com/2026/11/10/apple-work-podcast-osaurus-wants-your-companys-ai-to-run-on-the-mac-not-in-the-cloud/#respond</comments>
+		
+		<dc:creator><![CDATA[Bradley C]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 11:32:28 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1074278</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2026/06/apple-at-work-27.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><em><a href="https://mosyle.net/3RDn" target="_blank" rel="noreferrer noopener">Apple @ Work is exclusively brought to you by Mosyle</a>, the only Apple Unified Platform. Mosyle is the only solution that integrates in a single professional-grade platform all the solutions necessary to seamlessly and automatically deploy, manage &amp; protect Apple devices at work. Over 45,000 organizations trust Mosyle to make millions of Apple devices work-ready with no effort and at an affordable cost. </em><a href="https://mosyle.net/3RDn" target="_blank" rel="noreferrer noopener"><em>Request your EXTENDED TRIAL</em></a><em> today and understand why Mosyle is everything you need to work with Apple</em>.</p>
+
+
+
+<p class="wp-block-paragraph">In this episode of Apple @ Work, Terence Pae, co-founder and CEO of <a href="https://osaurus.ai">Osaurus</a>, joins the show to talk about running AI locally on the Mac instead of sending everything to the cloud. Osaurus is a free, first-party AI harness for the Mac.</p>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://9to5mac.com/wp-content/uploads/sites/6/2026/10/Osarius-leveled.mp3"></audio></figure>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="apple-work-podcast" data-layer-viewtype="unknown" data-post-id="1074278" href="https://9to5mac.com/2026/11/10/apple-work-podcast-osaurus-wants-your-companys-ai-to-run-on-the-mac-not-in-the-cloud/#more-1074278" class="more-link">more…</a>]]></description>
+		
+					<wfw:commentRss>https://9to5mac.com/2026/11/10/apple-work-podcast-osaurus-wants-your-companys-ai-to-run-on-the-mac-not-in-the-cloud/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1074278</post-id>	</item>
+		<item>
+		<title>Canadian court certifies class action against Apple over Google search deal</title>
+		<link>https://9to5mac.com/2026/11/09/canadian-court-certifies-class-action-against-apple-over-google-search-deal/</link>
+		
+		<dc:creator><![CDATA[Marcus Mendes]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 02:20:07 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078144</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2023/05/Apple-Google-partner-industry-specification-hero.jpg?quality=82&#038;strip=all&#038;w=1306" /></div><p class="wp-block-paragraph">A British Columbia Supreme Court judge has certified a class action against Apple over allegations that its search agreement with Google stifled competition and inflated advertising prices. Here are the details.</p>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="aapl,google" data-layer-viewtype="unknown" data-post-id="1078144" href="https://9to5mac.com/2026/11/09/canadian-court-certifies-class-action-against-apple-over-google-search-deal/#more-1078144" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078144</post-id>	</item>
+		<item>
+		<title>9to5Mac Daily: November 9, 2026 – Apple software development, iOS 28</title>
+		<link>https://9to5mac.com/2026/11/09/daily-november-9-2026/</link>
+		
+		<dc:creator><![CDATA[Seth Kurkowski]]></dc:creator>
+		<pubDate>Tue, 10 Nov 2026 00:49:31 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<guid isPermaLink="false">https://9to5mac.com/?p=1078140</guid>
+
+					<description><![CDATA[<div class="feat-image"><img src="https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600" /></div><p class="wp-block-paragraph"><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">Listen to a recap of the top stories of the day from </span><em style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">9to5Mac</em><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">. 9to5Mac Daily is available </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://podcasts.apple.com/us/podcast/9to5mac-daily/id1331816080" target="_blank" rel="noreferrer noopener">on iTunes and Apple’s Podcasts app</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://www.stitcher.com/podcast/9to5mac-daily">Stitcher</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://tunein.com/radio/9to5Mac-Daily-p1089524/">TuneIn</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://play.google.com/music/m/I5d4dzs7dauazmfxvvrynyiuram?t=9to5Mac_Daily">Google Play</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;">, or through our </span><a style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;" href="https://feedpress.me/9to5macdaily">dedicated RSS feed</a><span style="white-space: normal; font-family: var(--font-primary-sans); font-size: revert;"> for Overcast and other podcast players.</span></p>
+
+
+
+<p class="wp-block-paragraph"><a href="https://bit.ly/41bWB64"><strong>Sponsored by Backblaze</strong></a>: Backup you can rely on. Save 20% with code <strong>9to5daily</strong>.</p>
+
+
+
+<figure class="wp-block-audio"><audio controls src="https://9to5mac.com/wp-content/uploads/sites/6/2026/11/MacDaily_11-9-26.mp3"></audio></figure>
+
+
+
+ <a data-layer-pagetype="post" data-layer-postcategory="9to5mac-daily,podcast" data-layer-viewtype="unknown" data-post-id="1078140" href="https://9to5mac.com/2026/11/09/daily-november-9-2026/#more-1078140" class="more-link">more…</a>]]></description>
+		
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1078140</post-id>	</item>
+	</channel>
+</rss>
