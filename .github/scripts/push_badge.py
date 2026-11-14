@@ -151,12 +151,12 @@ def sync_check(out, token, files, data):
             base = e["url"]
             forms = {"asListed": base, "final": e.get("final") or base, "noSlash": base.rstrip("/"), "slash": base.rstrip("/") + "/",
                      "noWww": base.replace("://www.", "://"), "http": base.replace("https://", "http://")}
-            for link, ts in links.items():
-                if now - ts > 3 * 864e5 or not link.startswith("http"):
+            for url, ts in links.items():
+                if now - ts > 3 * 864e5 or not url.startswith("http"):
                     continue
-                u = urllib.parse.urlsplit(link)
+                u = urllib.parse.urlsplit(url)
                 canon = u.scheme + "://" + u.netloc.lower() + (u.path or "/")
-                lk = "l:" + js_hash(link_key(link))
+                lk = "l:" + js_hash(link_key(url))
                 hit = next((n for n, f in forms.items() if marks.get(js_hash(f + "|" + canon), 0) > 0), None)
                 kind = ("link+" if marks.get(lk, 0) > 0 else "nolink+") + (hit or "noId")
                 day = "day1" if now - ts < 864e5 else "day2to3"
