@@ -138,8 +138,32 @@ def sync_check(out, token, files, data):
         def tally(days):
             ks = [k for k, t in cur.items() if now - t < days * 864e5]
             return {"articles": len(ks), "readByLink": sum(1 for k in ks if marks.get(k, 0) > 0), "unreadByLink": sum(1 for k in ks if marks.get(k, 0) < 0)}
+        # Do the id-based marks match the ids the server's feed address gives?
+        from fetch_feeds import dated_links
+        byid = {}
+        with open(os.path.join(out, "index.json")) as fh:
+            entries = {e["file"]: e for e in json.load(fh)["feeds"].values()}
+        for fname, e in entries.items():
+            try:
+                links = dated_links(open(os.path.join(out, fname), "rb").read())
+            except Exception:
+                continue
+            base = e["url"]
+            forms = {"asListed": base, "final": e.get("final") or base, "noSlash": base.rstrip("/"), "slash": base.rstrip("/") + "/",
+                     "noWww": base.replace("://www.", "://"), "http": base.replace("https://", "http://")}
+            for link, ts in links.items():
+                if now - ts > 3 * 864e5 or not link.startswith("http"):
+                    continue
+                u = urllib.parse.urlsplit(link)
+                canon = u.scheme + "://" + u.netloc.lower() + (u.path or "/")
+                lk = "l:" + js_hash(link_key(link))
+                hit = next((n for n, f in forms.items() if marks.get(js_hash(f + "|" + canon), 0) > 0), None)
+                kind = ("link+" if marks.get(lk, 0) > 0 else "nolink+") + (hit or "noId")
+                day = "day1" if now - ts < 864e5 else "day2to3"
+                byid.setdefault(day, {}).setdefault(kind, 0)
+                byid[day][kind] += 1
         seen = data.get("seen") or {}
-        info = {"checkedAt": now, "gists": gists, "bytes": (files.get(SYNC_FILE) or {}).get("size"),
+        info = {"checkedAt": now, "byId": byid, "gists": gists, "bytes": (files.get(SYNC_FILE) or {}).get("size"),
                 "marks": len(marks), "linkMarks": len(link), "unreadMarks": sum(1 for v in marks.values() if v < 0),
                 "newestMarkMinAgo": ago(max((abs(v) for v in marks.values()), default=0)),
                 "newestLinkMarkMinAgo": ago(max((abs(v) for v in link.values()), default=0)),
