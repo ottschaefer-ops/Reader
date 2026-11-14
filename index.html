@@ -545,7 +545,8 @@ button { cursor: pointer; }
 
   function pruneRead() {
     const live = new Set(Object.values(items).flat().map(i => i.id));
-    for (const id of Object.keys(read)) if (!live.has(id)) delete read[id];
+    const cut = Date.now() - KEEP_MS;
+    for (const id of Object.keys(read)) if (id.startsWith("l:") ? read[id] < cut : !live.has(id)) delete read[id];
   }
 
   // ---------- feeds ----------
@@ -586,6 +587,16 @@ button { cursor: pointer; }
   // The same story can come from two feeds (9to5Mac's main feed and its Apple
   // Intelligence feed). Copies share read state, and "All articles" shows one.
   const linkKey = l => { try { const u = new URL(l); return (u.host.replace(/^www\./, "") + u.pathname).replace(/\/+$/, "").toLowerCase(); } catch { return ""; } };
+  // An article's id can differ between devices (it's built from the feed's
+  // address as that device has it). Read marks are also kept under the
+  // article's own link, which is the same everywhere; the newer mark wins.
+  const readKey = it => { const k = linkKey(it.link); return k ? "l:" + hash(k) : ""; };
+  function shareRead(it) {
+    const k = readKey(it); if (!k) return;
+    const r = Math.max(read[it.id] || 0, read[k] || 0), u = Math.max(tomb[it.id] || 0, tomb[k] || 0);
+    if (r > u) { if (!read[it.id]) read[it.id] = r; if (!read[k]) read[k] = r; delete tomb[it.id]; delete tomb[k]; }
+    else if (u) { delete read[it.id]; delete read[k]; tomb[it.id] = tomb[k] = u; }
+  }
   function allItems(dedupe = false) {
     const names = Object.fromEntries(feeds.map(f => [f.id, f.title || f.url]));
     const out = [];
@@ -596,6 +607,7 @@ button { cursor: pointer; }
       const r = g.map(i => read[i.id]).find(Boolean);
       if (r) for (const i of g) if (!read[i.id]) read[i.id] = r;
     }
+    for (const it of out) shareRead(it);
     out.sort((a, b) => b.ts - a.ts);
     if (!dedupe) return out;
     const seen = new Set();
@@ -967,7 +979,8 @@ button { cursor: pointer; }
 
   // ---------- events ----------
   function markRead(id, on) {
-    for (const c of copiesOf(id)) { if (on) { read[c] = Date.now(); delete tomb[c]; } else { delete read[c]; tomb[c] = Date.now(); } }
+    const it = allItems().find(i => i.id === id), k = it && readKey(it);
+    for (const c of [...copiesOf(id), ...(k ? [k] : [])]) { if (on) { read[c] = Date.now(); delete tomb[c]; } else { delete read[c]; tomb[c] = Date.now(); } }
     store.set("tomb", tomb); store.set("read", read); render();
   }
   document.addEventListener("click", e => {
