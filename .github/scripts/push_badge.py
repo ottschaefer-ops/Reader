@@ -162,6 +162,18 @@ def sync_check(out, token, files, data):
                 day = "day1" if now - ts < 864e5 else "day2to3"
                 byid.setdefault(day, {}).setdefault(kind, 0)
                 byid[day][kind] += 1
+            row = byid.setdefault("feeds", {}).setdefault(e["url"], {"read": 0, "noMark": 0, "noMarkNewestHoursAgo": None, "noMarkOldestDaysAgo": None})
+            for url, ts in links.items():
+                if now - ts > 20 * 864e5 or not url.startswith("http"):
+                    continue
+                if marks.get("l:" + js_hash(link_key(url)), 0) > 0:
+                    row["read"] += 1
+                else:
+                    row["noMark"] += 1
+                    h = round((now - ts) / 36e5)
+                    row["noMarkNewestHoursAgo"] = h if row["noMarkNewestHoursAgo"] is None else min(h, row["noMarkNewestHoursAgo"])
+                    row["noMarkOldestDaysAgo"] = max(round(h / 24), row["noMarkOldestDaysAgo"] or 0)
+        byid["gistFeeds"] = {k: ("on" if f.get("ts", 0) > 0 else "removed") for k, f in (data.get("feeds") or {}).items() if isinstance(f, dict)}
         seen = data.get("seen") or {}
         info = {"checkedAt": now, "byId": byid, "gists": gists, "bytes": (files.get(SYNC_FILE) or {}).get("size"),
                 "marks": len(marks), "linkMarks": len(link), "unreadMarks": sum(1 for v in marks.values() if v < 0),
