@@ -110,6 +110,50 @@ def items_of(body):
     return out
 
 
+def js_hash(s):
+    # The app's hash(): FNV-1a over the text, in base 36.
+    h = 2166136261
+    for ch in s:
+        h = ((h ^ ord(ch)) * 16777619) & 0xFFFFFFFF
+    d, o = "0123456789abcdefghijklmnopqrstuvwxyz", ""
+    while h:
+        h, r = divmod(h, 36)
+        o = d[r] + o
+    return o or "0"
+
+
+def sync_check(out, token, files, data):
+    """Temporary. Counts only (no article or account details): is the gist getting read marks?"""
+    try:
+        now = int(time.time() * 1000)
+        marks = data.get("marks") or {}
+        link = {k: v for k, v in marks.items() if k.startswith("l:")}
+        ago = lambda t: round((now - abs(t)) / 60000) if t else None
+        gists = sum(1 for page in range(1, 4) for g in gh("/gists?per_page=100&page=%d" % page, token) if SYNC_FILE in (g.get("files") or {}))
+        cur = {}
+        for name in os.listdir(os.path.join(out, "f")):
+            for it in items_of(open(os.path.join(out, "f", name), "rb").read()):
+                if "/" in it["k"]:
+                    cur["l:" + js_hash(it["k"])] = it["ts"]
+        def tally(days):
+            ks = [k for k, t in cur.items() if now - t < days * 864e5]
+            return {"articles": len(ks), "readByLink": sum(1 for k in ks if marks.get(k, 0) > 0), "unreadByLink": sum(1 for k in ks if marks.get(k, 0) < 0)}
+        seen = data.get("seen") or {}
+        info = {"checkedAt": now, "gists": gists, "bytes": (files.get(SYNC_FILE) or {}).get("size"),
+                "marks": len(marks), "linkMarks": len(link), "unreadMarks": sum(1 for v in marks.values() if v < 0),
+                "newestMarkMinAgo": ago(max((abs(v) for v in marks.values()), default=0)),
+                "newestLinkMarkMinAgo": ago(max((abs(v) for v in link.values()), default=0)),
+                "last1Day": tally(1), "last3Days": tally(3), "last20Days": tally(20),
+                "lastOpenUnread": seen.get("n"), "lastOpenMinAgo": ago(seen.get("t")),
+                "feeds": sum(1 for f in (data.get("feeds") or {}).values() if isinstance(f, dict) and f.get("ts", 0) > 0),
+                "stars": sum(1 for v in (data.get("stars") or {}).values() if isinstance(v, dict) and v.get("t", 0) > 0),
+                "devicesWithPush": len(data.get("subs") or {})}
+        with open(os.path.join(out, "sync-check.json"), "w") as fh:
+            json.dump(info, fh)
+    except Exception as e:
+        print("sync check failed:", str(e)[:120])
+
+
 def main():
     out = sys.argv[1]
     token = os.environ.get("GIST_TOKEN", "").strip()
@@ -130,6 +174,7 @@ def main():
         vapid = json.loads(file_text(files.get(KEY_FILE), token) or "{}").get("d", "")
     except Exception:
         vapid = ""
+    sync_check(out, token, files, data)
     subs = [v["s"] for v in (data.get("subs") or {}).values()
             if isinstance(v, dict) and v.get("ts", 0) > 0 and isinstance(v.get("s"), dict) and v["s"].get("endpoint")]
     seen = data.get("seen") or {}
