@@ -206,6 +206,10 @@ button { cursor: pointer; }
 .art-body pre { overflow-x: auto; font-size: 14px; }
 .art-open { display: block; margin-top: 24px; text-align: center; padding: 12px; border-radius: 10px;
   background: var(--accent-soft); color: var(--accent); font-weight: 600; text-decoration: none; }
+.art-acts { display: flex; gap: 10px; margin-top: 24px; }
+.art-acts .art-open { flex: 1; margin-top: 0; }
+button.art-open { width: 100%; border: 0; font: inherit; cursor: pointer; }
+.art-note { margin: 0 0 14px; font-size: 13px; color: var(--muted); }
 .art-hint { margin-top: 14px; text-align: center; font-size: 12px; color: var(--muted); }
 .art-edge { position: absolute; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--muted); pointer-events: none; opacity: 0; transition: opacity 0.15s; }
 
@@ -1089,10 +1093,11 @@ button { cursor: pointer; }
       card.innerHTML = `
         <div class="meta"><span class="src">${esc(it.source)}</span><span class="time">· ${esc(rel(it.ts))}</span></div>
         <h1>${esc(it.title)}</h1>
-        <div class="art-body">${body || (it.snippet ? `<p>${esc(it.snippet)}</p>` : "")}</div>
-        ${it.link ? `<a class="art-open" href="${esc(it.link)}" target="_blank" rel="noopener">Read the full article</a>` : ""}
+        <div class="art-body" id="artBody">${full[id] && full[id].html || body || (it.snippet ? `<p>${esc(it.snippet)}</p>` : "")}</div>
+        ${it.link ? `<div class="art-acts"><button class="art-open" id="artReader">${full[id] ? "Show feed text" : "Reader View"}</button><a class="art-open" href="${esc(it.link)}" target="_blank" rel="noopener">Open website</a></div>` : ""}
         ${view.idx === 0 && view.ids.length > 1 ? `<p class="art-hint">Swipe left for the next article.</p>` : ""}`;
       if (!read[id]) { read[id] = Date.now(); delete tomb[id]; store.set("tomb", tomb); store.set("read", read); }
+      const rb = $("artReader"); if (rb) rb.onclick = () => toggleReader(it, body);
     }
     const on = !!it && isStarred(it);
     $("artStar").setAttribute("aria-pressed", on); $("artStar").setAttribute("aria-label", on ? "Unstar" : "Star");
@@ -1100,6 +1105,47 @@ button { cursor: pointer; }
     $("artPrev").disabled = view.idx <= 0;
     $("artNext").disabled = view.idx >= view.ids.length - 1;
     $("artScroll").scrollTop = 0;
+  }
+  // Reader View: the article's web page, fetched directly or through a relay,
+  // reduced to its text and pictures by Mozilla's Readability (readability.js,
+  // loaded the first time it's needed). Kept for this session only.
+  const full = {}; // id -> { html } once shown in Reader View
+  let readabilityLoad = null;
+  function loadReadability() {
+    return readabilityLoad ||= new Promise((ok, no) => {
+      const sc = document.createElement("script"); sc.src = "readability.js";
+      sc.onload = () => ok(); sc.onerror = () => { readabilityLoad = null; no(new Error("load")); };
+      document.head.appendChild(sc);
+    });
+  }
+  async function readerHtml(link, title) {
+    const page = await Promise.any([getText(link, 12000), ...RELAYS.map(r => getText(r(link), 15000))].map(p => p.then(t => {
+      if (!/<(html|body|article|p)\b/i.test(t)) throw new Error("not a page"); return t;
+    })));
+    await loadReadability();
+    const doc = new DOMParser().parseFromString(page, "text/html");
+    const b = doc.createElement("base"); b.href = link; doc.head.prepend(b);
+    const got = new Readability(doc, { charThreshold: 400 }).parse();
+    let html = got && got.content ? cleanHtml(got.content, link) : "";
+    // Drop a headline at the top that repeats the article's title.
+    const d = new DOMParser().parseFromString(html, "text/html"), norm = t => (t || "").replace(/\W+/g, " ").trim().toLowerCase();
+    const h = d.body.querySelector("h1, h2");
+    if (h && norm(h.textContent) === norm(title) && !norm(d.body.textContent.slice(0, d.body.textContent.indexOf(h.textContent)))) { h.remove(); html = d.body.innerHTML.trim(); }
+    if (textOf(html).length < 200) throw new Error("no article text");
+    return html;
+  }
+  async function toggleReader(it, feedHtml) {
+    const id = it.id, btn = $("artReader"), area = $("artBody");
+    if (full[id]) { delete full[id]; area.innerHTML = feedHtml || (it.snippet ? `<p>${esc(it.snippet)}</p>` : ""); btn.textContent = "Reader View"; return; }
+    btn.disabled = true; btn.textContent = "Loading…";
+    try {
+      const html = await readerHtml(it.link, it.title);
+      full[id] = { html };
+      if (view && view.ids[view.idx] === id) { area.innerHTML = html; $("artScroll").scrollTop = 0; }
+    } catch {
+      if (view && view.ids[view.idx] === id) area.insertAdjacentHTML("afterbegin", `<p class="art-note">Couldn't load the full article. Try Open website.</p>`);
+    }
+    if (view && view.ids[view.idx] === id && $("artReader")) { $("artReader").disabled = false; $("artReader").textContent = full[id] ? "Show feed text" : "Reader View"; }
   }
   function openArticle(id) {
     const ids = shownIds(); const idx = Math.max(0, ids.indexOf(id));
