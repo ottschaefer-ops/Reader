@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:npr="https://www.npr.org/rss/" xmlns:nprml="https://api.npr.org/nprml" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>NPR Topics: News</title>
+    <link>https://www.npr.org/templates/story/story.php?storyId=1001</link>
+    <description>Breaking news, top national and world stories, politics, business and culture from NPR. Catch up on demand with NPR News Now, Up First and Consider This.</description>
+    <language>en</language>
+    <copyright>Copyright 2024 NPR - For Personal Use Only</copyright>
+    <generator>Story API Shim 1.2.24</generator>
+    <lastBuildDate>Sat, 21 Nov 2026 11:15:49 -0500</lastBuildDate>
+    <image>
+      <url>https://media.npr.org/images/podcasts/primary/npr_generic_image_300.jpg?s=200</url>
+      <title>NPR Topics: News</title>
+      <link>https://www.npr.org/sections/news/</link>
+    </image>
+    <item>
+      <title>Killer robots: U.N. talks fall short of hopes for legally binding rules</title>
+      <description>U.N. talks in Geneva have failed to deliver binding rules on autonomous weapons, as humanitarian groups warn that military AI is advancing far faster than diplomacy.</description>
+      <pubDate>Sat, 21 Nov 2026 09:18:17 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6047916/killer-robots-un-drones</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6047916/killer-robots-un-drones</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4146x2764+0+0/resize/4146x2764!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F77%2F65%2Fec3be56f4a8caadcaf913863094e%2Fap26320313350560.jpg' alt='A Ukrainian FP-1 long-range attack drone is launched at an undisclosed location in Ukraine, Aug. 16, 2026.'/><p>U.N. talks in Geneva have failed to deliver binding rules on autonomous weapons, as humanitarian groups warn that military AI is advancing far faster than diplomacy.</p><p>(Image credit: Efrem Lukatsky)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6047916' />]]></content:encoded>
+      <dc:creator>Imogen Foulkes</dc:creator>
+    </item>
+    <item>
+      <title>Federal jury convicts man of starting the deadly 2025 Palisades Fire in Los Angeles</title>
+      <description>Prosecutors argued the defendant, 30-year-old Jonathan Rinderknecht, had been &quot;mad at everything&quot; in the days leading up to the January 2025 fire, which killed 12 people.</description>
+      <pubDate>Sat, 21 Nov 2026 08:58:33 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6049625/palisades-fire-conviction</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6049625/palisades-fire-conviction</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5808x3872+0+0/resize/5808x3872!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fe0%2Ffd%2Ff9157ccb44d0a165869fae76e14b%2Fap26324834912819.jpg' alt='FILE - Water is dropped by helicopter on the advancing Palisades Fire in the Pacific Palisades neighborhood of Los Angeles, Jan. 7, 2025.'/><p>Prosecutors argued the defendant, 30-year-old Jonathan Rinderknecht, had been "mad at everything" in the days leading up to the January 2025 fire, which killed 12 people.</p><p>(Image credit: Etienne Laurent)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6049625' />]]></content:encoded>
+      <dc:creator>The Associated Press</dc:creator>
+    </item>
+    <item>
+      <title>Perspective: Defining &apos;human&apos;</title>
+      <description>The Cambridge Dictionary has chosen the word &quot;human&quot; as its Word of the Year. Why ever might a word that entered the English language over 500 years ago be so honored?</description>
+      <pubDate>Sat, 21 Nov 2026 08:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6041585/perspective-defining-human</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6041585/perspective-defining-human</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/1024x683+0+0/resize/1024x683!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F72%2Fdd%2F590c0a4048d2afc4cfee2373c16d%2Fap24253399940383-1.jpg' alt='Children hug during a ceremony marking the beginning of the school year at the Orizont Elementary School in Bucharest, Romania, Monday, Sept. 9, 2024.'/><p>The Cambridge Dictionary has chosen the word "human" as its Word of the Year. Why ever might a word that entered the English language over 500 years ago be so honored?</p><p>(Image credit: Andreea Alexandru)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6041585' />]]></content:encoded>
+      <dc:creator>Scott Simon</dc:creator>
+    </item>
+    <item>
+      <title>Senate permitting bill speeds up renewables, divides greens over oil and gas</title>
+      <description>A permitting reform bill in the Senate could help speed the development of renewable energy projects, but it&apos;s splitting environmentalists over other provisions that help the oil and gas industry.</description>
+      <pubDate>Sat, 21 Nov 2026 07:40:17 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6046482/senate-permitting-bill-speeds-up-renewables-divides-greens-over-oil-and-gas</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6046482/senate-permitting-bill-speeds-up-renewables-divides-greens-over-oil-and-gas</guid>
+      <content:encoded><![CDATA[<p>A permitting reform bill in the Senate could help speed the development of renewable energy projects, but it's splitting environmentalists over other provisions that help the oil and gas industry.</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6046482' />]]></content:encoded>
+      <dc:creator>Matthew Brown</dc:creator>
+    </item>
+    <item>
+      <title>Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI</title>
+      <description>A mathematician who works for artificial intelligence giant Anthropic claims he has solved a Holy Grail of math problems with the help of the company&apos;s AI tool Claude. It marks the second time in recent months that an AI company or someone linked to one claims to have cracked a famed unsolved math problem.</description>
+      <pubDate>Sat, 21 Nov 2026 07:30:16 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/g-s1-154922/anthropic-worker-claims-to-have-solved-a-holy-grail-of-math-problems-with-the-help-of-ai</link>
+      <guid>https://www.npr.org/2026/11/21/g-s1-154922/anthropic-worker-claims-to-have-solved-a-holy-grail-of-math-problems-with-the-help-of-ai</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/8565x5710+0+0/resize/8565x5710!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F44%2F26%2F578525af4450b59d88792c06e0da%2Fap26323821321779.jpg' alt='Paul Smith, chief commercial officer of Anthropic, center left, and Krishna Rao, chief financial officer of Anthropic, center right, alongside others react during the closing bell ceremony for the Anthropic IPO at Nasdaq MarketSite in New York, Thursday, Nov. 19, 2026.'/><p>A mathematician who works for artificial intelligence giant Anthropic claims he has solved a Holy Grail of math problems with the help of the company's AI tool Claude. It marks the second time in recent months that an AI company or someone linked to one claims to have cracked a famed unsolved math problem.</p><p>(Image credit: Seth Wenig)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=g-s1-154922' />]]></content:encoded>
+      <dc:creator>The Associated Press</dc:creator>
+    </item>
+    <item>
+      <title>5 ways to turn off your &apos;work brain&apos; after the day ends</title>
+      <description>Don&apos;t let your work troubles follow you home. Psychologist Guy Winch shares techniques to help you stop ruminating about your nine-to-five, so you can focus on what really matters.</description>
+      <pubDate>Sat, 21 Nov 2026 05:01:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6043793/stop-thinking-about-work</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6043793/stop-thinking-about-work</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4356x2904+0+0/resize/4356x2904!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F3e%2F55%2F5987a64f424b84b128aba38ba342%2Fnpr-lr-stop-thinking-about-work-harlan-3.jpg' alt='Psychologist Guy Winch, author of <em>Mind Over Grind</em>, shares techniques to help you stop thinking about work when the day is over.'/><p>Don't let your work troubles follow you home. Psychologist Guy Winch shares techniques to help you stop ruminating about your nine-to-five, so you can focus on what really matters.</p><p>(Image credit: Beck Harlan for NPR)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6043793' />]]></content:encoded>
+      <dc:creator>Malaka Gharib</dc:creator>
+    </item>
+    <item>
+      <title>Anthropic says it will put humanity first. Will its IPO change that?</title>
+      <description>Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.</description>
+      <pubDate>Sat, 21 Nov 2026 05:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6000x4000+0+0/resize/6000x4000!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F31%2F72%2F1359b5e7441995e3b5ba9e5c6d90%2Fgettyimages-2305894185.jpg' alt='Dario Amodei, CEO of Anthropic, is seen on video outside the Nasdaq MarketSite in Times Square as shares begin trading after the company's IPO on Nov. 19, 2026. Critics say now that the AI giant is a public company, its commitment to put safety first will be tested.'/><p>Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.</p><p>(Image credit: Michael M. Santiago)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6048678' />]]></content:encoded>
+      <dc:creator>Katie McQue</dc:creator>
+    </item>
+    <item>
+      <title>An effort to circumvent the Electoral College may be within reach. But hurdles remain</title>
+      <description>A national effort to ensure that only winners of the popular vote become president could reach a critical milestone soon.</description>
+      <pubDate>Sat, 21 Nov 2026 05:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6044237/electoral-college-national-popular-vote-interstate-compact</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6044237/electoral-college-national-popular-vote-interstate-compact</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/8055x5370+0+0/resize/8055x5370!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F9c%2Fe0%2F5117a4fb400e8b75168010b72ece%2Fgettyimages-1244621687.jpg' alt='Voting booths are seen at Glass Elementary School's polling station in Eagle Pass, Texas, on Nov. 8, 2022.'/><p>A national effort to ensure that only winners of the popular vote become president could reach a critical milestone soon.</p><p>(Image credit: Mark Felix)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6044237' />]]></content:encoded>
+      <dc:creator>Ashley Lopez</dc:creator>
+    </item>
+    <item>
+      <title>The AI boom had a really bad week — and it&apos;s raising loud alarms</title>
+      <description>AI stocks — and the broader markets — got pummeled this week, raising major concerns about the financial system and the wider economy. Here&apos;s what to know.</description>
+      <pubDate>Sat, 21 Nov 2026 05:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia</link>
+      <guid>https://www.npr.org/2026/11/21/nx-s1-6048729/ai-stock-markets-anthropic-nvidia</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6000x4000+0+0/resize/6000x4000!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F1c%2Ff4%2F5cd899cb4644a5425c60ad8b9f2b%2Fgettyimages-2305959470.jpg' alt='Stocks got hit hard this week amid fears that the AI trade could be buckling.'/><p>AI stocks — and the broader markets — got pummeled this week, raising major concerns about the financial system and the wider economy. Here's what to know.</p><p>(Image credit: Spencer Platt)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6048729' />]]></content:encoded>
+      <dc:creator>Rafael Nam</dc:creator>
+    </item>
+    <item>
+      <title>Nations at UN talks on AI killer robots agree to more talks but no firm commitment to rein them in</title>
+      <description>Efforts to establish rules for AI-powered killer robots and drones have run aground. U.N.-backed talks in Geneva ended Saturday with an agreement to extend discussions for two more years.</description>
+      <pubDate>Sat, 21 Nov 2026 03:08:01 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/21/g-s1-154914/nations-at-un-talks-on-ai-killer-robots-agree-to-more-talks-but-no-firm-commitment-to-rein-them-in</link>
+      <guid>https://www.npr.org/2026/11/21/g-s1-154914/nations-at-un-talks-on-ai-killer-robots-agree-to-more-talks-but-no-firm-commitment-to-rein-them-in</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/8256x5504+0+0/resize/8256x5504!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F47%2Fdc%2Fbe428cfe43728dcf909ce499cadf%2Fgettyimages-2273123489.jpg' alt='An armed robot developed by Turkish defense companies is demonstrated at a facility in Duzce, Turkey, on April 29.'/><p>Efforts to establish rules for AI-powered killer robots and drones have run aground. U.N.-backed talks in Geneva ended Saturday with an agreement to extend discussions for two more years.</p><p>(Image credit: Omer Urer)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=g-s1-154914' />]]></content:encoded>
+      <dc:creator>The Associated Press</dc:creator>
+    </item>
+  </channel>
+</rss>
