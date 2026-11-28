@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:npr="https://www.npr.org/rss/" xmlns:nprml="https://api.npr.org/nprml" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>NPR Topics: News</title>
+    <link>https://www.npr.org/templates/story/story.php?storyId=1001</link>
+    <description>Breaking news, top national and world stories, politics, business and culture from NPR. Catch up on demand with NPR News Now, Up First and Consider This.</description>
+    <language>en</language>
+    <copyright>Copyright 2024 NPR - For Personal Use Only</copyright>
+    <generator>Story API Shim 1.2.24</generator>
+    <lastBuildDate>Sat, 28 Nov 2026 14:57:20 -0500</lastBuildDate>
+    <image>
+      <url>https://media.npr.org/images/podcasts/primary/npr_generic_image_300.jpg?s=200</url>
+      <title>NPR Topics: News</title>
+      <link>https://www.npr.org/sections/news/</link>
+    </image>
+    <item>
+      <title>EPA says initial tests show no toxic lead contamination in Iowa following detonation</title>
+      <description>U.S. Army officials called the controlled detonation of roughly five tons of explosive lead azide on Wednesday a success. But some have criticized the Army for a lack of transparency.</description>
+      <pubDate>Sat, 28 Nov 2026 12:32:26 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/28/nx-s1-6056359/epa-results-iowa-lead-testing</link>
+      <guid>https://www.npr.org/2026/11/28/nx-s1-6056359/epa-results-iowa-lead-testing</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2472x1649+0+0/resize/2472x1649!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F8f%2F29%2Fe474c01f4d51b84093fe7240cf95%2Fap26331722157715.jpg' alt='This image provided by the U.S. Environmental Protection Agency (EPA) shows workers in Middletown, Iowa, preparing soil samples to be shipped to laboratories for testing on Thursday, Nov. 26, 2026.'/><p>U.S. Army officials called the controlled detonation of roughly five tons of explosive lead azide on Wednesday a success. But some have criticized the Army for a lack of transparency.</p><p>(Image credit: U.S. Environmental Protection Ag)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6056359' />]]></content:encoded>
+      <dc:creator>Kat Lonsdorf</dc:creator>
+    </item>
+    <item>
+      <title>COP31 climate talks fail to reach an agreement on fossil fuel language</title>
+      <description>U.N. climate talks collapsed over whether to mention fossil fuels that cause global warning. Several countries and the E.U. would not accept a final proposal without this.</description>
+      <pubDate>Sat, 28 Nov 2026 09:28:45 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/28/nx-s1-6050187/cop31-talks-fall-apart</link>
+      <guid>https://www.npr.org/2026/11/28/nx-s1-6050187/cop31-talks-fall-apart</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4007x2671+0+0/resize/4007x2671!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F34%2Fc7%2Fc29cb7ef4ed28f536dbb8f2a223f%2Fap26324395910618.jpg' alt='Tens of thousands of people attended the COP31 U.N. Climate Summit in Antalya, Turkey. This year's negotiations were supposed to end on Friday, Nov. 20, 2026, but ran two days longer than expected.'/><p>U.N. climate talks collapsed over whether to mention fossil fuels that cause global warning. Several countries and the E.U. would not accept a final proposal without this.</p><p>(Image credit: Khalil Hamra)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6050187' />]]></content:encoded>
+      <dc:creator>Rachel Waldholz</dc:creator>
+    </item>
+    <item>
+      <title>Perspective: A hero&apos;s name lives on</title>
+      <description>During Pearl Harbor, sailor Doris Miller carried the wounded to safety and fired a machine gun at Japanese planes. Next week, construction of a new aircraft carrier, the USS Doris Miller, begins.</description>
+      <pubDate>Sat, 28 Nov 2026 08:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/28/nx-s1-6045586/perspective-a-heros-name-lives-on</link>
+      <guid>https://www.npr.org/2026/11/28/nx-s1-6045586/perspective-a-heros-name-lives-on</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/843x1024+0+0/resize/843x1024!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fa5%2F73%2Ff95434574849b1a0d80d1b9e7db3%2Fdoris-miller.jpg' alt='Admiral Chester W. Nimitz, USN, Commander-in-Chief, Pacific Fleet, pins the Navy Cross on Doris "Dorie" Miller, Steward's Mate 1/c, USN, at a ceremony on board a U.S. Navy warship in Pearl Harbor, T.H., May 27, 1942.'/><p>During Pearl Harbor, sailor Doris Miller carried the wounded to safety and fired a machine gun at Japanese planes. Next week, construction of a new aircraft carrier, the USS Doris Miller, begins.</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6045586' />]]></content:encoded>
+      <dc:creator>Scott Simon</dc:creator>
+    </item>
+    <item>
+      <title>An explosion at a school in eastern Afghanistan kills 10, wounds 110</title>
+      <description>Local officials said the blast appeared to have originated in a neighboring depot for mining explosives.</description>
+      <pubDate>Sat, 28 Nov 2026 06:32:37 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/28/nx-s1-6056284/explosion-school-eastern-afghanistan</link>
+      <guid>https://www.npr.org/2026/11/28/nx-s1-6056284/explosion-school-eastern-afghanistan</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6000x4000+0+0/resize/6000x4000!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F09%2Fc6%2F4beced57455cb8ff17967d24abb2%2Fap26332491052304.jpg' alt='People look at a pile of schoolbags, books and shoes in a classroom after an explosion at a middle school on the outskirts of Asadabad, the capital of Afghanistan's eastern Kunar province, on Saturday.'/><p>Local officials said the blast appeared to have originated in a neighboring depot for mining explosives.</p><p>(Image credit: Shafiullah Kakar)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6056284' />]]></content:encoded>
+      <dc:creator>The Associated Press</dc:creator>
+    </item>
+    <item>
+      <title>New wave of Democratic attorneys general may reshape the justice system</title>
+      <description>The Democratic victories could have major effects for what alleged crimes are investigated, lawsuits filed and court cases heard across the U.S.</description>
+      <pubDate>Sat, 28 Nov 2026 05:00:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/28/g-s1-155837/democratic-attorneys-general-justice-system-texas</link>
+      <guid>https://www.npr.org/2026/11/28/g-s1-155837/democratic-attorneys-general-justice-system-texas</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/5966x3977+0+0/resize/5966x3977!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2F34%2Fac%2F5997b06047b288aee65e30c7da98%2Fap26078063733457.jpg' alt='Texas Attorney General-elect Nathan Johnson, a Democrat, is seen speaking on the state Senate floor in Austin on Sept. 3, 2025.'/><p>The Democratic victories could have major effects for what alleged crimes are investigated, lawsuits filed and court cases heard across the U.S.</p><p>(Image credit: Eric Gay)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=g-s1-155837' />]]></content:encoded>
+      <dc:creator>Matthew Brown</dc:creator>
+    </item>
+    <item>
+      <title>Sudan&apos;s lost generation: War is stealing the childhood of millions</title>
+      <description>Three years of war have stolen childhood from millions of children in Sudan, leaving them displaced, hungry and fighting for survival instead of learning in a classroom.</description>
+      <pubDate>Fri, 27 Nov 2026 17:54:53 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/27/nx-s1-6053049/sudans-lost-generation-war-is-stealing-a-generation-of-childhood</link>
+      <guid>https://www.npr.org/2026/11/27/nx-s1-6053049/sudans-lost-generation-war-is-stealing-a-generation-of-childhood</guid>
+      <content:encoded><![CDATA[<p>Three years of war have stolen childhood from millions of children in Sudan, leaving them displaced, hungry and fighting for survival instead of learning in a classroom.</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6053049' />]]></content:encoded>
+      <dc:creator>Kate Bartlett</dc:creator>
+    </item>
+    <item>
+      <title>Thanksgiving storm batters East Coast. And, Black Friday sales to hit record levels</title>
+      <description>A powerful storm knocked out power for nearly 1 million customers and flooded streets. And, experts predict inflation will not dampen American spending for the holidays</description>
+      <pubDate>Fri, 27 Nov 2026 06:59:02 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court</link>
+      <guid>https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court</guid>
+      <content:encoded><![CDATA[<img src='undefined' alt='NEW YORK, NEW YORK - NOVEMBER 26: Macy's Thanksgiving Day Parade floats sit in the wind and rain along Central Park West after the parade was postponed until Saturday on November 26, 2026 in New York City. A forecast of high winds and rain forced organizers of the parade, which celebrates its 100th year and features dozens of iconic floats, to postpone it until Saturday, November 28, the first time in the parade's history that it has been postponed due to weather. (Photo by Spencer Platt/Getty Images)'/><p>A powerful storm knocked out power for nearly 1 million customers and flooded streets. And, experts predict inflation will not dampen American spending for the holidays</p><p>(Image credit: Spencer Platt)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=g-s1-156004' />]]></content:encoded>
+      <dc:creator>Suzanne Nuyen</dc:creator>
+    </item>
+    <item>
+      <title>French cinema star Gérard Depardieu ordered to stand trial for rape and sexual assault</title>
+      <description>The case has become one of the most prominent in France&apos;s reckoning with sexual violence, as the #MeToo movement has faced resistance in the country, particularly in the arts.</description>
+      <pubDate>Fri, 27 Nov 2026 06:49:50 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/27/nx-s1-6055559/gerard-depardieu-trial-rape-france</link>
+      <guid>https://www.npr.org/2026/11/27/nx-s1-6055559/gerard-depardieu-trial-rape-france</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/2888x1926+0+0/resize/2888x1926!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fa9%2Fea%2Ff523d8f84dfa9012828ba7f8a0e5%2Fap26330526061869.jpg' alt='FILE - Actor Gerard Depardieu arrives to face trial for the alleged sexual assaults of two women on a film set in 2021, on March 24, 2025 in Paris.'/><p>The case has become one of the most prominent in France's reckoning with sexual violence, as the #MeToo movement has faced resistance in the country, particularly in the arts.</p><p>(Image credit: Aurelien Morissard)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6055559' />]]></content:encoded>
+      <dc:creator>The Associated Press</dc:creator>
+    </item>
+    <item>
+      <title>From Thanksgiving blackouts to Black Friday, a holiday hit by wild weather and economic woes</title>
+      <description>A storm battered much of the country on Thursday, knocking out power to thousands of homes and disrupting travel. Today, Black Friday shopping deals kick off, and on Saturday New York City will hold the postponed Macy&apos;s Thanksgiving Day Parade.</description>
+      <pubDate>Fri, 27 Nov 2026 05:59:36 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday</link>
+      <guid>https://www.npr.org/2026/11/27/nx-s1-6054884/thanksgiving-weather-black-friday</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4496x3000+0+0/resize/4496x3000!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Ff2%2Fe6%2F842c0c584574bebf383c85a84897%2Fap26330589214672.jpg' alt='Pedestrians shield themselves with umbrellas as they walk in the rain on Thanksgiving Day in New York, Thursday, Nov. 26, 2026.'/><p>A storm battered much of the country on Thursday, knocking out power to thousands of homes and disrupting travel. Today, Black Friday shopping deals kick off, and on Saturday New York City will hold the postponed Macy's Thanksgiving Day Parade.</p><p>(Image credit: Yuki Iwamura)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6054884' />]]></content:encoded>
+      <dc:creator>NPR Staff</dc:creator>
+    </item>
+    <item>
+      <title>Can luxury save Macy&apos;s?</title>
+      <description>This week&apos;s celebration of Macy&apos;s 100th Thanksgiving parade finds the department store at a turning point. After years of losing sales, the retailer is reimagining itself — as a higher-end destination.</description>
+      <pubDate>Fri, 27 Nov 2026 05:01:00 -0500</pubDate>
+      <link>https://www.npr.org/2026/11/27/nx-s1-6026486/macys-tries-to-reinvent-with-luxury</link>
+      <guid>https://www.npr.org/2026/11/27/nx-s1-6026486/macys-tries-to-reinvent-with-luxury</guid>
+      <content:encoded><![CDATA[<img src='https://npr.brightspotcdn.com/dims3/default/strip/false/crop/6192x4128+0+0/resize/6192x4128!/quality/85/format/webp/?url=https%3A%2F%2Fnpr-production-npr.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fce%2F42%2Fe92e56684604ba12db67369743e2%2Fgettyimages-2305985820.jpg' alt='Macy's flagship store in New York unveils its 2026 holiday display.'/><p>This week's celebration of Macy's 100th Thanksgiving parade finds the department store at a turning point. After years of losing sales, the retailer is reimagining itself — as a higher-end destination.</p><p>(Image credit: Eugene Gologursky)</p><img src='https://media.npr.org/include/images/tracking/npr-rss-pixel.png?story=nx-s1-6026486' />]]></content:encoded>
+      <dc:creator>Alina Selyukh</dc:creator>
+    </item>
+  </channel>
+</rss>
